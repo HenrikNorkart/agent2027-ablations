@@ -1,0 +1,2 @@
+row_id,ablation_id,arm_id,dataset_id,task_type,fold_seed,llm_seed,replicate,is_sentinel,session_id,order_key,image_tag,rung_S,rung_E,rung_T,port_S,port_E,port_T,env_overrides,cap_hours,expected_u,notes
+A04-002,A04,stage0_Q2,balance-scale,classification,42,42,0,0,S1014n,1,agent2027-pre.3,Q2,Q2,Q2,8031,8031,8031,"{""ROGUE_ONE_SMOKE_FOLDS"":""1""}",6,0.2,smoke

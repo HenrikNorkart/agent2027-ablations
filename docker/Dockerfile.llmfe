@@ -1,0 +1,49 @@
+# Minimal image for the LLM-FE *API sampling path* only.
+# Upstream requirements.txt additionally pins accelerate/transformers/bitsandbytes/
+# fastapi/Flask/matplotlib -- those are used exclusively by llm_engine/engine.py
+# (their local HF inference server), which is NOT used when --use_api True.
+FROM python:3.11-slim
+
+# Versions taken verbatim from upstream requirements.txt.
+RUN pip install --no-cache-dir \
+      numpy==1.26.4 \
+      pandas==2.2.3 \
+      scikit-learn==1.4.0 \
+      scipy==1.12.0 \
+      xgboost==2.1.4 \
+      requests==2.32.3 \
+      absl-py==2.1.0 \
+      PyYAML==6.0.2 \
+      joblib==1.4.2 \
+      tqdm==4.67.1 \
+      python-dateutil==2.9.0.post0 \
+      pytz==2025.1 \
+      tzdata==2025.1 \
+      six==1.17.0 \
+      threadpoolctl==3.5.0 \
+      tensorboard==2.16.2
+
+# torch is REQUIRED on the API path:
+#   - llmfe/profile.py: `from torch.utils.tensorboard import SummaryWriter`
+#   - specs/specification_*.txt: `import torch` inside evaluate()
+# Upstream pins torch==2.0.1 (CUDA 11.7 build). We install the same version as the
+# CPU-only build: the container gets no GPUs, and torch is only used for
+# torch.tensor() conversions that are discarded plus the tensorboard writer.
+RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch==2.0.1
+
+# `caafe`, for ONE function: specs/specification_diabetes.txt calls
+# `caafe.preprocessing.make_datasets_numeric`. It is absent from LLM-FE's own
+# requirements.txt -- the July image had it installed ad hoc, so the rebuilt
+# llmfe:oss120 failed `diabetes` instantly with `No module named 'caafe'`, which is the
+# only reason that dataset is missing from T0.4's LLM-FE column. Same --no-deps +
+# blanked __init__.py treatment, and for the same reasons, as docker/Dockerfile.llmfe_eval
+# -- see the long comment there.
+#
+# NOTE: this is NOT the CAAFE baseline. T0.4's CAAFE row still requires CAAFE's own
+# full environment in its own image, per the plan's ground rules.
+RUN pip install --no-cache-dir --no-deps caafe==0.1.6 \
+    && printf '%s\n' '# Intentionally blank: see docker/Dockerfile.llmfe.' \
+       > "$(python -c 'import site; print(site.getsitepackages()[0])')/caafe/__init__.py" \
+    && python -c "from caafe.preprocessing import make_datasets_numeric; print('caafe.preprocessing OK')"
+
+WORKDIR /app

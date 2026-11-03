@@ -1,0 +1,103 @@
+[
+  {
+    "description": "Execute a generic pandas command on the scientist feedback dataframe 'df_test_results' or the base data dataframe 'df_raw_data'.\nThe dataframe 'df_test_results' is organized as follows:\n- Each row is the result from one round of investigations (one trial).\n- Columns include:\n    - `id`: trial identifier with the form 'Trial <n>' (capital T, single space). Newer trials have higher numbers.\n    - `status`: 'completed', 'aborted', or 'skipped'.\n    - `dataset_id`, `fold_seed`, `aborted_fold_id`, `skip_reason`: per-trial metadata.\n    - `feature_assessment`: the markdown assessment report produced by the Tester for that trial.\n    - Performance columns are TRAIN-set metrics only: `train_accuracy`, `train_precision`, `train_recall`, `train_f1`, `train_AUROC`, `train_MSE`, `train_MAE`, `train_R2`. Held-out metrics are deliberately not visible to the Scientist (Constitution II — leakage prevention).\n\nThe dataframe 'df_raw_data' contains the original attributes used for aggregating.\n\nUse this tool to explore the dataframe and generate insights into the test results.\nThis tool can be used to filter, aggregate, or view the data.\n\nThe command should always:\n1. Use 'result' as the variable name for the output of the command.\n   For example, if you want to get the mean accuracy, you should use:\n   result = df_test_results['train_accuracy'].mean()\n2. Ensure that the command is a valid pandas command that can be executed in the context of the dataframe 'df_test_results' or 'df_raw_data'.\n   You can use any pandas function or method that is applicable to dataframes.",
+    "name": "generic_pandas_tool",
+    "params_json_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "command": {
+          "description": "The pandas command to execute.",
+          "title": "Command",
+          "type": "string"
+        }
+      },
+      "required": [
+        "command"
+      ],
+      "title": "generic_pandas_tool_args",
+      "type": "object"
+    }
+  },
+  {
+    "description": "Search the web for relevant information to expand your knowledge.\nUse this tool to find supporting evidence or context.\nUse this tool to get a better understanding of relevant concepts.",
+    "name": "search_tool",
+    "params_json_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "description": "The search query.",
+          "title": "Query",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "title": "search_tool_args",
+      "type": "object"
+    }
+  },
+  {
+    "description": "Look up the explanation for a given list of attribute names from the attribute_explanations dictionary.",
+    "name": "attribute_lookup_tool",
+    "params_json_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "attribute_names_list": {
+          "description": "The names of the attributes to look up.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Attribute Names List",
+          "type": "array"
+        }
+      },
+      "required": [
+        "attribute_names_list"
+      ],
+      "title": "attribute_lookup_tool_args",
+      "type": "object"
+    }
+  },
+  {
+    "description": "List all attribute names available in the dataframe 'df'.\nThese names can be used as input for the 'attribute_lookup_tool'.",
+    "name": "list_all_attributes",
+    "params_json_schema": {
+      "additionalProperties": false,
+      "properties": {},
+      "required": [],
+      "title": "list_all_attributes_args",
+      "type": "object"
+    }
+  },
+  {
+    "description": "Take a note and add it to the notebook.\nThis can be used to keep track of important information during the investigation and to pass information on to next iteration.",
+    "name": "take_a_note",
+    "params_json_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "note": {
+          "description": "The note to be added.",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "note"
+      ],
+      "title": "take_a_note_args",
+      "type": "object"
+    }
+  },
+  {
+    "description": "Read all notes from the notebook.",
+    "name": "read_notes",
+    "params_json_schema": {
+      "additionalProperties": false,
+      "properties": {},
+      "required": [],
+      "title": "read_notes_args",
+      "type": "object"
+    }
+  }
+]

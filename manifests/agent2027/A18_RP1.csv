@@ -1,0 +1,7 @@
+row_id,ablation_id,arm_id,dataset_id,task_type,fold_seed,llm_seed,replicate,is_sentinel,session_id,order_key,image_tag,rung_S,rung_E,rung_T,port_S,port_E,port_T,env_overrides,cap_hours,expected_u,notes
+A18-001,A18,replay_Q0.8,rp1set,mixed,42,7042,0,0,,,agent2027-v2.0,Q0.8,Q0.8,Q0.8,8030,8030,8030,{},6,0.3,replay-only
+A18-002,A18,replay_Q2,rp1set,mixed,42,7042,0,0,,,agent2027-v2.0,Q2,Q2,Q2,8031,8031,8031,{},6,0.3,replay-only
+A18-003,A18,replay_Q4,rp1set,mixed,42,7042,0,0,,,agent2027-v2.0,Q4,Q4,Q4,8032,8032,8032,{},6,0.3,replay-only
+A18-004,A18,replay_Q9,rp1set,mixed,42,7042,0,0,,,agent2027-v2.0,Q9,Q9,Q9,8033,8033,8033,{},6,0.3,replay-only
+A18-006,A18,replay_Q122,rp1set,mixed,42,7042,0,0,,,agent2027-v2.0,Q122,Q122,Q122,8040,8040,8040,{},6,1.7,replay-only
+A18-007,A18,replay_O120,rp1set,mixed,42,7042,0,0,,,agent2027-v2.0,O120,O120,O120,8010,8010,8010,{},6,1.7,replay-only; control

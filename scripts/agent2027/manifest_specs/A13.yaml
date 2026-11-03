@@ -1,0 +1,19 @@
+# A13 · KT1-Off search off (docs/ablations/A13_KT1_search_off.md §4, A13-T9).
+#   python scripts/agent2027/make_manifest.py --ablation A13 -> manifests/agent2027/A13_KT1-Off.csv
+# Rows 001-010: Core-10 at fold seed 42 (control = mean of A05 full f42 r0 + r1).
+# Rows 011-020: RV2 replication at fold seed 4; never planned into a session unless RV2 fires.
+# Row 901: G0b-1 smoke (one fold, heart), never analysed; shares its run name with A13-004.
+# Needs image v2.3 (E9e): ROGUE_ONE_KNOWLEDGE_BACKEND is not read by v2.0-v2.2.
+ablation_id: A13
+defaults:
+  image_tag: agent2027-v2.3
+  rung: O120
+  port: 8010
+  cap_hours: 6
+  expected_u: 1.0
+  env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: "off"}
+blocks:
+  - {arm_id: search_off, start: 1, datasets: "@CORE10", fold_seeds: [42], replicates: [0], notes: "pair A05 full f42 r0+r1"}
+  - {arm_id: search_off, start: 11, datasets: "@CORE10", fold_seeds: [4], replicates: [0], notes: RV2-conditional}
+  - {arm_id: search_off, start: 901, datasets: [heart], fold_seeds: [42], replicates: [0], expected_u: 0.2, notes: smoke,
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: "off", ROGUE_ONE_SMOKE_FOLDS: "1"}}

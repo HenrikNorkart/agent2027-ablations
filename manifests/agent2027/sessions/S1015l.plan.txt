@@ -1,0 +1,9 @@
+session_id=S1015l
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=5944790284766441464
+sentinel_first=0 sentinels=none
+rows=4
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A03-903	replace	credit-g	0
+2	A03-904	augment	credit-g	0
+3	A03-902	augment	myocardial	0
+4	A03-901	replace	myocardial	0

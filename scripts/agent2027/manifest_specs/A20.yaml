@@ -1,0 +1,38 @@
+# A20 · CAP-3 minimal harness at the small rung, SR4 fallback: Q4 instead of O20
+# (docs/ablations/A20_CAP3_harness_at_O20.md §4, §6 "Q4 switch", A20-T6; pre-registration
+# Part V.20 and Part VII.1 item 14).
+#   python scripts/agent2027/make_manifest.py --ablation A20 -> manifests/agent2027/A20_CAP-3.csv
+#
+# Arm fx_pajM_Q4 = FX cell P-A-J-aM+ (E9d switches, image agent2027-v2.3; overrides identical
+# to A12 fx_pajM) with every role and W on Q4 (Qwen/Qwen3.5-4B @ 851bf6e, rungs.csv).
+# Rows A20-001…007 in A20 §4's task order p3, p5, p2, p6a, p6b, p4, p1; f42 r0 only.
+# Comparison cells: Full at Q4 = A17 f2_Q4 f42 (A17-030…036, image v2.0, other sessions: the
+# within-session pairing is lost, disclosed); O120 = A12 fx_pajM r0 and A05 full f42 r0.
+# A20-008 = O20-era smoke row re-pointed to Q4 (synp_p3, 1 fold x 3 iterations, never analysed).
+# D4: synp_p3/p4/p5 stratified.
+ablation_id: A20
+templates:
+  pajM: &pajM {ROGUE_ONE_PLANNER_MODE: none, ROGUE_ONE_ASSESSMENT_MODE: template, ROGUE_ONE_PRUNING_MODE: rules}
+  synp: &synp {classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}}
+defaults:
+  arm_id: fx_pajM_Q4
+  image_tag: agent2027-v2.3
+  rung: Q4
+  port: 8032
+  cap_hours: 6
+  expected_u: 0.75
+  fold_seeds: [42]
+  replicates: [0]
+  env_overrides: *pajM
+  env_overrides_by_task_type: *synp
+blocks:
+  - {start: 1, datasets: [synp_p3], notes: "pair=A17__f2_Q4__synp_p3__f42__r0; o120=A12__fx_pajM__synp_p3__f42__r0|A05__full__synp_p3__f42__r0"}
+  - {start: 2, datasets: [synp_p5], notes: "pair=A17__f2_Q4__synp_p5__f42__r0; o120=A12__fx_pajM__synp_p5__f42__r0|A05__full__synp_p5__f42__r0"}
+  - {start: 3, datasets: [synp_p2], notes: "pair=A17__f2_Q4__synp_p2__f42__r0; o120=A12__fx_pajM__synp_p2__f42__r0|A05__full__synp_p2__f42__r0"}
+  - {start: 4, datasets: [synp_p6a], notes: "pair=A17__f2_Q4__synp_p6a__f42__r0; o120=A12__fx_pajM__synp_p6a__f42__r0|A05__full__synp_p6a__f42__r0"}
+  - {start: 5, datasets: [synp_p6b], notes: "pair=A17__f2_Q4__synp_p6b__f42__r0; o120=A12__fx_pajM__synp_p6b__f42__r0|A05__full__synp_p6b__f42__r0"}
+  - {start: 6, datasets: [synp_p4], notes: "pair=A17__f2_Q4__synp_p4__f42__r0; o120=A12__fx_pajM__synp_p4__f42__r0|A05__full__synp_p4__f42__r0"}
+  - {start: 7, datasets: [synp_p1], notes: "pair=A17__f2_Q4__synp_p1__f42__r0; o120=A12__fx_pajM__synp_p1__f42__r0|A05__full__synp_p1__f42__r0"}
+  # Smoke (A20-T9, Q4 switch): synp_p3, 1 fold x 3 iterations, code_phase=smoke via notes.
+  - {start: 8, datasets: [synp_p3], expected_u: 0.05, notes: smoke,
+     env_overrides: {<<: *pajM, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}

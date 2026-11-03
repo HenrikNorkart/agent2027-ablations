@@ -1,0 +1,12 @@
+suppressMessages({library(glmmTMB); library(logistf)})
+d <- read.csv("/w/rv3_runs.csv")
+f <- cbind(k, n - k) ~ P + A + J + M + PA + PJ + PM + AJ + AM + JM + block + (1 | task)
+m <- glmmTMB(f, data = d, family = binomial)
+cat("== glmmTMB binomial  sd_task", sqrt(as.numeric(VarCorr(m)$cond$task)), "\n")
+print(round(summary(m)$coefficients$cond[, c(1, 2, 4)], 4))
+e <- d[rep(seq_len(nrow(d)), d$n), ]
+e$y <- unlist(lapply(seq_len(nrow(d)), function(i) c(rep(1, d$k[i]), rep(0, d$n[i] - d$k[i]))))
+fm <- logistf(y ~ P + A + J + M + PA + PJ + PM + AJ + AM + JM + block + factor(task), data = e)
+cat("== Firth, task FE\n")
+t <- c("P","A","J","M","PA","PJ","PM","AJ","AM","JM","block")
+print(round(data.frame(beta = coef(fm)[t], se = sqrt(diag(vcov(fm)))[t], p_pl = fm$prob[t]), 4))

@@ -1,0 +1,27 @@
+# A05 · M0 Full-v2 reference (docs/ablations/A05_M0_full_v2_reference.md §4.3).
+#   python scripts/agent2027/make_manifest.py --ablation A05 -> manifests/agent2027/A05_M0.csv (55 + 2 smoke)
+ablation_id: A05
+defaults:
+  image_tag: agent2027-v2.0
+  rung: O120
+  port: 8010
+  cap_hours: 6
+  env_overrides_by_task_type:
+    classification: {}
+blocks:
+  - {arm_id: full, start: 1, datasets: "@CORE10", fold_seeds: [42], replicates: [0], expected_u: 1.0}
+  - {arm_id: full, start: 11, datasets: "@CORE10", fold_seeds: [4], replicates: [0], expected_u: 1.0}
+  - {arm_id: full, start: 21, datasets: "@CORE10", fold_seeds: [42], replicates: [1], expected_u: 1.0}
+  # SYN-P classification tasks carry the D4 stratified-folds override (task definition, as in A02).
+  - {arm_id: full, start: 31, datasets: "@SYNP8", fold_seeds: [42], replicates: [0], expected_u: 0.85,
+     env_overrides_by_task_type: {classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}}}
+  - {arm_id: full, start: 39, datasets: "@SYNP8", fold_seeds: [4], replicates: [0], expected_u: 0.85,
+     env_overrides_by_task_type: {classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}}}
+  - {arm_id: full, start: 47, datasets: "@SYNP8", fold_seeds: [42], replicates: [1], expected_u: 0.85,
+     env_overrides_by_task_type: {classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}}}
+  - {arm_id: full, start: 55, datasets: [synp_p0], fold_seeds: [42], replicates: [0], expected_u: 0.85}
+  # Freeze smoke (session S1016s), one fold, outside the total.
+  - {arm_id: full, start: 901, datasets: [synp_p3], fold_seeds: [42], replicates: [0], expected_u: 0.2, notes: smoke,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_STRATIFIED_FOLDS: "True"}}
+  - {arm_id: full, start: 902, datasets: [heart], fold_seeds: [42], replicates: [0], expected_u: 0.2, notes: smoke,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1"}}

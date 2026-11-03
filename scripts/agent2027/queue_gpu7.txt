@@ -1,0 +1,7 @@
+# AGENT2027 queue for GPU 7 (one H100, TP1 small rungs; SR4 fallback 2026-10-19).
+# Henrik 2026-10-20 (option b): Q4 has its replicate (S1019g: 5 A17 rows + 2 sentinels, all
+# CAP_HIT at 6 h); one replicate (synp_p2 x f42 x r0, as the Q4 anchor) per remaining rung,
+# then GPU 7 is freed. The 16/9/9-row sessions S1019h/i/j are retired, never launched.
+S1020h|agent2027-v2.0|8035|RUNG=Q0.8
+S1020i|agent2027-v2.0|8036|RUNG=Q2
+S1020j|agent2027-v2.0|8037|RUNG=Q9

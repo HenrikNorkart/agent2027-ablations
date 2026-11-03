@@ -1,0 +1,39 @@
+row_id,ablation_id,arm_id,dataset_id,task_type,fold_seed,llm_seed,replicate,is_sentinel,session_id,order_key,image_tag,rung_S,rung_E,rung_T,port_S,port_E,port_T,env_overrides,cap_hours,expected_u,notes
+A14-010,A14,kb_local_correct,synp_p7,classification,1,1,0,0,S1021d,1,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_correct"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-011,A13,search_off,balance-scale,classification,4,4,0,0,S1021d,2,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-004,A14,kb_off,synp_p7,classification,1,1,0,0,S1021d,3,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-019,A13,search_off,crab,regression,4,4,0,0,S1021d,4,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-011,A14,kb_local_correct,synp_p7,classification,2,2,0,0,S1021d,5,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_correct"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-015,A13,search_off,credit-g,classification,4,4,0,0,S1021d,6,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-005,A14,kb_off,synp_p7,classification,2,2,0,0,S1021d,7,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-014,A13,search_off,heart,classification,4,4,0,0,S1021d,8,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-012,A14,kb_local_correct,synp_p7,classification,3,3,0,0,S1021d,9,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_correct"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-017,A13,search_off,housing,regression,4,4,0,0,S1021d,10,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-006,A14,kb_off,synp_p7,classification,3,3,0,0,S1021d,11,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-018,A13,search_off,insurance,regression,4,4,0,0,S1021d,12,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-008,A14,kb_local_correct,synp_p7,classification,4,4,0,0,S1021d,13,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_correct"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-012,A13,search_off,junglechess,classification,4,4,0,0,S1021d,14,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-017,A14,kb_local_wrong,synp_p7,classification,4,4,0,0,S1021d,15,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_wrong"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-016,A13,search_off,myocardial,classification,4,4,0,0,S1021d,16,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-002,A14,kb_off,synp_p7,classification,4,4,0,0,S1021d,17,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-013,A13,search_off,vehicle,classification,4,4,0,0,S1021d,18,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-014,A14,kb_parametric,synp_p7,classification,4,4,0,0,S1021d,19,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""parametric"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-020,A13,search_off,wine,regression,4,4,0,0,S1021d,20,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,RV2-conditional
+A14-009,A14,kb_local_correct,synp_p7,classification,5,5,0,0,S1021d,21,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_correct"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-001,A13,search_off,balance-scale,classification,42,42,0,0,S1021d,22,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A14-018,A14,kb_local_wrong,synp_p7,classification,5,5,0,0,S1021d,23,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_wrong"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-009,A13,search_off,crab,regression,42,42,0,0,S1021d,24,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A14-003,A14,kb_off,synp_p7,classification,5,5,0,0,S1021d,25,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-005,A13,search_off,credit-g,classification,42,42,0,0,S1021d,26,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A14-015,A14,kb_parametric,synp_p7,classification,5,5,0,0,S1021d,27,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""parametric"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-004,A13,search_off,heart,classification,42,42,0,0,S1021d,28,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A14-007,A14,kb_local_correct,synp_p7,classification,42,42,0,0,S1021d,29,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_correct"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-007,A13,search_off,housing,regression,42,42,0,0,S1021d,30,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A14-016,A14,kb_local_wrong,synp_p7,classification,42,42,0,0,S1021d,31,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""local"",""ROGUE_ONE_LOCAL_CORPUS"":""kt3_wrong"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-008,A13,search_off,insurance,regression,42,42,0,0,S1021d,32,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A14-001,A14,kb_off,synp_p7,classification,42,42,0,0,S1021d,33,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-002,A13,search_off,junglechess,classification,42,42,0,0,S1021d,34,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A14-013,A14,kb_parametric,synp_p7,classification,42,42,0,0,S1021d,35,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""parametric"",""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A13-006,A13,search_off,myocardial,classification,42,42,0,0,S1021d,36,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A13-003,A13,search_off,vehicle,classification,42,42,0,0,S1021d,37,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1
+A13-010,A13,search_off,wine,regression,42,42,0,0,S1021d,38,agent2027-v2.3,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_KNOWLEDGE_BACKEND"":""off""}",6,1.0,pair A05 full f42 r0+r1

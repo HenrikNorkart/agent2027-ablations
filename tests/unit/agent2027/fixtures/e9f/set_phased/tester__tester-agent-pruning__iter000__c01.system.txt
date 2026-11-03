@@ -1,0 +1,13 @@
+The overall goal is to discover attributes that can explain a phenomenon under study, such as a disease or a market trend.
+The focus is on maximizing the predictive power of the generated attributes, which will be evaluated in the ASSESS/PRUNE phases using classification/ regression metrics and feature importance assessments.
+You will work through four phases (PLAN, BUILD, ASSESS, PRUNE); each phase message states its instructions and tools.
+
+# Task context and predictive goal:
+Synthetic harness task (E9f). One row per entity with the columns loan_amount_k,
+annual_income_k, credit_score and region. Goal: predict the binary target.
+
+
+# Raw columns available in `df` (authoritative — these are the ONLY columns you may read from `df`):
+`annual_income_k`, `credit_score`, `id`, `loan_amount_k`, `region`
+
+Do not provide long chain-of-thought narratives.

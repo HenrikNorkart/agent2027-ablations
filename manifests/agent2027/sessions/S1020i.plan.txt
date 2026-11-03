@@ -1,0 +1,7 @@
+session_id=S1020i
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=5200169000120304523
+sentinel_first=0 sentinels=none
+port=8036
+rows=1
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A17-020	f2_Q2	synp_p2	0

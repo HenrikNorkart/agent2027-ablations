@@ -1,0 +1,22 @@
+session_id=S1020b
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=4549265246427606476
+sentinel_first=0 sentinels=none
+rows=14
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A11-002	l0	synp_p2	0
+2	A10-010	restarts	synp_p3	0
+3	A11-006	l0	synp_p6a	0
+4	A11-010	l0	synp_p3	0
+5	A10-002	restarts	synp_p2	0
+6	A11-008	l0	synp_p1	0
+7	A11-004	l0	synp_p4	0
+8	A10-012	restarts	synp_p5	0
+9	A11-012	l0	synp_p5	0
+10	A10-008	restarts	synp_p1	0
+11	A10-004	restarts	synp_p4	0
+12	A10-006	restarts	synp_p6a	0
+13	A10-014	restarts	synp_p6b	0
+14	A11-014	l0	synp_p6b	0
+# port_S/E/T=8019: this session's O120 TP2 server (ports from 8017 up; set after planning, as for S1016a-c)
+# GPUS=<assigned by the coordinator at launch, from a fresh pre-flight>  (placeholder)
+# SENTINEL: none planned yet. No A06 manifest exists; add the next free A06 `sentinel` row (lowest unused k, this session's port) and re-plan with --sentinel-first before launch (A06-T12, guard 3 for v2.2).

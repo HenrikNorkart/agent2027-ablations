@@ -1,0 +1,8 @@
+# AGENT2027 queue for GPUs 5,6 (one O120 TP2 server). SID|IMAGE_TAG|PORT|EXTRA_ENV
+S1019a|agent2027-v2.1|8023|
+S1021b|agent2027-v2.3|8024|
+S1022b|agent2027-v2.4|8025|
+S1020a|agent2027-v2.2|8018|
+S1020b|agent2027-v2.2|8019|
+S1020l|agent2027-v2.2|8020|CLIENTS_SCRIPT=/raid/home/henrbr16/a08_comparators_clients.sh PROXY_PORT=8090
+S1020m|agent2027-v2.2|8021|CLIENTS_SCRIPT=/raid/home/henrbr16/a08_comparators_clients.sh PROXY_PORT=8091

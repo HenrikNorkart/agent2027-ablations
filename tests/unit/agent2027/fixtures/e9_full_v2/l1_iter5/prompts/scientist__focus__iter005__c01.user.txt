@@ -1,0 +1,1 @@
+Round 6/10: Determine the focus for the next round of attribute extraction based the focus history: ['focus 0', 'focus 1', 'focus 2', 'focus 3', 'focus 4'].

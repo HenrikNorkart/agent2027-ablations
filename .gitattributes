@@ -1,0 +1,20 @@
+
+# Shell scripts under paper/scripts are executed on the CAIR Linux box; CRLF line
+# endings make bash fail there, so keep them LF in the working copy too.
+paper/scripts/*.sh text eol=lf
+
+# AGENT 2027 launchers, their defaults file and the test docker shim run under bash on
+# the CAIR Linux box (and Git Bash in the tests): keep them LF.
+scripts/agent2027/*.sh text eol=lf
+scripts/agent2027/*.env text eol=lf
+tests/unit/agent2027/shims/* text eol=lf
+
+# E9 golden prompt dumps (agent2027-v2.0 rendering): compared byte for byte, never converted.
+tests/unit/agent2027/fixtures/e9_full_v2/** -text
+
+# AGENT 2027 KT3 corpora (E8b): the A14-T1 corpus hash is over the file bytes, so the
+# working copy must hold the committed LF bytes on every machine (Windows included).
+scripts/agent2027/corpora/** text eol=lf
+
+# E9f golden dumps (Full v2.0 and SET-phased renderings): compared byte for byte.
+tests/unit/agent2027/fixtures/e9f/** -text

@@ -1,0 +1,110 @@
+#!/usr/bin/env bash
+# Fake `docker` for the ro27_clients_manifest.sh tests. State lives in $SHIM_STATE:
+#   calls.log            every invocation, one line
+#   c/<name>.{start,dur,stopped,rc,mounts,image,env,runs}
+# Behaviour per container comes from $SHIM_BEHAVIOR (lines "<name> <behaviour>"):
+#   ok[:secs]          exits 0 after secs (default 1), writes fold_aggregation_summary.csv
+#   fail_once[:secs]   first run exits 1 with no summary; later runs behave like ok
+#   rc0_noresult       exits 0 without a summary (the silent failure)
+#   hang               runs until `docker stop`
+set -u
+S="${SHIM_STATE:?}"
+mkdir -p "$S/c"
+echo "$*" >> "$S/calls.log"
+
+behaviour() {
+  local b
+  b=$(awk -v n="$1" '$1 == n {print $2}' "${SHIM_BEHAVIOR:-/dev/null}" 2>/dev/null)
+  echo "${b:-ok}"
+}
+running() {  # name -> 0 if running
+  local n="$1" now start dur
+  [ -f "$S/c/$n.start" ] || return 1
+  [ -f "$S/c/$n.stopped" ] && return 1
+  dur=$(cat "$S/c/$n.dur")
+  [ "$dur" = "inf" ] && return 0
+  now=$(date +%s); start=$(cat "$S/c/$n.start")
+  [ $((now - start)) -lt "$dur" ]
+}
+
+cmd="${1:-}"; shift || true
+case "$cmd" in
+  ps)
+    all=0; for a in "$@"; do [ "$a" = "-a" ] && all=1; done
+    for f in "$S"/c/*.start; do
+      [ -e "$f" ] || continue
+      n=$(basename "$f" .start)
+      if [ "$all" = "1" ] || running "$n"; then echo "$n"; fi
+    done
+    ;;
+  inspect)
+    fmt=""; name=""
+    while [ $# -gt 0 ]; do
+      case "$1" in
+        -f|--format) fmt="$2"; shift 2 ;;
+        *) name="$1"; shift ;;
+      esac
+    done
+    [ -f "$S/c/$name.start" ] || { echo "Error: No such object: $name" >&2; exit 1; }
+    case "$fmt" in
+      *State.Running*) if running "$name"; then echo true; else echo false; fi ;;
+      *State.ExitCode*)
+        if running "$name"; then echo 0
+        elif [ -f "$S/c/$name.stopped" ]; then echo 137
+        else cat "$S/c/$name.rc"; fi ;;
+      *Mounts*) tr '\n' ' ' < "$S/c/$name.mounts"; echo ;;
+      *) echo "{}" ;;
+    esac
+    ;;
+  run)
+    detach=0; name=""; envfile=""; image=""; mounts=""
+    while [ $# -gt 0 ]; do
+      case "$1" in
+        -d) detach=1; shift ;;
+        --rm) shift ;;
+        --name) name="$2"; shift 2 ;;
+        --env-file) envfile="$2"; shift 2 ;;
+        -v) mounts="$mounts${2%%:*}"$'\n'; shift 2 ;;
+        -e|--cpus|--network|--entrypoint|--gpus) shift 2 ;;
+        --ipc=*|--network=*) shift ;;
+        -*) shift ;;
+        *) image="$1"; shift; break ;;
+      esac
+    done
+    if [ "$detach" != "1" ]; then exit 0; fi
+    runs=$(( $(cat "$S/c/$name.runs" 2>/dev/null || echo 0) + 1 ))
+    rm -f "$S/c/$name.stopped"
+    echo "$runs" > "$S/c/$name.runs"
+    date +%s > "$S/c/$name.start"
+    printf '%s' "$mounts" > "$S/c/$name.mounts"
+    echo "$image" > "$S/c/$name.image"
+    [ -n "$envfile" ] && cp "$envfile" "$S/c/$name.env.$runs"
+    tasks=$(head -1 "$S/c/$name.mounts")
+    b=$(behaviour "$name"); kind="${b%%:*}"; secs=1
+    case "$b" in *:*) secs="${b#*:}" ;; esac
+    write_summary() {
+      d=$(find "$tasks" -mindepth 2 -maxdepth 2 -type d | head -1)
+      mkdir -p "$d/output" && echo "metric,mean" > "$d/output/fold_aggregation_summary.csv"
+    }
+    case "$kind" in
+      ok) echo "$secs" > "$S/c/$name.dur"; echo 0 > "$S/c/$name.rc"; write_summary ;;
+      fail_once)
+        echo "$secs" > "$S/c/$name.dur"
+        if [ "$runs" = "1" ]; then echo 1 > "$S/c/$name.rc"; else echo 0 > "$S/c/$name.rc"; write_summary; fi ;;
+      rc0_noresult) echo "$secs" > "$S/c/$name.dur"; echo 0 > "$S/c/$name.rc" ;;
+      hang) echo inf > "$S/c/$name.dur"; echo 0 > "$S/c/$name.rc" ;;
+    esac
+    echo "fakecontainerid-$name"
+    ;;
+  stop)
+    for a in "$@"; do case "$a" in -t) ;; [0-9]*) ;; *) touch "$S/c/$a.stopped" ;; esac; done
+    ;;
+  rm)
+    for a in "$@"; do
+      case "$a" in -f) ;; *) rm -f "$S/c/$a.start" "$S/c/$a.dur" "$S/c/$a.rc" "$S/c/$a.mounts" "$S/c/$a.stopped" ;; esac
+    done
+    ;;
+  logs) echo "fake container log for ${!#}" ;;
+  *) echo "shim: unsupported docker $cmd" >&2; exit 1 ;;
+esac
+exit 0

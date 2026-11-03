@@ -1,0 +1,37 @@
+# A14 · KT3-P7 knowledge probe (docs/ablations/A14_KT3_knowledge_probe_P7.md §4, A14-T9).
+#   python scripts/agent2027/make_manifest.py --ablation A14 -> manifests/agent2027/A14_KT3-P7.csv
+# Rows 001-006 kb_off, 007-012 kb_local_correct at fold seeds {42, 4, 5, 1, 2, 3};
+# rows 013-015 kb_parametric, 016-018 kb_local_wrong at {42, 4, 5} (18 runs, 90 episodes).
+# Rows 901-904: G0b-1 smoke (one fold, synp_p7, seed 42), never analysed.
+# ROGUE_ONE_STRATIFIED_FOLDS as in A05's synp_p7 rows (D4). Needs image v2.3 (E9e + E8b);
+# the launcher mounts scripts/agent2027/corpora/<ROGUE_ONE_LOCAL_CORPUS> read-only at
+# /workspace/corpora/<name> only for rows with ROGUE_ONE_KNOWLEDGE_BACKEND=local.
+ablation_id: A14
+defaults:
+  image_tag: agent2027-v2.3
+  rung: O120
+  port: 8010
+  cap_hours: 6
+  expected_u: 0.85
+  datasets: [synp_p7]
+  replicates: [0]
+  env_overrides_by_task_type:
+    classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}
+blocks:
+  - {arm_id: kb_off, start: 1, fold_seeds: [42, 4, 5, 1, 2, 3],
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: "off"}}
+  - {arm_id: kb_local_correct, start: 7, fold_seeds: [42, 4, 5, 1, 2, 3],
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: local, ROGUE_ONE_LOCAL_CORPUS: kt3_correct}}
+  - {arm_id: kb_parametric, start: 13, fold_seeds: [42, 4, 5],
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: parametric}}
+  - {arm_id: kb_local_wrong, start: 16, fold_seeds: [42, 4, 5],
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: local, ROGUE_ONE_LOCAL_CORPUS: kt3_wrong}}
+  # G0b-1 smoke (A14-T10): one fold each, never analysed.
+  - {arm_id: kb_off, start: 901, fold_seeds: [42], expected_u: 0.17, notes: smoke,
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: "off", ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: kb_parametric, start: 902, fold_seeds: [42], expected_u: 0.17, notes: smoke,
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: parametric, ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: kb_local_correct, start: 903, fold_seeds: [42], expected_u: 0.17, notes: smoke,
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: local, ROGUE_ONE_LOCAL_CORPUS: kt3_correct, ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: kb_local_wrong, start: 904, fold_seeds: [42], expected_u: 0.17, notes: smoke,
+     env_overrides: {ROGUE_ONE_KNOWLEDGE_BACKEND: local, ROGUE_ONE_LOCAL_CORPUS: kt3_wrong, ROGUE_ONE_SMOKE_FOLDS: "1"}}

@@ -1,0 +1,24 @@
+session_id=S1019a
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=7072912246967408409
+sentinel_first=1 sentinels=A06-001
+sentinel_image_tag=agent2027-v2.1
+port=8023
+rows=17
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A06-001	sentinel	synp_p2	1
+2	A09-003	oracle	synp_p3	0
+3	A09-001	oracle	synp_p1	0
+4	A09-006	oracle	synp_p6a	0
+5	A09-011	misdirected	synp_p3	0
+6	A09-005	oracle	synp_p5	0
+7	A09-000	full	synp_p3	0
+8	A09-009	misdirected	synp_p1	0
+9	A09-012	misdirected	synp_p4	0
+10	A09-007	oracle	synp_p6b	0
+11	A09-015	misdirected	synp_p6b	0
+12	A09-004	oracle	synp_p4	0
+13	A09-013	misdirected	synp_p5	0
+14	A09-008	oracle	synp_p7	0
+15	A09-002	oracle	synp_p2	0
+16	A09-014	misdirected	synp_p6a	0
+17	A09-010	misdirected	synp_p2	0

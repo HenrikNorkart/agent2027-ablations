@@ -1,0 +1,195 @@
+{
+ "m0_rows": [
+  "A05-032",
+  "A05-048"
+ ],
+ "sentinel_rows": [
+  "A06-001",
+  "A06-002",
+  "A06-003",
+  "A06-004",
+  "A06-005",
+  "A06-006",
+  "A06-007",
+  "A06-008",
+  "A06-010",
+  "A06-011",
+  "A06-009",
+  "A06-012",
+  "A06-013",
+  "A06-016",
+  "A06-015",
+  "A06-014",
+  "A06-017",
+  "A06-018",
+  "A06-019",
+  "A06-020",
+  "A06-021",
+  "A06-022",
+  "A06-024",
+  "A06-023",
+  "A06-025",
+  "A06-027",
+  "A06-026"
+ ],
+ "sentinel_rows_without_episodes": [],
+ "primary_fisher": {
+  "x": 89,
+  "y": 135,
+  "z": 5,
+  "n0": 10,
+  "rate_sentinel": 0.6592592592592592,
+  "rate_m0": 0.5,
+  "odds_ratio": 1.934782608695652,
+  "p": 0.3223919038903956
+ },
+ "sens_stratified_by_fold": {
+  "x_obs": 89,
+  "expected": 87.51724137931036,
+  "p": 0.49763651301977313,
+  "n_strata": 5
+ },
+ "sens_run_permutation": {
+  "stat": 0.15925925925925932,
+  "p": 0.541871921182266,
+  "p_upper": 0.270935960591133,
+  "p_lower": 0.8916256157635468,
+  "n_perm": 406,
+  "min_p": 0.0049261083743842365
+ },
+ "desc_trend_ca_exact": {
+  "t_obs": 1234,
+  "expected": 1225.2413793103449,
+  "p": 0.859782370839845,
+  "n_groups": 28,
+  "successes": 94,
+  "session_order": [
+   "S1019a",
+   "S1020a",
+   "S1020l",
+   "S1022g",
+   "S1022h",
+   "S1024c",
+   "S1024d",
+   "S1024e",
+   "S1024g",
+   "S1024h",
+   "S1024f",
+   "S1024s",
+   "S1024t",
+   "S1024w",
+   "S1024v",
+   "S1024u",
+   "S1024x",
+   "S1025a",
+   "S1025b",
+   "S1025c",
+   "S1025e",
+   "S1025f",
+   "S1025h",
+   "S1025g",
+   "S1025i",
+   "S1025k",
+   "S1025j"
+  ]
+ },
+ "desc_q4_homogeneity": {
+  "rec_sel": {
+   "p": 1.0,
+   "draws": 0,
+   "note": "a single non-empty row or column: homogeneous by construction"
+  },
+  "rec_sel_table": [
+   [
+    5,
+    0
+   ],
+   [
+    5,
+    0
+   ],
+   [
+    5,
+    0
+   ]
+  ],
+  "func_success": {
+   "p": 1.0,
+   "draws": 0,
+   "note": "a single non-empty row or column: homogeneous by construction"
+  },
+  "func_success_table": [
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    0
+   ]
+  ],
+  "rec_sel_by_row": {
+   "A06-101": 0,
+   "A06-102": 0,
+   "A06-103": 0
+  }
+ },
+ "primary_rejects": false,
+ "period_sensitivity": "not triggered (primary p >= 0.05)",
+ "label": "FINAL (A06-T17)",
+ "verdicts": [
+  [
+   "sentinel",
+   "PASS",
+   22
+  ],
+  [
+   "sentinel",
+   "WARN",
+   5
+  ],
+  [
+   "sentinel_Q4",
+   "NOT_EVALUABLE",
+   2
+  ],
+  [
+   "sentinel_Q4",
+   "REFERENCE",
+   1
+  ]
+ ],
+ "rec_sel_by_sentinel": {
+  "A06-001": 4,
+  "A06-002": 3,
+  "A06-003": 5,
+  "A06-004": 2,
+  "A06-005": 4,
+  "A06-006": 5,
+  "A06-007": 3,
+  "A06-008": 4,
+  "A06-009": 3,
+  "A06-010": 4,
+  "A06-011": 1,
+  "A06-012": 2,
+  "A06-013": 4,
+  "A06-014": 2,
+  "A06-015": 3,
+  "A06-016": 3,
+  "A06-017": 1,
+  "A06-018": 3,
+  "A06-019": 4,
+  "A06-020": 4,
+  "A06-021": 4,
+  "A06-022": 5,
+  "A06-023": 4,
+  "A06-024": 2,
+  "A06-025": 2,
+  "A06-026": 3,
+  "A06-027": 5
+ }
+}

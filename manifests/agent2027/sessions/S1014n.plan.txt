@@ -1,0 +1,6 @@
+session_id=S1014n
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=8605806870611041284
+sentinel_first=0 sentinels=none
+rows=1
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A04-002	stage0_Q2	balance-scale	0

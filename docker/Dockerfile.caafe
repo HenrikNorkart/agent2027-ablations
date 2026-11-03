@@ -1,0 +1,116 @@
+# CAAFE (Hollmann et al., 2023 -- arXiv:2305.03403) under Rogue One's folds +
+# evaluator + LLM backbone. The LLM-backed third of T0.4.
+#
+# Why this image exists at all, rather than `pip install caafe`: the PyPI release
+# (0.1.6, the copy already inside docker/Dockerfile.llmfe for an unrelated single
+# function) still calls `openai.ChatCompletion.create` -- the pre-1.0 OpenAI API that
+# was REMOVED in openai>=1.0. It cannot talk to any current client. Upstream git HEAD
+# (automl/CAAFE @ bb65b4d, "Sathya98-patch-api-update") migrated to the modern
+# `openai.OpenAI()` client, so HEAD is the only variant that can reach an
+# OpenAI-compatible endpoint at all -- which is what pointing CAAFE at our vLLM
+# requires. We therefore vendor HEAD and apply paper/scripts/caafe_upstream.patch.
+# See that patch for the one defect it fixes and why the fix is not a methodological
+# change.
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/*
+
+# ---------------------------------------------------------------------------------
+# Scoring-critical pins. These MUST stay byte-identical to docker/Dockerfile.classicfe
+# because paper/scripts/caafe_arm.py imports classicfe_arm.evaluate() to score its
+# folds -- the whole point being that `caafe` and `openfe`/`autofeat`/`raw` cells in
+# results_matched_harness_baselines.csv come out of the same estimator. A version
+# skew here would silently reintroduce Finding 11 (an arm scored with a different
+# estimator than Rogue One reports) in a new place.
+# ---------------------------------------------------------------------------------
+RUN pip install --no-cache-dir \
+        "numpy==1.26.4" \
+        "pandas==2.2.3" \
+        "scikit-learn==1.5.2" \
+        "xgboost==2.1.3" \
+        "scipy==1.13.1" \
+        "PyYAML==6.0.2"
+
+# torch, CPU-only: this container gets no GPUs. It is required because CAAFE's
+# caafe/caafe_evaluate.py does a module-level `import tabpfn`, and because
+# caafe/data.py::get_X_y returns torch tensors on every internal evaluation.
+RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch==2.0.1
+
+# tabpfn==0.1.11 is the LAST release carrying the `tabpfn/scripts/` package layout
+# that CAAFE imports (`tabpfn.scripts.tabular_metrics`,
+# `tabpfn.scripts.tabular_baselines`). Every tabpfn >=2.0 dropped that layout, so a
+# modern tabpfn makes CAAFE unimportable. --no-deps keeps its own loose numpy/sklearn
+# pins from silently clobbering the scoring-critical block above.
+RUN pip install --no-cache-dir --no-deps tabpfn==0.1.11
+
+# catboost + hyperopt are imported at module scope by tabpfn.scripts.tabular_baselines,
+# which is where CAAFE's own default internal evaluator (`iterative_method="logistic"`
+# -> logistic_metric) lives. They are never used for anything we report; they are
+# import-time dependencies of the module holding that one function (lightgbm is there
+# for the same reason).
+RUN pip install --no-cache-dir "catboost==1.2.10" "hyperopt==0.3.0" "lightgbm==4.5.0"
+
+# openai>=1.0 for the modern client. CAAFE HEAD calls `openai.OpenAI()`, which reads
+# OPENAI_BASE_URL / OPENAI_API_KEY from the environment -- that, and nothing else, is
+# how this arm is pointed at our own vLLM GPT-OSS-120B server instead of OpenAI. No
+# CAAFE source change is needed for the backbone swap.
+RUN pip install --no-cache-dir "openai==1.59.6"
+
+# openml is imported at module scope by caafe/data.py, which we cannot avoid: the
+# import chain caafe.caafe -> caafe_evaluate -> data (for get_X_y) goes through it.
+# None of openml's dataset-fetching is used -- our data comes off disk -- it is purely
+# an import-time dependency. Installed WITH its deps (an isolated --no-deps install
+# leaves openml's own submodule imports broken), and then the scoring-critical pins
+# are force-reinstalled on top so that whatever openml's resolver dragged in cannot
+# move numpy/pandas/sklearn/xgboost underneath evaluate(). Keeping this arm's
+# estimator bit-identical to classicfe_arm's is the one thing that must not regress.
+RUN pip install --no-cache-dir "openml==0.12.0" \
+    && pip install --no-cache-dir --force-reinstall --no-deps \
+        "numpy==1.26.4" \
+        "pandas==2.2.3" \
+        "scikit-learn==1.5.2" \
+        "xgboost==2.1.3" \
+        "scipy==1.13.1" \
+        "PyYAML==6.0.2"
+
+# Vendor upstream CAAFE at the exact commit, then patch it. Pinned by SHA so this
+# image is reproducible even if the branch moves.
+ARG CAAFE_SHA=bb65b4d517bd86056352ad2ee98be6655f2d5aec
+RUN git clone https://github.com/automl/CAAFE.git /opt/CAAFE \
+    && cd /opt/CAAFE \
+    && git checkout ${CAAFE_SHA}
+
+COPY paper/scripts/caafe_upstream.patch /tmp/caafe_upstream.patch
+RUN cd /opt/CAAFE && git apply --verbose /tmp/caafe_upstream.patch
+
+# Install as a package but WITHOUT its setup.py install_requires -- that pins
+# `openai==0.28` (contradicting its own HEAD source, which needs >=1.0), plus kaggle,
+# openml and an unpinned modern `tabpfn` that would undo the pin above.
+RUN cd /opt/CAAFE && pip install --no-cache-dir --no-deps -e .
+
+# Import-time compatibility shims (np.warnings, OneHotEncoder(sparse=)). Both are
+# numerically inert; see the long rationale in docker/caafe_sitecustomize.py. Installed
+# as sitecustomize so they precede every other import in the container.
+COPY docker/caafe_sitecustomize.py /tmp/caafe_sitecustomize.py
+RUN cp /tmp/caafe_sitecustomize.py "$(python -c 'import site; print(site.getsitepackages()[0])')/sitecustomize.py"
+
+# openml 0.12.0 reads/creates its config at IMPORT time and dies with
+# FileNotFoundError: '/root/.config/openml' if the directory is absent. Nothing in
+# this arm ever contacts openml.org; the directory just has to exist for the import
+# in caafe/data.py to survive. HOME is pinned so the path stays valid whatever the
+# container's environment does.
+ENV HOME=/root
+RUN mkdir -p /root/.config/openml /root/.cache/openml /root/.openml
+
+# Fail the BUILD, not the first GPU-adjacent run, if any of that came apart.
+RUN python -c "\
+import caafe, openai, xgboost, numpy, sklearn, yaml;\
+from caafe.caafe import generate_features;\
+from caafe.run_llm_code import run_llm_code;\
+from caafe.metrics import auc_metric, accuracy_metric;\
+from tabpfn.scripts.tabular_metrics import accuracy_metric as _am;\
+from tabpfn.scripts.tabular_baselines import logistic_metric;\
+print('caafe import OK', numpy.__version__, sklearn.__version__, xgboost.__version__)"
+
+WORKDIR /app

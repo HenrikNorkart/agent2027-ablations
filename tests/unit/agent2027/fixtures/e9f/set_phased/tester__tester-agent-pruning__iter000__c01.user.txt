@@ -1,0 +1,57 @@
+### PHASE 4/4 — PRUNE. From now on only the instructions below and the tools of this phase apply.
+
+            # Hard Constraints
+            - You MUST use the provided assessment markdown as primary context.
+            - You MUST rely primarily on pre-computed metrics.
+            - Supplemental experiments are allowed only when evidence is inconclusive.
+            - Use attribute_pruning_tool to prune features.
+            - You MUST NOT un-prune any feature in this stage.
+            - Each pruning decision must include rationale.
+            - VIF >= 1e10 indicates a perfect colinearity cluster (typically the dummy-variable
+              trap, or a feature paired with its `_sq` / `_x_` derivative). When you observe
+              VIF >= 1e10:
+                1. Group the features that share this near-infinite VIF cluster (typically the
+                   original dummies of a categorical, or `feat`, `feat_sq`, `feat_x_other`).
+                2. Prune ONLY the lowest-mean_abs_SHAP member of the cluster (or the lowest
+                   mutual_information if SHAP is tied).
+                3. NEVER prune a feature with mean_abs_SHAP > 0.1 just because of high VIF —
+                   high SHAP means the feature is genuinely predictive and the high VIF is a
+                   mathematical artifact, not a signal-quality problem.
+            - For VIF in [10, 1e10] (high but finite), use the existing rule: prune only if
+              PFI ~= 0 AND mean_abs_SHAP < 0.1.
+            - Squares (`feat_sq`) and interactions (`feat_a_x_feat_b`) of features that are
+              themselves active should be pruned BEFORE their bases when colinearity makes a
+              choice necessary.
+
+            # Mandatory Workflow
+            1. Read pre-computed metrics with get_precomputed_metrics_tool.
+            2. Read notes with get_notes_tool.
+            3. Evaluate prune vs keep per feature.
+            4. Call attribute_pruning_tool for prune decisions.
+            5. Return a concise markdown summary with rationale and evidence source.
+
+Use this assessment markdown as input context and decide what to prune:
+
+# Assessment
+All fine.
+
+Pre-computed metric table:
+
+| feature_name | mutual_information | vif | pfi_mean | pfi_std | noise_sensitivity | mean_abs_shap | warnings |
+|---|---:|---:|---:|---:|---:|---:|---|
+| loan_amount_k | 0.14358 | 1.77431 | 0.03 | 0.00666667 | 0.00868499 | 0.770833 |  |
+| annual_income_k | 0.125363 | 1.35013 | 0.0308333 | 0.005 | 0.0101815 | 0.695938 |  |
+| credit_score | 0 | 1e+12 | 0.0125 | 0.00372678 | 0.00440137 | 0.25915 |  |
+| region_ord | 0.00754172 | 1.02718 | 0.00333333 | 0.00311805 | 0.00677495 | 0.25228 |  |
+| ratio_1 | 0.338651 | 1e+12 | 0.245 | 0.0169558 | 0.018928 | 2.88887 |  |
+| ratio_1_dup | 0.338651 | 1e+12 | 0.00416667 | 0 | 0.00392088 | 0.33736 |  |
+| score_1 | 0 | 1e+12 | 0 | 0 | 0.000732621 | 0.0517636 |  |
+| ratio_4 | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_4_dup | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| score_4 | 0 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_7 | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_7_dup | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| score_7 | 0 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_10 | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_10_dup | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| score_10 | 0 | 1e+12 | 0 | 0 | 0 | 0 |  |

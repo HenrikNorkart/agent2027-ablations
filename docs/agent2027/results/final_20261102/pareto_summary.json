@@ -1,0 +1,106 @@
+{
+  "seed": 20261016,
+  "B": 2000,
+  "delta": 0.167,
+  "population": [
+    "synp_p2",
+    "synp_p3",
+    "synp_p4",
+    "synp_p5",
+    "synp_p6a",
+    "synp_p6b"
+  ],
+  "outcomes": [
+    {
+      "panel": "A",
+      "outcome": "Opposite",
+      "meets_R-A23-3": [],
+      "full": "dominated",
+      "variant": "primary"
+    },
+    {
+      "panel": "B",
+      "outcome": "Null A",
+      "meets_R-A23-3": [],
+      "variant": "primary"
+    },
+    {
+      "panel": "A",
+      "outcome": "Opposite",
+      "meets_R-A23-3": [
+        "llmfe"
+      ],
+      "full": "dominated",
+      "variant": "a_all7"
+    },
+    {
+      "panel": "B",
+      "outcome": "Null A",
+      "meets_R-A23-3": [],
+      "variant": "a_all7"
+    },
+    {
+      "panel": "A",
+      "outcome": "Opposite",
+      "meets_R-A23-3": [
+        "llmfe"
+      ],
+      "full": "dominated",
+      "variant": "b_allseeds"
+    },
+    {
+      "panel": "B",
+      "outcome": "Null A",
+      "meets_R-A23-3": [],
+      "variant": "b_allseeds"
+    },
+    {
+      "panel": "A",
+      "outcome": "Opposite",
+      "meets_R-A23-3": [],
+      "full": "dominated",
+      "variant": "power"
+    },
+    {
+      "panel": "B",
+      "outcome": "Null A",
+      "meets_R-A23-3": [],
+      "variant": "power"
+    },
+    {
+      "panel": "A",
+      "outcome": "Opposite",
+      "meets_R-A23-3": [],
+      "full": "dominated",
+      "variant": "infguard"
+    },
+    {
+      "panel": "B",
+      "outcome": "Null A",
+      "meets_R-A23-3": [],
+      "variant": "infguard"
+    },
+    {
+      "panel": "A",
+      "outcome": "Opposite",
+      "meets_R-A23-3": [],
+      "full": "dominated",
+      "variant": "a20_relaunch"
+    },
+    {
+      "panel": "B",
+      "outcome": "Null A",
+      "meets_R-A23-3": [],
+      "variant": "a20_relaunch"
+    }
+  ],
+  "not_evaluated": {
+    "c_fallback_only": "needs a per-run 'all selected features are fallback' flag (process_metrics.py)",
+    "f_drift": "needs A06 drift verdicts (--drift session_id,drift_flag)",
+    "g_func_success": "needs per-run func_success"
+  },
+  "missing_configs": [
+    "caafe"
+  ],
+  "token_validation": "not checked by pareto.py (A23-T1/T13); pass --token-invalid if it failed"
+}

@@ -1,0 +1,54 @@
+### PHASE 3/4 — ASSESS. From now on only the instructions below and the tools of this phase apply.
+
+            You will assess the quality of the current feature set produced by the BUILD phase using the pre-computed metrics as primary evidence.
+            The assessment report you produce will be used by the PLAN phase to generate new focus areas, the assessment must therefore give a clear and actionable summary.
+
+            # Hard Constraints
+            - Do not prune features in this stage.
+            - Use pre-computed metrics as primary evidence.
+            - Supplemental experiments are optional and only for ambiguous features.
+            - Use training data only.
+
+            # Available Resources
+            - The generic_python_executor_tool environment includes a fitted XGBoost model (`assessment_model`)
+              trained on the current feature set. You can use this model to:
+              - Extract feature importances (e.g. `assessment_model.feature_importances_`)
+              - Compute SHAP values for deeper feature-level explanations
+              - Generate predictions and residual analyses
+              - Perform partial dependence or interaction analyses
+              Use the model when pre-computed metrics alone are ambiguous or insufficient.
+
+            # Mandatory Workflow
+            1. Call get_precomputed_metrics_tool first.
+            2. Review high/low-quality features from the metrics.
+            3. Optionally run targeted experiments with generic_python_executor_tool (you have access to the trained assessment_model).
+            4. Take notes with take_note_tool.
+            5. Return a markdown assessment report with per-feature findings and explicit evidence.
+
+            # Output Format
+            Return markdown with sections:
+            - Summary
+            - Feature-by-feature assessment
+            - Risks and uncertainties
+            - Recommended candidates for pruning (recommendations only, no pruning action)
+
+Assess the current feature set based on pre-computed metrics. Use this metric table as the baseline:
+
+| feature_name | mutual_information | vif | pfi_mean | pfi_std | noise_sensitivity | mean_abs_shap | warnings |
+|---|---:|---:|---:|---:|---:|---:|---|
+| loan_amount_k | 0.14358 | 1.77431 | 0.03 | 0.00666667 | 0.00868499 | 0.770833 |  |
+| annual_income_k | 0.125363 | 1.35013 | 0.0308333 | 0.005 | 0.0101815 | 0.695938 |  |
+| credit_score | 0 | 1e+12 | 0.0125 | 0.00372678 | 0.00440137 | 0.25915 |  |
+| region_ord | 0.00754172 | 1.02718 | 0.00333333 | 0.00311805 | 0.00677495 | 0.25228 |  |
+| ratio_1 | 0.338651 | 1e+12 | 0.245 | 0.0169558 | 0.018928 | 2.88887 |  |
+| ratio_1_dup | 0.338651 | 1e+12 | 0.00416667 | 0 | 0.00392088 | 0.33736 |  |
+| score_1 | 0 | 1e+12 | 0 | 0 | 0.000732621 | 0.0517636 |  |
+| ratio_4 | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_4_dup | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| score_4 | 0 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_7 | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_7_dup | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| score_7 | 0 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_10 | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| ratio_10_dup | 0.338651 | 1e+12 | 0 | 0 | 0 | 0 |  |
+| score_10 | 0 | 1e+12 | 0 | 0 | 0 | 0 |  |

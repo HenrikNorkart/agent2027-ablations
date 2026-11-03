@@ -1,0 +1,11 @@
+session_id=S1022b
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=9056711321613089722
+sentinel_first=0 sentinels=none
+port=8025
+rows=5
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A16-001	set_phased	blood	0
+2	A16-028	full	heart	0
+3	A16-002	set_phased	communities	0
+4	A16-027	full	synp_p3	0
+5	A16-000	set_phased	synp_p3	0

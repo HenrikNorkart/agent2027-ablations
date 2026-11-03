@@ -1,0 +1,1 @@
+Round 1: Determine the focus for the next round of attribute extraction. This is the first round of investigation, thus there is no focus history or extracted attributes.

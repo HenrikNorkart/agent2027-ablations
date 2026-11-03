@@ -1,0 +1,9 @@
+row_id,ablation_id,arm_id,dataset_id,task_type,fold_seed,llm_seed,replicate,is_sentinel,session_id,order_key,image_tag,rung_S,rung_E,rung_T,port_S,port_E,port_T,env_overrides,cap_hours,expected_u,notes
+A08-086,A08,llmfe,synp_p5,classification,42,,0,0,S1020l,1,llmfe:oss120,O120,O120,O120,8090,8090,8090,{},6,0.6,llmfe native budget 20 samples/split; LLMFE_MAX_TOKENS=2048; X4 spec; X5 proxy
+A08-082,A08,llmfe,synp_p1,regression,42,,0,0,S1020l,2,llmfe:oss120,O120,O120,O120,8090,8090,8090,{},6,0.6,llmfe native budget 20 samples/split; LLMFE_MAX_TOKENS=2048; X4 spec; X5 proxy
+A08-090,A08,llmfe,synp_p2,regression,42,,1,0,S1020l,3,llmfe:oss120,O120,O120,O120,8090,8090,8090,{},6,0.6,llmfe native budget 20 samples/split; LLMFE_MAX_TOKENS=2048; X4 spec; X5 proxy
+A06-003,A06,sentinel,synp_p2,regression,42,5003,3,1,S1020l,4,agent2027-v2.2,O120,O120,O120,8020,8020,8020,{},6,0.85,sentinel; task fixed at G2 (A06 4.3)
+A08-084,A08,llmfe,synp_p3,classification,42,,0,0,S1020l,5,llmfe:oss120,O120,O120,O120,8090,8090,8090,{},6,0.6,llmfe native budget 20 samples/split; LLMFE_MAX_TOKENS=2048; X4 spec; X5 proxy
+A08-094,A08,llmfe,synp_p6a,regression,42,,1,0,S1020l,6,llmfe:oss120,O120,O120,O120,8090,8090,8090,{},6,0.6,llmfe native budget 20 samples/split; LLMFE_MAX_TOKENS=2048; X4 spec; X5 proxy
+A08-092,A08,llmfe,synp_p4,classification,42,,1,0,S1020l,7,llmfe:oss120,O120,O120,O120,8090,8090,8090,{},6,0.6,llmfe native budget 20 samples/split; LLMFE_MAX_TOKENS=2048; X4 spec; X5 proxy
+A08-088,A08,llmfe,synp_p6b,regression,42,,0,0,S1020l,8,llmfe:oss120,O120,O120,O120,8090,8090,8090,{},6,0.6,llmfe native budget 20 samples/split; LLMFE_MAX_TOKENS=2048; X4 spec; X5 proxy

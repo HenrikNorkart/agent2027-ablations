@@ -1,0 +1,91 @@
+# FeatLLM (Han et al., ICLR 2024 -- Sungwon-Han/FeatLLM) under Rogue One's folds +
+# evaluator + LLM backbone. The second LLM-backed arm of T0.4, after CAAFE.
+#
+# NOTE the interpreter pin below is load-bearing, not housekeeping. Read it before
+# changing the base image.
+FROM python:3.11-slim
+# ---------------------------------------------------------------------------------
+# WHY python 3.11 AND NOT 3.13 (Finding 31, measured 2026-09-08 by
+# paper/scripts/featllm_arm_selftest.py check 0, not inferred).
+#
+# FeatLLM's utils.convert_to_binary_vectors materialises every generated function as
+#
+#     exec(fct_strs_all[i][fct_idx].strip('` "'))
+#     X_train_each = locals()[fct_names[i][fct_idx]](X_train)...
+#
+# PEP 667 (Python 3.13) made `locals()` inside a function return an independent
+# snapshot, so a name created by `exec` is no longer visible through it and that
+# lookup raises KeyError. Upstream swallows it with a bare `except Exception:
+# continue`, so on 3.13+ EVERY ensemble trial is discarded in silence and FeatLLM
+# yields zero features on every fold -- a cell that scores exactly like the `raw` arm
+# while looking like a completed run. That is the "FeatLLM was never heard" failure
+# the checklist forbids reporting, arriving through the interpreter rather than
+# through a token budget.
+#
+# featllm_arm.py's EMPTY_GENERATION guard does catch it (verified: it refused the
+# cell), but a guard that fires on every dataset is a broken image, not a result. Any
+# bump of this base image MUST be followed by re-running the selftest and seeing
+# `check 0 ... works`.
+# ---------------------------------------------------------------------------------
+
+RUN apt-get update && apt-get install -y --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/*
+
+# ---------------------------------------------------------------------------------
+# Scoring-critical pins. These MUST stay byte-identical to docker/Dockerfile.classicfe
+# and docker/Dockerfile.caafe, because paper/scripts/featllm_arm.py imports
+# classicfe_arm.evaluate() to score its folds -- the whole point being that `featllm`,
+# `caafe`, `openfe`, `autofeat` and `raw` cells in
+# results_matched_harness_baselines.csv come out of one estimator. A version skew here
+# would silently reintroduce Finding 11 (an arm scored with a different estimator than
+# Rogue One reports) in a new place.
+# ---------------------------------------------------------------------------------
+RUN pip install --no-cache-dir \
+        "numpy==1.26.4" \
+        "pandas==2.2.3" \
+        "scikit-learn==1.5.2" \
+        "xgboost==2.1.3" \
+        "scipy==1.13.1" \
+        "PyYAML==6.0.2"
+
+# torch, CPU-only: this container gets no GPUs. Required because upstream's
+# convert_to_binary_vectors wraps its binary matrices in torch tensors before
+# returning them (featllm_arm converts straight back with np.asarray). tqdm is
+# imported at module scope by utils.py.
+RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch==2.0.1
+RUN pip install --no-cache-dir "tqdm==4.66.5"
+
+# openai>=1.0 for the modern client. Upstream's own query_gpt CANNOT run on this
+# version -- it calls the removed openai.ChatCompletion.create and catches the removed
+# openai.error.InvalidRequestError (recon blocker 1) -- which is why featllm_arm.py
+# issues the calls itself, with upstream's exact request parameters, instead of
+# patching utils.py. There is deliberately no featllm_upstream.patch: see design note
+# (4) in featllm_arm.py, whose second and stronger reason is that query_gpt's failure
+# value is an in-band `-1` that would score as if it were an answer.
+# The client reads OPENAI_BASE_URL / OPENAI_API_KEY from the environment; that, and
+# nothing else, points this arm at our own vLLM GPT-OSS-120B server.
+RUN pip install --no-cache-dir "openai==1.59.6"
+
+# Vendor upstream at an exact commit, unpatched. Pinned by SHA so the image is
+# reproducible even if the branch moves. FeatLLM is not a pip package; utils.py is
+# imported by path (featllm_arm.py --featllm-dir), and data/ + templates/ are read
+# from the same tree -- templates/ask_llm.txt and templates/ask_for_function.txt are
+# upstream's own prompts, and data/<ds>-metadata.json its own per-feature dictionary,
+# both INPUTS to the published method that we must not author ourselves.
+ARG FEATLLM_SHA=d60f685025cb2addbc61c2b57a2a0fb91f3ef599
+RUN git clone https://github.com/Sungwon-Han/FeatLLM.git /featllm \
+    && cd /featllm \
+    && git checkout ${FEATLLM_SHA}
+
+# Fail the BUILD, not the first GPU-adjacent run, if any of that came apart -- and in
+# particular fail it if the interpreter cannot run upstream's materialisation pattern.
+RUN python -c "\
+import sys; sys.path.insert(0, '/featllm');\
+import utils, openai, xgboost, numpy, sklearn, torch, pandas;\
+assert len(utils.TASK_DICT) == 9, utils.TASK_DICT.keys();\
+from utils import get_prompt_for_asking, get_prompt_for_generating_function, parse_rules, convert_to_binary_vectors;\
+exec('def _p(x):\n    return x');\
+assert '_p' in locals(), 'PEP 667: exec/locals() round-trip is broken on this interpreter -- see the comment at the top of this Dockerfile';\
+print('featllm import OK', sys.version.split()[0], numpy.__version__, sklearn.__version__, xgboost.__version__)"
+
+WORKDIR /app

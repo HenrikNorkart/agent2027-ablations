@@ -1,0 +1,33 @@
+session_id=S1022a
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=16349045358623781264
+sentinel_first=0 sentinels=none
+rows=28
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A19-010	mix_esmall	synp_p3	0
+2	A19-023	mix_1b	synp_p5	0
+3	A19-001	mix_esmall	synp_p1	0
+4	A19-025	mix_1b	synp_p6b	0
+5	A19-027	mix_1b	synp_p2	0
+6	A19-008	mix_esmall	synp_p1	0
+7	A19-024	mix_1b	synp_p6a	0
+8	A19-028	mix_1b	synp_p3	0
+9	A19-011	mix_esmall	synp_p4	0
+10	A19-030	mix_1b	synp_p5	0
+11	A19-004	mix_esmall	synp_p4	0
+12	A19-032	mix_1b	synp_p6b	0
+13	A19-003	mix_esmall	synp_p3	0
+14	A19-031	mix_1b	synp_p6a	0
+15	A19-021	mix_1b	synp_p3	0
+16	A19-007	mix_esmall	synp_p6b	0
+17	A19-006	mix_esmall	synp_p6a	0
+18	A19-020	mix_1b	synp_p2	0
+19	A19-009	mix_esmall	synp_p2	0
+20	A19-022	mix_1b	synp_p4	0
+21	A19-002	mix_esmall	synp_p2	0
+22	A19-012	mix_esmall	synp_p5	0
+23	A19-013	mix_esmall	synp_p6a	0
+24	A19-029	mix_1b	synp_p4	0
+25	A19-019	mix_1b	synp_p1	0
+26	A19-026	mix_1b	synp_p1	0
+27	A19-014	mix_esmall	synp_p6b	0
+28	A19-005	mix_esmall	synp_p5	0

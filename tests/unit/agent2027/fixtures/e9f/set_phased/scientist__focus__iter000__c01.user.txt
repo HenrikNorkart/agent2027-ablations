@@ -1,0 +1,35 @@
+### PHASE 1/4 — PLAN. From now on only the instructions below and the tools of this phase apply.
+
+                    Your primary responsibility is to determine the focus of the investigation based on the test results provided by the ASSESS/PRUNE phases and the explanations of the attributes extracted by the BUILD phase.
+                    Your task is to analyze the test results, the attribute explanations, the focus history, and compare with existing information from the web to determine the focus area of the investigation. Find the focus area that will lead to the most useful hypotheses.
+                    Use the tools available to you to explore the data, gather information, and generate insights.
+
+                    # Objective:
+                    - Choose the next focus area that most likely improves model performance.
+
+                    # Required workflow:
+                    1. Review prior notes and focus history.
+                    2. Identify strongest and weakest tested attributes.
+                    3. Use tools to gather missing context (search, lookup, quick dataframe checks). Always perform at least one web search.
+                    4. Select one focus for the next BUILD phase round and classify it as exploratory or exploitative.
+                    5. Save key reasoning in notes for future rounds.
+
+                    # Hard rules:
+                    - Keep focus within what the BUILD phase can implement.
+                    - Prefer first-round baseline on raw attributes unless evidence suggests otherwise.
+                    - Use search_tool actively when uncertain.
+                    - Avoid repeating previous focus unless new evidence justifies it.
+                    - Focus on exploratory strategies if current performance is poor or an early round, and exploitative refinements if performance is strong.
+                    - **Every focus MUST be additive: it must request at least one concrete new feature, encoding, interaction, or transform the BUILD phase can build via `append_new_attribute`.** Pure-pruning focuses ("remove low-importance features", "keep only top-K", "drop redundant columns") are forbidden — pruning is the ASSESS/PRUNE phases' job, the BUILD phase has no pruning tool, and a pruning-only focus produces zero new features and wastes the iteration. If you believe pruning is needed, pair it with at least one additive request (e.g. "build target-encoded versions of the categorical columns; the ASSESS/PRUNE phases may then prune redundant one-hots").
+                    - **Replacement framing must still be additive.** Phrases like "replace X with Y" leave the BUILD phase unsure whether to add or delete. Phrase the focus as "introduce Y (the ASSESS/PRUNE phases will retire X if it is dominated)" instead, so the BUILD phase's job is unambiguously to call `append_new_attribute` for the new feature.
+                    - **Avoid focus repetition once the obvious feature space is covered.** Small datasets (e.g. a dataset with only a handful of raw categorical columns) saturate after 1–2 iterations of "ordinal encodings + one-hot + pairwise interactions". When the focus history shows the same encoding/interaction theme twice, pivot to **less obvious** additive ideas: log/sqrt/box-cox transforms, three-way interactions, ratio features, target-conditional aggregates (only if you can compute them without leaking the label), or restoration of features the ASSESS/PRUNE phases have previously pruned with concrete arguments for why they should come back. Do not loop on the same theme.
+
+                    # BUILD phase implementation constraints:
+                    - Tabular features: pandas and numpy only.
+                    - The BUILD phase can ONLY add features via `append_new_attribute`. It cannot delete, rename, or replace existing features. Plan focuses around what the BUILD phase can do.
+
+                    # Output requirements:
+                    - Return a concise focus statement plus a short justification.
+                    - Keep the final answer to a few sentences.
+
+Round 1: Determine the focus for the next round of attribute extraction. This is the first round of investigation, thus there is no focus history or extracted attributes.

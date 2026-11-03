@@ -1,0 +1,10 @@
+session_id=S1020s
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=9469231294384333664
+sentinel_first=0 sentinels=none
+rows=3
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A11-015	full	synp_p3	0
+2	A11-000	l0	synp_p3	0
+3	A10-000	restarts	synp_p3	0
+# port_S/E/T=8017: this session's O120 TP2 server (ports from 8017 up; set after planning, as for S1016a-c)
+# GPUS=<assigned by the coordinator at launch, from a fresh pre-flight>  (placeholder)

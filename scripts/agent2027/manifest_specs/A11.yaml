@@ -1,0 +1,38 @@
+# A11 · LF2-L0 open-loop planner (docs/ablations/A11_LF2L0_open_loop_planner.md §4, A11-T9).
+#   python scripts/agent2027/make_manifest.py --ablation A11 -> manifests/agent2027/A11_LF2-L0.csv
+# Arm `l0` = Full-v2 + ROGUE_ONE_FEEDBACK_LEVEL=l0 (E9b, image v2.2). SYN-P 7 x {42, 4}, r0,
+# llm_seed = fold_seed. Each row pairs with the A05 row of the same dataset_id and fold_seed
+# (A05-031..037 seed 42, A05-039..045 seed 4; A05-038/046 are synp_p7, excluded by the P7 policy).
+# SYN-P classification tasks carry the D4 stratified-folds override, copied from the paired A05 row.
+# A11-000 (l0) and A11-015 (Full-v2 guard smoke for the shared v2.2 release) run in S1020s, one fold.
+ablation_id: A11
+defaults:
+  image_tag: agent2027-v2.2
+  rung: O120
+  port: 8010
+  cap_hours: 6
+  expected_u: 0.85
+  env_overrides: {ROGUE_ONE_FEEDBACK_LEVEL: l0}
+  env_overrides_by_task_type:
+    classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}
+blocks:
+  # Switch smoke (S1020s): the SYN-P task of prompt-baseline-v2.0 (synp_p3), one fold.
+  - {arm_id: l0, start: 0, datasets: [synp_p3], fold_seeds: [42], replicates: [0], expected_u: 0.17, notes: smoke,
+     env_overrides: {ROGUE_ONE_FEEDBACK_LEVEL: l0, ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: l0, start: 1, datasets: [synp_p1], fold_seeds: [42], replicates: [0], notes: "pair with A05-031"}
+  - {arm_id: l0, start: 2, datasets: [synp_p2], fold_seeds: [42], replicates: [0], notes: "pair with A05-032"}
+  - {arm_id: l0, start: 3, datasets: [synp_p3], fold_seeds: [42], replicates: [0], notes: "pair with A05-033"}
+  - {arm_id: l0, start: 4, datasets: [synp_p4], fold_seeds: [42], replicates: [0], notes: "pair with A05-034"}
+  - {arm_id: l0, start: 5, datasets: [synp_p5], fold_seeds: [42], replicates: [0], notes: "pair with A05-035"}
+  - {arm_id: l0, start: 6, datasets: [synp_p6a], fold_seeds: [42], replicates: [0], notes: "pair with A05-036"}
+  - {arm_id: l0, start: 7, datasets: [synp_p6b], fold_seeds: [42], replicates: [0], notes: "pair with A05-037"}
+  - {arm_id: l0, start: 8, datasets: [synp_p1], fold_seeds: [4], replicates: [0], notes: "pair with A05-039"}
+  - {arm_id: l0, start: 9, datasets: [synp_p2], fold_seeds: [4], replicates: [0], notes: "pair with A05-040"}
+  - {arm_id: l0, start: 10, datasets: [synp_p3], fold_seeds: [4], replicates: [0], notes: "pair with A05-041"}
+  - {arm_id: l0, start: 11, datasets: [synp_p4], fold_seeds: [4], replicates: [0], notes: "pair with A05-042"}
+  - {arm_id: l0, start: 12, datasets: [synp_p5], fold_seeds: [4], replicates: [0], notes: "pair with A05-043"}
+  - {arm_id: l0, start: 13, datasets: [synp_p6a], fold_seeds: [4], replicates: [0], notes: "pair with A05-044"}
+  - {arm_id: l0, start: 14, datasets: [synp_p6b], fold_seeds: [4], replicates: [0], notes: "pair with A05-045"}
+  # Full-v2 guard smoke for v2.2 (A11-T8): same task and seed as A11-000, no switch set.
+  - {arm_id: full, start: 15, datasets: [synp_p3], fold_seeds: [42], replicates: [0], expected_u: 0.17, notes: guard-smoke,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1"}}

@@ -1,0 +1,1321 @@
+{"row_id": "A02-008", "seq": 1, "query": "bridge cable inspection feature engineering"}
+{"row_id": "A02-008", "seq": 2, "query": "bridge cable corrosion temperature humidity features"}
+{"row_id": "A02-008", "seq": 3, "query": "corrosion depth prediction bridge cable temperature humidity interaction features"}
+{"row_id": "A02-008", "seq": 4, "query": "feature engineering corrosion depth temperature humidity bridge cable"}
+{"row_id": "A02-008", "seq": 5, "query": "feature engineering corrosion prediction bridge cable"}
+{"row_id": "A02-008", "seq": 7, "query": "bridge cable tension corrosion interaction"}
+{"row_id": "A02-008", "seq": 8, "query": "strand tension corrosion bridge cable interaction study"}
+{"row_id": "A02-008", "seq": 9, "query": "steel strand tension corrosion bridge cable"}
+{"row_id": "A02-008", "seq": 10, "query": "bridge cable corrosion tension interaction"}
+{"row_id": "A02-008", "seq": 11, "query": "corrosion fatigue bridge cable strands tension"}
+{"row_id": "A02-008", "seq": 13, "query": "bridge cable corrosion factors tension vibration temperature humidity altitude"}
+{"row_id": "A02-008", "seq": 14, "query": "bridge cable corrosion sensor"}
+{"row_id": "A02-008", "seq": 15, "query": "bridge cable corrosion temperature humidity tension vibration altitude"}
+{"row_id": "A02-008", "seq": 17, "query": "bridge cable corrosion tension vibration fatigue predictive features"}
+{"row_id": "A02-008", "seq": 18, "query": "predictive features corrosion rate per operating hour bridge cable"}
+{"row_id": "A02-008", "seq": 19, "query": "corrosion fatigue degradation mechanism of cables systematic review"}
+{"row_id": "A02-008", "seq": 20, "query": "machine learning features corrosion rate bridge cable tension vibration"}
+{"row_id": "A02-008", "seq": 21, "query": "features tension vibration fatigue corrosion rate bridge cable machine learning"}
+{"row_id": "A02-008", "seq": 22, "query": "corrosion fatigue degradation mechanism of cables systematic review 2026"}
+{"row_id": "A02-008", "seq": 24, "query": "bridge cable corrosion predictive features temperature humidity tension vibration"}
+{"row_id": "A02-008", "seq": 25, "query": "bridge cable corrosion prediction temperature humidity tension vibration"}
+{"row_id": "A02-008", "seq": 26, "query": "suspension bridge cable corrosion prediction machine learning"}
+{"row_id": "A02-008", "seq": 27, "query": "annual corrosion rate main cable suspension bridge environmental variables temperature humidity tension"}
+{"row_id": "A02-008", "seq": 28, "query": "features predicting bridge cable corrosion temperature humidity tension vibration"}
+{"row_id": "A02-008", "seq": 29, "query": "bridge cable corrosion monitoring temperature humidity tension vibration depth"}
+{"row_id": "A02-008", "seq": 30, "query": "bridge cable corrosion machine learning features temperature humidity tension vibration"}
+{"row_id": "A02-008", "seq": 31, "query": "suspension bridge main cable corrosion monitoring study"}
+{"row_id": "A02-008", "seq": 32, "query": "feature importance temperature humidity tension corrosion bridge cable machine learning"}
+{"row_id": "A02-008", "seq": 33, "query": "bridge cable corrosion predictive features temperature humidity tension vibration interaction term"}
+{"row_id": "A02-008", "seq": 34, "query": "stay cable corrosion temperature humidity tension vibration predictive model"}
+{"row_id": "A02-008", "seq": 36, "query": "bridge cable corrosion temperature humidity dust vibration"}
+{"row_id": "A02-008", "seq": 37, "query": "factors affecting corrosion of bridge cables"}
+{"row_id": "A02-008", "seq": 38, "query": "temperature effect on bridge cable corrosion"}
+{"row_id": "A02-008", "seq": 39, "query": "environmental factors corrosion bridge stay cables humidity temperature dust vibration"}
+{"row_id": "A02-008", "seq": 40, "query": "bridge cable corrosion humidity"}
+{"row_id": "A02-008", "seq": 41, "query": "vibration effect on bridge cable corrosion"}
+{"row_id": "A02-008", "seq": 42, "query": "bridge cable dehumidification humidity corrosion rate below 60%"}
+{"row_id": "A02-008", "seq": 43, "query": "combined effects fretting corrosion fatigue bridge cable"}
+{"row_id": "A02-008", "seq": 44, "query": "bridge cable dehumidification humidity below 60% corrosion rate study"}
+{"row_id": "A02-008", "seq": 45, "query": "stray current corrosion bridge cables power factor"}
+{"row_id": "A02-008", "seq": 46, "query": "suspension bridge cable corrosion environmental factors temperature humidity dust"}
+{"row_id": "A02-008", "seq": 47, "query": "bridge cable temperature humidity corrosion rate study"}
+{"row_id": "A02-008", "seq": 49, "query": "bridge cable corrosion dust concentration"}
+{"row_id": "A02-008", "seq": 50, "query": "bridge cable corrosion vibration dust"}
+{"row_id": "A02-008", "seq": 51, "query": "bridge cable corrosion monitoring vibration pressure dust"}
+{"row_id": "A02-008", "seq": 52, "query": "dust impact on steel cable corrosion bridge"}
+{"row_id": "A02-008", "seq": 53, "query": "suspension bridge cable corrosion monitoring"}
+{"row_id": "A02-008", "seq": 54, "query": "dust concentration steel cable corrosion bridge"}
+{"row_id": "A02-008", "seq": 55, "query": "environmental factors corrosion bridge cables dust"}
+{"row_id": "A02-008", "seq": 56, "query": "environmental factors dust corrosion bridge cables"}
+{"row_id": "A02-008", "seq": 57, "query": "bridge cable corrosion vibration"}
+{"row_id": "A02-008", "seq": 58, "query": "cable corrosion monitoring suspension bridge"}
+{"row_id": "A02-008", "seq": 59, "query": "suspension bridge cable corrosion monitoring system"}
+{"row_id": "A02-008", "seq": 60, "query": "particulate deposition corrosion bridge cables"}
+{"row_id": "A02-008", "seq": 61, "query": "corrosion fatigue bridge cable vibration"}
+{"row_id": "A02-008", "seq": 63, "query": "dust concentration steel corrosion"}
+{"row_id": "A02-008", "seq": 64, "query": "sensor network monitor corrosion rate main cable suspension bridge temperature humidity"}
+{"row_id": "A02-008", "seq": 65, "query": "dust deposition effect on steel corrosion bridges"}
+{"row_id": "A02-008", "seq": 66, "query": "dust concentration effect on bridge cable corrosion"}
+{"row_id": "A02-008", "seq": 67, "query": "dust deposition bridge cable corrosion"}
+{"row_id": "A02-008", "seq": 68, "query": "dust concentration steel corrosion bridge"}
+{"row_id": "A02-008", "seq": 69, "query": "environmental factors affecting bridge cable corrosion"}
+{"row_id": "A02-008", "seq": 70, "query": "power factor corrosion bridge"}
+{"row_id": "A02-008", "seq": 71, "query": "vibration induced corrosion fatigue bridge cable"}
+{"row_id": "A02-008", "seq": 72, "query": "dust deposition corrosion steel structures"}
+{"row_id": "A02-008", "seq": 73, "query": "dust effect on steel cable corrosion"}
+{"row_id": "A02-008", "seq": 74, "query": "environmental factors dust pressure bridge cable corrosion"}
+{"row_id": "A02-008", "seq": 75, "query": "airborne dust accelerates steel corrosion bridges"}
+{"row_id": "A02-008", "seq": 77, "query": "bridge cable corrosion factors temperature humidity vibration tension"}
+{"row_id": "A02-008", "seq": 78, "query": "bridge cable corrosion temperature humidity"}
+{"row_id": "A02-008", "seq": 79, "query": "suspension bridge cable corrosion humidity temperature vibration"}
+{"row_id": "A02-008", "seq": 80, "query": "bridge cable corrosion vibration tension factors"}
+{"row_id": "A02-008", "seq": 81, "query": "factors affecting corrosion of bridge cables"}
+{"row_id": "A02-008", "seq": 82, "query": "bridge cable corrosion temperature humidity vibration tension study"}
+{"row_id": "A02-008", "seq": 83, "query": "environmental factors corrosion steel wire bridge cables"}
+{"row_id": "A02-008", "seq": 84, "query": "corrosion fatigue bridge cable temperature humidity stress"}
+{"row_id": "A02-008", "seq": 85, "query": "bridge cable corrosion temperature humidity dust pressure vibration tension factors study"}
+{"row_id": "A02-008", "seq": 86, "query": "environmental factors corrosion suspension bridge cables temperature humidity vibration"}
+{"row_id": "A02-008", "seq": 87, "query": "suspension bridge cable corrosion environmental factors temperature humidity"}
+{"row_id": "A02-008", "seq": 89, "query": "bridge cable corrosion temperature humidity"}
+{"row_id": "A02-008", "seq": 90, "query": "dew point effect cable corrosion bridge"}
+{"row_id": "A02-008", "seq": 92, "query": "bridge cable inspection predictive features corrosion depth tension temperature humidity"}
+{"row_id": "A02-008", "seq": 93, "query": "bridge cable corrosion prediction temperature humidity tension"}
+{"row_id": "A02-008", "seq": 94, "query": "bridge cable corrosion depth prediction machine learning"}
+{"row_id": "A02-008", "seq": 95, "query": "predictive features bridge cable corrosion depth"}
+{"row_id": "A02-008", "seq": 96, "query": "cable temperature relative humidity corrosion prediction bridge cable study 2026"}
+{"row_id": "A02-008", "seq": 97, "query": "bridge cable corrosion monitoring temperature relative humidity tension features machine learning"}
+{"row_id": "A02-008", "seq": 99, "query": "cable corrosion predictive features temperature humidity tension dust"}
+{"row_id": "A02-008", "seq": 100, "query": "predictive features cable corrosion"}
+{"row_id": "A02-008", "seq": 101, "query": "features temperature humidity tension dust cable corrosion model"}
+{"row_id": "A02-008", "seq": 102, "query": "cable corrosion predictive model temperature humidity tension dust"}
+{"row_id": "A02-008", "seq": 103, "query": "feature importance cable corrosion temperature humidity tension dust"}
+{"row_id": "A02-008", "seq": 104, "query": "cable corrosion features temperature humidity tension dust"}
+{"row_id": "A02-008", "seq": 105, "query": "machine learning cable corrosion temperature humidity tension dust"}
+{"row_id": "A02-008", "seq": 106, "query": "feature engineering cable corrosion temperature humidity tension dust"}
+{"row_id": "A02-008", "seq": 107, "query": "cable corrosion prediction temperature humidity tension"}
+{"row_id": "A02-008", "seq": 108, "query": "cable corrosion machine learning features temperature humidity tension dust"}
+{"row_id": "A02-008", "seq": 109, "query": "environmental factors cable corrosion temperature humidity tension dust"}
+{"row_id": "A02-008", "seq": 110, "query": "cable corrosion prediction features"}
+{"row_id": "A02-008", "seq": 112, "query": "suspension bridge cable corrosion predictive features"}
+{"row_id": "A02-008", "seq": 113, "query": "dust concentration bridge cable corrosion features"}
+{"row_id": "A02-008", "seq": 114, "query": "bridge cable tension corrosion predictive features"}
+{"row_id": "A02-008", "seq": 115, "query": "corrosion depth as feature bridge cable predictive model"}
+{"row_id": "A02-008", "seq": 116, "query": "predictive model annual corrosion rate suspension bridge cable temperature humidity tension dust concentration"}
+{"row_id": "A02-008", "seq": 117, "query": "suspension bridge cable corrosion temperature humidity pH chloride predictive features study"}
+{"row_id": "A02-008", "seq": 118, "query": "robust framework predict annual corrosion rate main cables suspension bridge environmental factors"}
+{"row_id": "A02-008", "seq": 119, "query": "dust concentration environmental factor bridge cable corrosion"}
+{"row_id": "A02-008", "seq": 121, "query": "Box Cox transformation corrosion prediction cable"}
+{"row_id": "A02-008", "seq": 122, "query": "Box Cox transformation cable corrosion prediction"}
+{"row_id": "A02-008", "seq": 123, "query": "Box Cox corrosion prediction cable"}
+{"row_id": "A02-008", "seq": 124, "query": "Box-Cox transformation cable corrosion"}
+{"row_id": "A02-008", "seq": 125, "query": "Box Cox transformation bridge cable corrosion"}
+{"row_id": "A02-008", "seq": 126, "query": "Box Cox transformation corrosion steel cable"}
+{"row_id": "A02-008", "seq": 127, "query": "Box Cox transformation wire rope corrosion"}
+{"row_id": "A02-008", "seq": 128, "query": "cable corrosion prediction Box Cox"}
+{"row_id": "A02-008", "seq": 129, "query": "Box Cox transformation corrosion cable prediction study"}
+{"row_id": "A02-008", "seq": 130, "query": "Box Cox cable corrosion"}
+{"row_id": "A02-008", "seq": 131, "query": "Box Cox transformation corrosion steel cable"}
+{"row_id": "A02-008", "seq": 132, "query": "cable corrosion prediction Box Cox"}
+{"row_id": "A02-008", "seq": 133, "query": "Box-Cox degradation modeling cable corrosion"}
+{"row_id": "A02-008", "seq": 134, "query": "suspension bridge cable corrosion Box Cox"}
+{"row_id": "A02-008", "seq": 135, "query": "cable corrosion box cox"}
+{"row_id": "A02-008", "seq": 136, "query": "cable corrosion prediction Box Cox"}
+{"row_id": "A02-008", "seq": 137, "query": "Box Cox transformation degradation cable"}
+{"row_id": "A02-008", "seq": 138, "query": "Box-Cox cable corrosion prediction"}
+{"row_id": "A02-008", "seq": 139, "query": "Box Cox transformation cable degradation"}
+{"row_id": "A02-008", "seq": 140, "query": "Box-Cox transformation cable corrosion study"}
+{"row_id": "A02-008", "seq": 141, "query": "wire rope corrosion prediction Box Cox"}
+{"row_id": "A02-008", "seq": 142, "query": "Box Cox transformation corrosion data cable"}
+{"row_id": "A02-008", "seq": 143, "query": "Box-Cox corrosion cable degradation"}
+{"row_id": "A02-008", "seq": 144, "query": "nonlinear stochastic degradation modeling cable corrosion"}
+{"row_id": "A02-008", "seq": 145, "query": "Box Cox transformation corrosion data cable"}
+{"row_id": "A02-008", "seq": 146, "query": "Box Cox cable corrosion prediction study"}
+{"row_id": "A02-008", "seq": 147, "query": "degradation modeling cable corrosion Box Cox"}
+{"row_id": "A02-008", "seq": 148, "query": "Box Cox transformation degradation"}
+{"row_id": "A02-008", "seq": 149, "query": "Box Cox transformation corrosion prediction"}
+{"row_id": "A02-008", "seq": 150, "query": "cable corrosion prediction using Box Cox"}
+{"row_id": "A02-008", "seq": 151, "query": "anchor cable corrosion Box Cox"}
+{"row_id": "A02-008", "seq": 152, "query": "Box Cox corrosion cable"}
+{"row_id": "A02-008", "seq": 153, "query": "Box Cox cable corrosion"}
+{"row_id": "A02-008", "seq": 154, "query": "cable degradation Box Cox"}
+{"row_id": "A02-008", "seq": 155, "query": "degradation modeling cable corrosion box cox"}
+{"row_id": "A02-008", "seq": 156, "query": "cable corrosion prediction model"}
+{"row_id": "A02-008", "seq": 157, "query": "Box Cox transformation corrosion"}
+{"row_id": "A02-008", "seq": 159, "query": "bridge cable inspection predictive modeling region level features"}
+{"row_id": "A02-008", "seq": 160, "query": "bridge cable inspection machine learning model"}
+{"row_id": "A02-008", "seq": 161, "query": "regional aggregated features bridge inspection predictive modeling"}
+{"row_id": "A02-008", "seq": 162, "query": "bridge condition assessment machine learning region level features"}
+{"row_id": "A02-008", "seq": 163, "query": "cable stay bridge predictive maintenance regional features"}
+{"row_id": "A02-008", "seq": 164, "query": "stay cable inspection machine learning"}
+{"row_id": "A02-008", "seq": 165, "query": "regional aggregated features bridge cable inspection predictive model"}
+{"row_id": "A02-008", "seq": 166, "query": "bridge cable inspection machine learning region features"}
+{"row_id": "A02-008", "seq": 167, "query": "cable stay bridge predictive maintenance machine learning"}
+{"row_id": "A02-008", "seq": 168, "query": "bridge inspection aggregated features machine learning"}
+{"row_id": "A02-008", "seq": 169, "query": "cable-stayed bridge inspection machine learning regional features"}
+{"row_id": "A02-008", "seq": 170, "query": "spatial aggregation features bridge deterioration prediction"}
+{"row_id": "A02-008", "seq": 171, "query": "regional features bridge inspection model performance"}
+{"row_id": "A02-008", "seq": 172, "query": "bridge condition assessment aggregated features machine learning"}
+{"row_id": "A02-008", "seq": 173, "query": "bridge cable condition prediction features region"}
+{"row_id": "A02-008", "seq": 174, "query": "regional features improve bridge deterioration prediction machine learning"}
+{"row_id": "A02-008", "seq": 175, "query": "region level aggregated features bridge inspection"}
+{"row_id": "A02-008", "seq": 176, "query": "aggregated features bridge inspection model performance"}
+{"row_id": "A02-008", "seq": 177, "query": "regional aggregated features improve bridge condition prediction machine learning"}
+{"row_id": "A02-008", "seq": 178, "query": "region level features bridge inspection model"}
+{"row_id": "A02-008", "seq": 179, "query": "region level features bridge cable inspection predictive model"}
+{"row_id": "A02-008", "seq": 180, "query": "aggregated regional features improve bridge cable inspection model"}
+{"row_id": "A02-008", "seq": 181, "query": "bridge cable inspection predictive modeling aggregated features"}
+{"row_id": "A02-008", "seq": 182, "query": "region level features improve bridge cable inspection prediction"}
+{"row_id": "A02-008", "seq": 183, "query": "aggregated features bridge inspection machine learning performance"}
+{"row_id": "A02-008", "seq": 184, "query": "region level aggregated features bridge inspection machine learning study"}
+{"row_id": "A02-008", "seq": 185, "query": "regional features bridge inspection machine learning performance"}
+{"row_id": "A02-008", "seq": 186, "query": "spatial aggregation features bridge cable inspection"}
+{"row_id": "A02-008", "seq": 187, "query": "regional aggregated features improve bridge inspection machine learning model performance"}
+{"row_id": "A02-008", "seq": 188, "query": "region level aggregated features improve bridge condition prediction random forest"}
+{"row_id": "A02-008", "seq": 189, "query": "region level features bridge cable inspection machine learning study"}
+{"row_id": "A02-008", "seq": 190, "query": "regional features bridge cable inspection model performance"}
+{"row_id": "A02-008", "seq": 191, "query": "region level features improve bridge cable condition prediction"}
+{"row_id": "A02-008", "seq": 192, "query": "regional aggregation bridge inspection data machine learning"}
+{"row_id": "A02-008", "seq": 193, "query": "region level features bridge inspection model"}
+{"row_id": "A02-008", "seq": 194, "query": "bridge cable predictive modeling features aggregated"}
+{"row_id": "A02-008", "seq": 195, "query": "regional aggregated features bridge inspection machine learning study"}
+{"row_id": "A02-008", "seq": 196, "query": "regional aggregated features bridge inspection random forest performance"}
+{"row_id": "A02-008", "seq": 197, "query": "aggregated regional features improve bridge condition prediction"}
+{"row_id": "A02-008", "seq": 198, "query": "regional aggregation bridge inspection data improves machine learning model"}
+{"row_id": "A02-008", "seq": 199, "query": "regional features improve bridge condition prediction"}
+{"row_id": "A02-008", "seq": 200, "query": "regional aggregated features improve bridge condition prediction model"}
+{"row_id": "A02-008", "seq": 201, "query": "bridge cable inspection predictive model aggregated features"}
+{"row_id": "A02-008", "seq": 202, "query": "aggregated features improve bridge cable inspection model"}
+{"row_id": "A02-008", "seq": 203, "query": "region based features cable inspection"}
+{"row_id": "A02-008", "seq": 204, "query": "region level features bridge inspection"}
+{"row_id": "A02-008", "seq": 205, "query": "regional aggregated features improve bridge condition prediction machine learning study"}
+{"row_id": "A02-008", "seq": 206, "query": "graph neural network bridge cable inspection"}
+{"row_id": "A02-008", "seq": 207, "query": "bridge cable inspection predictive modeling region features"}
+{"row_id": "A02-008", "seq": 208, "query": "bridge cable condition prediction aggregated features"}
+{"row_id": "A02-008", "seq": 209, "query": "aggregated features improve bridge condition prediction"}
+{"row_id": "A02-008", "seq": 210, "query": "regional aggregated features improve bridge condition prediction random forest study"}
+{"row_id": "A02-008", "seq": 211, "query": "regional features improve bridge inspection prediction model"}
+{"row_id": "A02-008", "seq": 212, "query": "bridge cable inspection machine learning region"}
+{"row_id": "A02-008", "seq": 213, "query": "bridge cable inspection predictive modeling"}
+{"row_id": "A02-008", "seq": 214, "query": "region level features improve bridge condition model"}
+{"row_id": "A02-008", "seq": 216, "query": "bridge cable corrosion sensor vendor"}
+{"row_id": "A02-008", "seq": 217, "query": "bridge cable corrosion monitoring sensor temperature humidity"}
+{"row_id": "A02-008", "seq": 218, "query": "CorroSense bridge cable sensor"}
+{"row_id": "A02-008", "seq": 219, "query": "bridge cable corrosion monitoring vendor"}
+{"row_id": "A02-008", "seq": 220, "query": "bridge cable corrosion sensor temperature humidity tension"}
+{"row_id": "A02-008", "seq": 221, "query": "cable corrosion sensor manufacturer"}
+{"row_id": "A02-008", "seq": 222, "query": "CorroSense bridge cable corrosion sensor"}
+{"row_id": "A02-008", "seq": 223, "query": "CorroSense bridge cable corrosion monitoring sensor"}
+{"row_id": "A02-008", "seq": 224, "query": "CorroSense bridge cable sensor temperature humidity corrosion depth"}
+{"row_id": "A02-008", "seq": 225, "query": "bridge cable corrosion monitoring temperature humidity tension"}
+{"row_id": "A02-008", "seq": 227, "query": "log transform skewed sensor data predictive modeling"}
+{"row_id": "A02-008", "seq": 228, "query": "log transform skewed data machine learning"}
+{"row_id": "A02-008", "seq": 229, "query": "log transform sensor data skewed features"}
+{"row_id": "A02-008", "seq": 230, "query": "log transform sensor data machine learning"}
+{"row_id": "A02-008", "seq": 231, "query": "log transformation sensor data predictive maintenance"}
+{"row_id": "A02-008", "seq": 232, "query": "log transform skewed features improve model performance"}
+{"row_id": "A02-008", "seq": 233, "query": "log transform sensor data"}
+{"row_id": "A02-008", "seq": 234, "query": "log transform skewed sensor data"}
+{"row_id": "A02-008", "seq": 235, "query": "log transform sensor data predictive maintenance"}
+{"row_id": "A02-008", "seq": 236, "query": "log transform sensor features machine learning"}
+{"row_id": "A02-008", "seq": 237, "query": "log scaling sensor data"}
+{"row_id": "A02-008", "seq": 238, "query": "log transform sensor measurements machine learning"}
+{"row_id": "A02-008", "seq": 239, "query": "log transformation sensor data predictive modeling"}
+{"row_id": "A02-008", "seq": 240, "query": "master log transformation sklearn numpy fix skewed data"}
+{"row_id": "A02-008", "seq": 241, "query": "log transform sensor data python"}
+{"row_id": "A02-008", "seq": 242, "query": "log transform sensor readings"}
+{"row_id": "A02-008", "seq": 243, "query": "log transform sensor features"}
+{"row_id": "A02-008", "seq": 244, "query": "log transform skewed features machine learning"}
+{"row_id": "A02-008", "seq": 245, "query": "sensor data preprocessing log transform"}
+{"row_id": "A02-008", "seq": 246, "query": "log transform sensor data predictive modeling case study"}
+{"row_id": "A02-008", "seq": 247, "query": "log transform skewed data machine learning"}
+{"row_id": "A02-008", "seq": 249, "query": "bridge cable strand tension anchor spacing ratio predictive inspection"}
+{"row_id": "A02-008", "seq": 250, "query": "bridge cable strand tension monitoring predictive inspection"}
+{"row_id": "A02-008", "seq": 251, "query": "anchor spacing ratio bridge cable inspection"}
+{"row_id": "A02-008", "seq": 252, "query": "anchor spacing ratio bridge cable predictive maintenance"}
+{"row_id": "A02-008", "seq": 253, "query": "anchor spacing ratio cable strand tension"}
+{"row_id": "A02-008", "seq": 254, "query": "bridge cable tension monitoring predictive inspection"}
+{"row_id": "A02-008", "seq": 255, "query": "bridge cable strand tension monitoring predictive maintenance"}
+{"row_id": "A02-008", "seq": 256, "query": "bridge cable tension anchor spacing inspection"}
+{"row_id": "A02-008", "seq": 257, "query": "anchor spacing ratio cable stay bridge"}
+{"row_id": "A02-008", "seq": 258, "query": "anchor spacing ratio bridge cable inspection guidelines"}
+{"row_id": "A02-008", "seq": 259, "query": "cable strand tension ratio inspection"}
+{"row_id": "A02-008", "seq": 260, "query": "bridge cable strand tension ratio"}
+{"row_id": "A02-008", "seq": 261, "query": "anchor spacing ratio bridge cable inspection"}
+{"row_id": "A02-008", "seq": 262, "query": "predictive inspection bridge cable tension"}
+{"row_id": "A02-008", "seq": 264, "query": "target encoding bridge inspection predictive modeling"}
+{"row_id": "A02-008", "seq": 265, "query": "target encoding categorical bridge condition prediction"}
+{"row_id": "A02-008", "seq": 266, "query": "bridge inspection machine learning target encoding"}
+{"row_id": "A02-008", "seq": 267, "query": "bridge condition prediction machine learning encoding"}
+{"row_id": "A02-008", "seq": 268, "query": "target encoding bridge condition dataset"}
+{"row_id": "A02-008", "seq": 269, "query": "target encoding bridge inspection data"}
+{"row_id": "A02-008", "seq": 270, "query": "bridge inspection machine learning feature engineering"}
+{"row_id": "A02-008", "seq": 271, "query": "target encoding bridge inspection predictive model"}
+{"row_id": "A02-008", "seq": 272, "query": "target encoding national bridge inventory"}
+{"row_id": "A02-008", "seq": 273, "query": "bridge inspection target encoding"}
+{"row_id": "A02-008", "seq": 274, "query": "bridge condition prediction target encoding"}
+{"row_id": "A02-008", "seq": 275, "query": "mean encoding bridge inspection"}
+{"row_id": "A02-008", "seq": 276, "query": "target encoding bridge"}
+{"row_id": "A02-008", "seq": 278, "query": "polynomial features bridge inspection sensor data classification"}
+{"row_id": "A02-008", "seq": 279, "query": "polynomial features sensor data classification"}
+{"row_id": "A02-008", "seq": 280, "query": "polynomial feature engineering bridge health monitoring classification"}
+{"row_id": "A02-008", "seq": 281, "query": "polynomial features improve classification bridge inspection"}
+{"row_id": "A02-008", "seq": 282, "query": "polynomial features bridge health monitoring"}
+{"row_id": "A02-008", "seq": 283, "query": "polynomial feature expansion structural health monitoring classification"}
+{"row_id": "A02-008", "seq": 284, "query": "polynomial features improve bridge health monitoring classification accuracy"}
+{"row_id": "A02-008", "seq": 285, "query": "polynomial feature expansion bridge sensor classification"}
+{"row_id": "A02-008", "seq": 286, "query": "feature engineering bridge inspection sensor classification"}
+{"row_id": "A02-008", "seq": 288, "query": "bridge cable inspection predictive features tension spacing corrosion depth ratio"}
+{"row_id": "A02-008", "seq": 289, "query": "bridge cable condition monitoring features tension corrosion depth"}
+{"row_id": "A02-008", "seq": 290, "query": "machine learning bridge cable inspection features tension corrosion"}
+{"row_id": "A02-008", "seq": 291, "query": "predictive features bridge cable condition assessment tension spacing corrosion depth"}
+{"row_id": "A02-008", "seq": 292, "query": "research trends degradation condition assessment bridge cables multi-factor"}
+{"row_id": "A02-008", "seq": 293, "query": "bridge cable inspection machine learning features"}
+{"row_id": "A02-008", "seq": 294, "query": "feature importance bridge cable condition prediction tension corrosion"}
+{"row_id": "A02-008", "seq": 295, "query": "bridge cable inspection predictive model tension spacing corrosion depth"}
+{"row_id": "A02-008", "seq": 296, "query": "bridge cable condition monitoring machine learning"}
+{"row_id": "A02-008", "seq": 297, "query": "bridge cable inspection tension corrosion depth features"}
+{"row_id": "A02-008", "seq": 298, "query": "bridge cable condition prediction machine learning"}
+{"row_id": "A02-008", "seq": 299, "query": "bridge cable inspection predictive model"}
+{"row_id": "A02-008", "seq": 300, "query": "bridge cable condition prediction features tension corrosion"}
+{"row_id": "A02-008", "seq": 301, "query": "feature importance bridge cable inspection"}
+{"row_id": "A02-008", "seq": 302, "query": "bridge cable inspection features tension corrosion"}
+{"row_id": "A02-008", "seq": 303, "query": "bridge cable corrosion depth predictive model"}
+{"row_id": "A02-008", "seq": 304, "query": "bridge cable condition assessment machine learning tension spacing corrosion depth"}
+{"row_id": "A02-008", "seq": 306, "query": "quantile binning model generalization"}
+{"row_id": "A02-008", "seq": 307, "query": "bridge inspection sensor data quantile binning"}
+{"row_id": "A02-008", "seq": 308, "query": "quantile discretization bridge health monitoring"}
+{"row_id": "A02-008", "seq": 309, "query": "quantile binning sensor data bridge inspection machine learning"}
+{"row_id": "A02-008", "seq": 310, "query": "quantile binning improves generalization sensor data"}
+{"row_id": "A02-008", "seq": 312, "query": "bridge cable inspection predictive model risk score"}
+{"row_id": "A02-008", "seq": 313, "query": "bridge cable corrosion depth ratio predictive model"}
+{"row_id": "A02-008", "seq": 314, "query": "bridge cable tension corrosion predictive model"}
+{"row_id": "A02-008", "seq": 315, "query": "bridge cable risk score model"}
+{"row_id": "A02-008", "seq": 316, "query": "suspension bridge cable inspection risk model tension corrosion"}
+{"row_id": "A02-008", "seq": 317, "query": "bridge cable corrosion depth ratio model"}
+{"row_id": "A02-008", "seq": 318, "query": "AASHTO bridge cable inspection risk scoring model"}
+{"row_id": "A02-008", "seq": 319, "query": "bridge cable condition assessment predictive model tension corrosion"}
+{"row_id": "A02-008", "seq": 320, "query": "bridge cable corrosion depth ratio predictive model academic"}
+{"row_id": "A02-008", "seq": 321, "query": "bridge cable corrosion predictive model research paper"}
+{"row_id": "A02-008", "seq": 322, "query": "bridge cable risk scoring tension corrosion"}
+{"row_id": "A02-008", "seq": 323, "query": "ASCE bridge cable corrosion predictive model"}
+{"row_id": "A02-008", "seq": 324, "query": "machine learning bridge cable corrosion model"}
+{"row_id": "A02-008", "seq": 325, "query": "predictive model bridge cable corrosion depth ratio pdf"}
+{"row_id": "A02-008", "seq": 326, "query": "annual corrosion rate model suspension bridge cables MLP"}
+{"row_id": "A02-008", "seq": 328, "query": "group mean deviation features classification sensor data bridge inspection"}
+{"row_id": "A02-008", "seq": 329, "query": "group mean deviation feature classification"}
+{"row_id": "A02-008", "seq": 330, "query": "group based mean deviation features bridge sensor classification"}
+{"row_id": "A02-008", "seq": 331, "query": "mean deviation features bridge inspection classification"}
+{"row_id": "A02-008", "seq": 332, "query": "group mean deviation sensor data bridge classification"}
+{"row_id": "A02-008", "seq": 333, "query": "group mean deviation feature engineering bridge health monitoring"}
+{"row_id": "A02-008", "seq": 334, "query": "group mean deviation feature engineering structural health monitoring"}
+{"row_id": "A02-008", "seq": 335, "query": "group mean deviation feature extraction"}
+{"row_id": "A02-008", "seq": 336, "query": "aggregation features bridge health monitoring classification"}
+{"row_id": "A02-008", "seq": 337, "query": "group mean deviation feature engineering"}
+{"row_id": "A02-008", "seq": 338, "query": "mean deviation feature bridge health monitoring"}
+{"row_id": "A02-008", "seq": 339, "query": "group based features bridge sensor classification"}
+{"row_id": "A02-008", "seq": 340, "query": "group based features bridge sensor classification 2025"}
+{"row_id": "A02-008", "seq": 342, "query": "k-means clustering feature engineering bridge cable inspection"}
+{"row_id": "A02-008", "seq": 343, "query": "k-means clustering bridge cable inspection"}
+{"row_id": "A02-008", "seq": 344, "query": "bridge cable inspection predictive modeling k means"}
+{"row_id": "A02-008", "seq": 345, "query": "bridge cable inspection k means clustering"}
+{"row_id": "A02-008", "seq": 346, "query": "suspension bridge cable monitoring k means clustering"}
+{"row_id": "A02-008", "seq": 347, "query": "bridge cable vibration damage detection k means"}
+{"row_id": "A02-008", "seq": 348, "query": "bridge cable inspection data feature engineering k means"}
+{"row_id": "A02-008", "seq": 349, "query": "bridge cable inspection k means clustering feature engineering"}
+{"row_id": "A02-008", "seq": 350, "query": "cable frequency k means clustering bridge"}
+{"row_id": "A02-008", "seq": 351, "query": "bridge cable monitoring k means"}
+{"row_id": "A02-008", "seq": 352, "query": "bridge cable inspection data machine learning"}
+{"row_id": "A02-008", "seq": 353, "query": "bridge cable inspection machine learning"}
+{"row_id": "A02-008", "seq": 354, "query": "k means clustering bridge cable inspection"}
+{"row_id": "A02-008", "seq": 355, "query": "bridge cable damage detection empirical mode decomposition k-means"}
+{"row_id": "A02-008", "seq": 357, "query": "predictive features corrosion depth cable strand inspection"}
+{"row_id": "A02-008", "seq": 358, "query": "topological feature corrosion characterization steel wire persistent homology"}
+{"row_id": "A02-008", "seq": 359, "query": "machine learning predict corrosion depth cable strand features"}
+{"row_id": "A02-008", "seq": 360, "query": "multi vision scanning system corrosion depth steel wire cable"}
+{"row_id": "A02-008", "seq": 361, "query": "corrosion depth prediction model cable strand machine learning features magnetic flux leakage"}
+{"row_id": "A02-008", "seq": 362, "query": "self magnetic flux leakage features corrosion depth prediction cable strands"}
+{"row_id": "A02-008", "seq": 363, "query": "machine learning corrosion depth prediction steel wire features image texture"}
+{"row_id": "A02-008", "seq": 365, "query": "suspension bridge cable corrosion predictive features"}
+{"row_id": "A02-008", "seq": 367, "query": "frequency encoding multicollinearity"}
+{"row_id": "A02-008", "seq": 368, "query": "frequency encoding vs one hot encoding multicollinearity"}
+{"row_id": "A02-008", "seq": 369, "query": "frequency encoding reduces multicollinearity compared to one hot"}
+{"row_id": "A02-008", "seq": 370, "query": "frequency encoding reduces multicollinearity"}
+{"row_id": "A02-008", "seq": 371, "query": "one hot encoding perfect multicollinearity frequency encoding avoids"}
+{"row_id": "A02-008", "seq": 372, "query": "frequency encoding advantages over one hot multicollinearity"}
+{"row_id": "A02-008", "seq": 374, "query": "cable stay bridge inspection corrosion pressure effect"}
+{"row_id": "A02-008", "seq": 375, "query": "cable stayed bridge inspection vendor"}
+{"row_id": "A02-008", "seq": 376, "query": "cable stay bridge corrosion inspection pressure effect"}
+{"row_id": "A02-008", "seq": 377, "query": "cable stay bridge inspection vendor pressure corrosion"}
+{"row_id": "A02-008", "seq": 378, "query": "stay cable inspection corrosion pressure"}
+{"row_id": "A02-008", "seq": 379, "query": "cable stay corrosion pressure effect study"}
+{"row_id": "A02-008", "seq": 380, "query": "hydrostatic pressure corrosion cable stay"}
+{"row_id": "A02-008", "seq": 381, "query": "stress corrosion stay cable"}
+{"row_id": "A02-008", "seq": 382, "query": "stay cable tension corrosion study"}
+{"row_id": "A02-008", "seq": 383, "query": "DYWIDAG stay cable inspection corrosion"}
+{"row_id": "A02-008", "seq": 384, "query": "cable stay bridge corrosion monitoring vendor"}
+{"row_id": "A02-008", "seq": 385, "query": "stay cable corrosion pressure"}
+{"row_id": "A02-008", "seq": 387, "query": "bridge cable corrosion depth tension relationship"}
+{"row_id": "A02-008", "seq": 388, "query": "bridge cable corrosion inspection index tension"}
+{"row_id": "A02-008", "seq": 389, "query": "cable corrosion bridge inspection tension"}
+{"row_id": "A02-008", "seq": 390, "query": "bridge cable corrosion inspection"}
+{"row_id": "A02-008", "seq": 391, "query": "suspension bridge cable corrosion depth tension"}
+{"row_id": "A02-008", "seq": 392, "query": "bridge cable corrosion depth measurement"}
+{"row_id": "A02-008", "seq": 393, "query": "NCHRP 534 cable corrosion tension"}
+{"row_id": "A02-008", "seq": 394, "query": "bridge cable corrosion depth tension relationship"}
+{"row_id": "A02-008", "seq": 395, "query": "bridge cable corrosion index tension loss"}
+{"row_id": "A02-008", "seq": 396, "query": "suspension bridge cable corrosion inspection index tension"}
+{"row_id": "A02-008", "seq": 397, "query": "cable corrosion depth index"}
+{"row_id": "A02-008", "seq": 398, "query": "suspension bridge cable corrosion depth tension"}
+{"row_id": "A02-008", "seq": 399, "query": "NCHRP 534 corrosion depth"}
+{"row_id": "A02-008", "seq": 400, "query": "bridge cable corrosion inspection guidelines"}
+{"row_id": "A02-008", "seq": 401, "query": "cable corrosion depth tension bridge"}
+{"row_id": "A02-008", "seq": 402, "query": "bridge cable corrosion index"}
+{"row_id": "A02-008", "seq": 403, "query": "cable corrosion depth tension"}
+{"row_id": "A02-008", "seq": 404, "query": "NCHRP 534 corrosion depth cable"}
+{"row_id": "A02-008", "seq": 405, "query": "corrosion depth index bridge cable"}
+{"row_id": "A02-008", "seq": 406, "query": "corrosion depth index bridge cable tension reduction"}
+{"row_id": "A02-008", "seq": 407, "query": "corrosion depth index cable"}
+{"row_id": "A02-008", "seq": 408, "query": "cable corrosion index FHWA"}
+{"row_id": "A02-008", "seq": 409, "query": "bridge cable corrosion inspection index NCHRP"}
+{"row_id": "A02-008", "seq": 411, "query": "suspension bridge cable corrosion predictive features"}
+{"row_id": "A02-008", "seq": 412, "query": "bridge cable tension corrosion monitoring features"}
+{"row_id": "A02-008", "seq": 413, "query": "predictive model cable corrosion temperature humidity tension suspension bridge"}
+{"row_id": "A02-008", "seq": 415, "query": "suspension bridge cable corrosion tension relationship"}
+{"row_id": "A02-008", "seq": 416, "query": "suspension bridge cable corrosion depth temperature humidity tension"}
+{"row_id": "A02-008", "seq": 417, "query": "corrosion tension relationship suspension bridge cable"}
+{"row_id": "A02-008", "seq": 418, "query": "corrosion effect on tensile strength suspension bridge cables"}
+{"row_id": "A02-008", "seq": 419, "query": "suspension bridge cable corrosion rate model temperature humidity"}
+{"row_id": "A02-008", "seq": 420, "query": "cable tension corrosion suspension bridge"}
+{"row_id": "A02-008", "seq": 421, "query": "time dependent corrosion rate model bridge wires temperature humidity"}
+{"row_id": "A02-008", "seq": 422, "query": "suspension bridge cable corrosion tension relationship study"}
+{"row_id": "A02-008", "seq": 423, "query": "time dependent corrosion rate model bridge wires"}
+{"row_id": "A02-008", "seq": 424, "query": "corrosion depth tension reduction suspension bridge cable"}
+{"row_id": "A02-008", "seq": 425, "query": "corrosion depth effect on tensile strength steel wire cable"}
+{"row_id": "A02-008", "seq": 427, "query": "bridge cable corrosion temperature humidity tension"}
+{"row_id": "A02-008", "seq": 428, "query": "bridge cable corrosion depth temperature humidity tension study"}
+{"row_id": "A02-008", "seq": 429, "query": "suspension bridge cable corrosion temperature humidity tension depth"}
+{"row_id": "A02-008", "seq": 431, "query": "bridge cable inspection predictive features"}
+{"row_id": "A02-008", "seq": 432, "query": "bridge cable condition monitoring tension corrosion temperature vibration fatigue predictive model"}
+{"row_id": "A02-008", "seq": 433, "query": "predictive model bridge cable corrosion features"}
+{"row_id": "A02-016", "seq": 1, "query": "suspension bridge cable inspection predictive features"}
+{"row_id": "A02-016", "seq": 2, "query": "bridge cable corrosion depth prediction temperature humidity tension"}
+{"row_id": "A02-016", "seq": 3, "query": "predictive features corrosion depth bridge cable"}
+{"row_id": "A02-016", "seq": 4, "query": "bridge cable corrosion prediction temperature humidity tension features"}
+{"row_id": "A02-016", "seq": 6, "query": "cable corrosion temperature humidity interaction features"}
+{"row_id": "A02-016", "seq": 7, "query": "feature engineering interaction temperature humidity cable corrosion"}
+{"row_id": "A02-016", "seq": 8, "query": "cable corrosion prediction temperature humidity machine learning"}
+{"row_id": "A02-016", "seq": 9, "query": "temperature humidity interaction feature cable corrosion prediction"}
+{"row_id": "A02-016", "seq": 10, "query": "feature engineering temperature humidity interaction corrosion"}
+{"row_id": "A02-016", "seq": 11, "query": "cable corrosion machine learning temperature humidity features"}
+{"row_id": "A02-016", "seq": 12, "query": "temperature humidity interaction feature engineering corrosion prediction"}
+{"row_id": "A02-016", "seq": 13, "query": "cable corrosion temperature humidity feature engineering"}
+{"row_id": "A02-016", "seq": 14, "query": "temperature humidity interaction feature engineering"}
+{"row_id": "A02-016", "seq": 15, "query": "cable corrosion machine learning temperature humidity interaction term"}
+{"row_id": "A02-016", "seq": 16, "query": "main cable corrosion humidity temperature interaction"}
+{"row_id": "A02-016", "seq": 17, "query": "temperature humidity interaction term feature engineering corrosion prediction"}
+{"row_id": "A02-016", "seq": 19, "query": "bridge cable corrosion stress index temperature pressure"}
+{"row_id": "A02-016", "seq": 20, "query": "bridge cable corrosion depth tension temperature pressure"}
+{"row_id": "A02-016", "seq": 21, "query": "corrosion stress index bridge cables"}
+{"row_id": "A02-016", "seq": 22, "query": "stress corrosion interaction index bridge cable"}
+{"row_id": "A02-016", "seq": 23, "query": "corrosion stress interaction index"}
+{"row_id": "A02-016", "seq": 25, "query": "cable corrosion risk factors temperature humidity dew point suspension bridge"}
+{"row_id": "A02-016", "seq": 26, "query": "suspension bridge cable corrosion temperature humidity dew point"}
+{"row_id": "A02-016", "seq": 27, "query": "cable corrosion temperature humidity dew point bridge"}
+{"row_id": "A02-016", "seq": 28, "query": "risk factors cable corrosion suspension bridge temperature humidity dew point"}
+{"row_id": "A02-016", "seq": 29, "query": "suspension bridge main cable corrosion temperature humidity dew point factors"}
+{"row_id": "A02-016", "seq": 30, "query": "temperature relative humidity dew point corrosion main cable suspension bridge"}
+{"row_id": "A02-016", "seq": 31, "query": "cable temperature relative humidity corrosion suspension bridge study"}
+{"row_id": "A02-016", "seq": 32, "query": "dehumidification systems suspension bridges risk factors corrosion temperature humidity dew point"}
+{"row_id": "A02-016", "seq": 34, "query": "Marenko index cable inspection suspension bridge"}
+{"row_id": "A02-016", "seq": 35, "query": "Marenko index cable"}
+{"row_id": "A02-016", "seq": 36, "query": "Marenko index suspension bridge"}
+{"row_id": "A02-016", "seq": 37, "query": "Marenko index bridge cable inspection"}
+{"row_id": "A02-016", "seq": 38, "query": "Marenko index bridge cable"}
+{"row_id": "A02-016", "seq": 39, "query": "Marenko index"}
+{"row_id": "A02-016", "seq": 40, "query": "cable inspection index Marenko"}
+{"row_id": "A02-016", "seq": 41, "query": "Marenko cable inspection"}
+{"row_id": "A02-016", "seq": 42, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 43, "query": "Marenko cable inspection index suspension"}
+{"row_id": "A02-016", "seq": 44, "query": "Marenko index cable"}
+{"row_id": "A02-016", "seq": 45, "query": "Marenko cable inspection"}
+{"row_id": "A02-016", "seq": 46, "query": "cable inspection index suspension bridge"}
+{"row_id": "A02-016", "seq": 47, "query": "Marenko index bridge cable"}
+{"row_id": "A02-016", "seq": 48, "query": "Marenko cable health index"}
+{"row_id": "A02-016", "seq": 49, "query": "Marenko index bridge cable inspection"}
+{"row_id": "A02-016", "seq": 50, "query": "Marenko index bridge cable inspection"}
+{"row_id": "A02-016", "seq": 51, "query": "Marenko index cable"}
+{"row_id": "A02-016", "seq": 52, "query": "cable inspection index suspension bridge"}
+{"row_id": "A02-016", "seq": 53, "query": "Marenko bridge cable inspection"}
+{"row_id": "A02-016", "seq": 54, "query": "Marenko cable inspection bridge"}
+{"row_id": "A02-016", "seq": 55, "query": "Marenko index cable inspection"}
+{"row_id": "A02-016", "seq": 56, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 57, "query": "Marenko cable inspection index"}
+{"row_id": "A02-016", "seq": 58, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 59, "query": "Marenko bridge cable index"}
+{"row_id": "A02-016", "seq": 60, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 61, "query": "Marenko bridge cable"}
+{"row_id": "A02-016", "seq": 62, "query": "cable inspection index suspension bridge"}
+{"row_id": "A02-016", "seq": 63, "query": "Marenko index structural health monitoring"}
+{"row_id": "A02-016", "seq": 64, "query": "Marenko cable condition index"}
+{"row_id": "A02-016", "seq": 65, "query": "Marenko cable inspection index suspension"}
+{"row_id": "A02-016", "seq": 66, "query": "Marenko"}
+{"row_id": "A02-016", "seq": 67, "query": "Marenko cable inspection"}
+{"row_id": "A02-016", "seq": 68, "query": "Marenko index bridge cable"}
+{"row_id": "A02-016", "seq": 69, "query": "Marenko index bridge cable inspection"}
+{"row_id": "A02-016", "seq": 70, "query": "Marenko index bridge cable condition"}
+{"row_id": "A02-016", "seq": 71, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 72, "query": "Marenko cable inspection index suspension"}
+{"row_id": "A02-016", "seq": 73, "query": "Marenko index structural health"}
+{"row_id": "A02-016", "seq": 74, "query": "cable inspection index"}
+{"row_id": "A02-016", "seq": 75, "query": "cable condition index suspension bridge"}
+{"row_id": "A02-016", "seq": 76, "query": "Marenko bridge cable"}
+{"row_id": "A02-016", "seq": 77, "query": "cable inspection index suspension bridge"}
+{"row_id": "A02-016", "seq": 78, "query": "Marenko cable inspection index"}
+{"row_id": "A02-016", "seq": 79, "query": "Marenko cable inspection index"}
+{"row_id": "A02-016", "seq": 80, "query": "Marenko bridge"}
+{"row_id": "A02-016", "seq": 81, "query": "Marenko cable inspection"}
+{"row_id": "A02-016", "seq": 82, "query": "Marenko NCHRP cable"}
+{"row_id": "A02-016", "seq": 83, "query": "Marenkov index"}
+{"row_id": "A02-016", "seq": 85, "query": "dew point calculation formula temperature humidity"}
+{"row_id": "A02-016", "seq": 87, "query": "Marenko index cable inspection suspension bridge"}
+{"row_id": "A02-016", "seq": 88, "query": "Marenko index cable"}
+{"row_id": "A02-016", "seq": 89, "query": "cable inspection features suspension bridge index"}
+{"row_id": "A02-016", "seq": 90, "query": "Marenko index bridge cable inspection"}
+{"row_id": "A02-016", "seq": 91, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 92, "query": "Marenko index cable inspection"}
+{"row_id": "A02-016", "seq": 93, "query": "Marenko index suspension bridge cable inspection"}
+{"row_id": "A02-016", "seq": 94, "query": "Marenko cable inspection"}
+{"row_id": "A02-016", "seq": 95, "query": "Marenko index"}
+{"row_id": "A02-016", "seq": 96, "query": "Marenko index cable condition"}
+{"row_id": "A02-016", "seq": 97, "query": "cable inspection index suspension bridge"}
+{"row_id": "A02-016", "seq": 98, "query": "Marenko index cable condition"}
+{"row_id": "A02-016", "seq": 99, "query": "Marenko cable inspection index bridge"}
+{"row_id": "A02-016", "seq": 100, "query": "Marenko bridge cable"}
+{"row_id": "A02-016", "seq": 101, "query": "cable inspection index suspension bridge"}
+{"row_id": "A02-016", "seq": 102, "query": "Marenko index bridge cable"}
+{"row_id": "A02-016", "seq": 103, "query": "Marenko bridge cable inspection"}
+{"row_id": "A02-016", "seq": 104, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 105, "query": "Marenko index bridge cable"}
+{"row_id": "A02-016", "seq": 106, "query": "Marenko index health index"}
+{"row_id": "A02-016", "seq": 107, "query": "Marenko cable inspection bridge"}
+{"row_id": "A02-016", "seq": 108, "query": "Marenko index image processing"}
+{"row_id": "A02-016", "seq": 109, "query": "cable inspection index"}
+{"row_id": "A02-016", "seq": 110, "query": "Marenko bridge inspection"}
+{"row_id": "A02-016", "seq": 111, "query": "cable health index suspension bridge"}
+{"row_id": "A02-016", "seq": 113, "query": "corrosion effect on suspension bridge cable tension"}
+{"row_id": "A02-016", "seq": 114, "query": "how corrosion reduces tension in suspension bridge cables"}
+{"row_id": "A02-016", "seq": 116, "query": "handling multicollinearity feature engineering pandas"}
+{"row_id": "A02-016", "seq": 117, "query": "multicollinearity feature engineering pandas PCA additive features"}
+{"row_id": "A02-016", "seq": 118, "query": "PCA multicollinearity pandas"}
+{"row_id": "A02-016", "seq": 119, "query": "multicollinearity feature engineering pandas PCA tutorial"}
+{"row_id": "A02-016", "seq": 120, "query": "PCA address multicollinearity python pandas tutorial"}
+{"row_id": "A02-016", "seq": 121, "query": "detect multicollinearity pandas VIF tutorial"}
+{"row_id": "A02-016", "seq": 122, "query": "additive features pandas feature engineering"}
+{"row_id": "A02-016", "seq": 123, "query": "multicollinearity PCA pandas tutorial"}
+{"row_id": "A02-016", "seq": 124, "query": "principal component analysis multicollinearity pandas example"}
+{"row_id": "A02-016", "seq": 126, "query": "bridge cable corrosion factors tension vibration humidity temperature"}
+{"row_id": "A02-016", "seq": 127, "query": "bridge cable corrosion predictive modeling machine learning"}
+{"row_id": "A02-016", "seq": 128, "query": "tension vibration effect corrosion bridge cable"}
+{"row_id": "A02-016", "seq": 129, "query": "annual corrosion rate bridge cable temperature humidity predictive model multilayer perceptron"}
+{"row_id": "A02-016", "seq": 130, "query": "bridge cable corrosion fatigue tension vibration humidity temperature study"}
+{"row_id": "A02-016", "seq": 132, "query": "bridge cable corrosion tension pressure interaction index"}
+{"row_id": "A02-016", "seq": 133, "query": "bridge cable corrosion tension interaction"}
+{"row_id": "A02-016", "seq": 134, "query": "bridge cable corrosion tension index"}
+{"row_id": "A02-016", "seq": 135, "query": "corrosion stress interaction index bridge cable"}
+{"row_id": "A02-016", "seq": 136, "query": "interaction index corrosion tension cable"}
+{"row_id": "A02-016", "seq": 137, "query": "interaction index corrosion tension bridge cable"}
+{"row_id": "A02-016", "seq": 138, "query": "corrosion stress interaction index bridge"}
+{"row_id": "A02-016", "seq": 139, "query": "corrosion stress interaction index"}
+{"row_id": "A02-016", "seq": 140, "query": "stress corrosion interaction index cable"}
+{"row_id": "A02-016", "seq": 141, "query": "corrosion tension interaction index steel cable"}
+{"row_id": "A02-016", "seq": 142, "query": "corrosion stress interaction index cable"}
+{"row_id": "A02-016", "seq": 143, "query": "corrosion stress interaction index cable"}
+{"row_id": "A02-016", "seq": 144, "query": "interaction factor corrosion tension cable"}
+{"row_id": "A02-016", "seq": 145, "query": "cable corrosion interaction index tension"}
+{"row_id": "A02-016", "seq": 146, "query": "corrosion stress interaction index cable"}
+{"row_id": "A02-016", "seq": 147, "query": "corrosion fatigue interaction factor"}
+{"row_id": "A02-016", "seq": 148, "query": "interaction index bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 149, "query": "interaction index bridge cable"}
+{"row_id": "A02-016", "seq": 150, "query": "corrosion fatigue interaction factor cable"}
+{"row_id": "A02-016", "seq": 151, "query": "corrosion fatigue interaction coefficient bridge cable"}
+{"row_id": "A02-016", "seq": 152, "query": "interaction index corrosion fatigue bridge cable"}
+{"row_id": "A02-016", "seq": 153, "query": "\"interaction index\" bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 154, "query": "corrosion fatigue interaction factor"}
+{"row_id": "A02-016", "seq": 155, "query": "corrosion stress interaction factor cable"}
+{"row_id": "A02-016", "seq": 156, "query": "interaction index corrosion fatigue cable"}
+{"row_id": "A02-016", "seq": 158, "query": "suspension bridge cable corrosion exposure index Marenko"}
+{"row_id": "A02-016", "seq": 159, "query": "bridge cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 160, "query": "Marenko corrosion exposure index"}
+{"row_id": "A02-016", "seq": 161, "query": "Marenko bridge cable corrosion index"}
+{"row_id": "A02-016", "seq": 162, "query": "Marenko exposure index suspension bridge"}
+{"row_id": "A02-016", "seq": 163, "query": "Marenko corrosion index"}
+{"row_id": "A02-016", "seq": 164, "query": "Marenko cable corrosion exposure"}
+{"row_id": "A02-016", "seq": 165, "query": "Marenko corrosion exposure index bridge"}
+{"row_id": "A02-016", "seq": 166, "query": "Marenko bridge cable"}
+{"row_id": "A02-016", "seq": 167, "query": "Marenko corrosion exposure index bridge"}
+{"row_id": "A02-016", "seq": 168, "query": "Marenko cable exposure index"}
+{"row_id": "A02-016", "seq": 169, "query": "Marenko corrosion"}
+{"row_id": "A02-016", "seq": 170, "query": "Marenko bridge cable corrosion index"}
+{"row_id": "A02-016", "seq": 171, "query": "Marenko corrosion exposure"}
+{"row_id": "A02-016", "seq": 172, "query": "Marenko suspension bridge cable corrosion index"}
+{"row_id": "A02-016", "seq": 173, "query": "Marenko suspension bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 174, "query": "Marenko bridge cable"}
+{"row_id": "A02-016", "seq": 175, "query": "Marenko exposure index"}
+{"row_id": "A02-016", "seq": 176, "query": "Marenko corrosion index suspension bridge"}
+{"row_id": "A02-016", "seq": 177, "query": "Marenko A cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 178, "query": "\"Marenko\" cable corrosion"}
+{"row_id": "A02-016", "seq": 179, "query": "Marenko exposure index cable corrosion"}
+{"row_id": "A02-016", "seq": 180, "query": "Marenko corrosion index bridge"}
+{"row_id": "A02-016", "seq": 181, "query": "Marenko cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 182, "query": "Marenko bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 183, "query": "Marenko exposure index"}
+{"row_id": "A02-016", "seq": 184, "query": "Marenko corrosion exposure index bridge"}
+{"row_id": "A02-016", "seq": 185, "query": "Marenko cable corrosion index"}
+{"row_id": "A02-016", "seq": 186, "query": "Marenko A cable corrosion"}
+{"row_id": "A02-016", "seq": 187, "query": "Marenko A. cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 188, "query": "Marenko corrosion exposure"}
+{"row_id": "A02-016", "seq": 189, "query": "\"Marenko\" \"cable\" corrosion"}
+{"row_id": "A02-016", "seq": 190, "query": "Marenko A cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 191, "query": "Marenko bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 192, "query": "Marenko corrosion index bridge"}
+{"row_id": "A02-016", "seq": 193, "query": "Marenko A cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 194, "query": "Marenko suspension bridge cable exposure index"}
+{"row_id": "A02-016", "seq": 195, "query": "Marenko A corrosion exposure index"}
+{"row_id": "A02-016", "seq": 196, "query": "Marenko A cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 197, "query": "Marenko A cable corrosion"}
+{"row_id": "A02-016", "seq": 198, "query": "Marenko bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 199, "query": "Marenko cable exposure"}
+{"row_id": "A02-016", "seq": 200, "query": "A Marenko cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 201, "query": "Marenko cable exposure"}
+{"row_id": "A02-016", "seq": 202, "query": "Marenko bridge"}
+{"row_id": "A02-016", "seq": 203, "query": "cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 204, "query": "Marenko corrosion index"}
+{"row_id": "A02-016", "seq": 205, "query": "Marenko cable corrosion"}
+{"row_id": "A02-016", "seq": 206, "query": "\"Marenko\" \"exposure index\""}
+{"row_id": "A02-016", "seq": 207, "query": "Marenko A bridge"}
+{"row_id": "A02-016", "seq": 208, "query": "Marenko exposure index bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 209, "query": "A. Marenko cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 210, "query": "cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 211, "query": "Marenko exposure index cable"}
+{"row_id": "A02-016", "seq": 212, "query": "Marenko A cable"}
+{"row_id": "A02-016", "seq": 213, "query": "A Marenko cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 214, "query": "Marenko bridge cable corrosion index"}
+{"row_id": "A02-016", "seq": 215, "query": "Marenko exposure index cable bridge"}
+{"row_id": "A02-016", "seq": 216, "query": "Marenko cable corrosion exposure index suspension bridge"}
+{"row_id": "A02-016", "seq": 217, "query": "A Marenko corrosion exposure index"}
+{"row_id": "A02-016", "seq": 218, "query": "Маренко индекс коррозии кабеля подвесного моста"}
+{"row_id": "A02-016", "seq": 219, "query": "Marenko bridge cable corrosion index"}
+{"row_id": "A02-016", "seq": 220, "query": "A Marenko bridge cable exposure index"}
+{"row_id": "A02-016", "seq": 221, "query": "A Marenko cable corrosion exposure"}
+{"row_id": "A02-016", "seq": 222, "query": "Маренко индекс коррозии кабеля подвесного моста"}
+{"row_id": "A02-016", "seq": 223, "query": "A Marenko bridge cable corrosion exposure"}
+{"row_id": "A02-016", "seq": 224, "query": "Маренко индекс коррозии подвесного моста"}
+{"row_id": "A02-016", "seq": 226, "query": "target encoding sensor vendor feature engineering"}
+{"row_id": "A02-016", "seq": 227, "query": "target encoding categorical sensor vendor"}
+{"row_id": "A02-016", "seq": 228, "query": "sensor vendor categorical encoding"}
+{"row_id": "A02-016", "seq": 229, "query": "target encoding vendor column sensor data"}
+{"row_id": "A02-016", "seq": 230, "query": "target encoding example categorical feature"}
+{"row_id": "A02-016", "seq": 231, "query": "mean encoding categorical feature example"}
+{"row_id": "A02-016", "seq": 232, "query": "catboost encoding sensor vendor"}
+{"row_id": "A02-016", "seq": 233, "query": "high cardinality categorical encoding sensor"}
+{"row_id": "A02-016", "seq": 234, "query": "target encoding vendor column"}
+{"row_id": "A02-016", "seq": 235, "query": "target encoding high cardinality categorical feature"}
+{"row_id": "A02-016", "seq": 236, "query": "sensor vendor categorical variable encoding"}
+{"row_id": "A02-016", "seq": 237, "query": "target encoding for categorical sensor data"}
+{"row_id": "A02-016", "seq": 238, "query": "feature engineering sensor vendor categorical"}
+{"row_id": "A02-016", "seq": 240, "query": "Marenko index cable corrosion exposure"}
+{"row_id": "A02-016", "seq": 241, "query": "Marenko index corrosion"}
+{"row_id": "A02-016", "seq": 242, "query": "Marenko index cable corrosion"}
+{"row_id": "A02-016", "seq": 243, "query": "Marenko index"}
+{"row_id": "A02-016", "seq": 244, "query": "Marenko cable corrosion index"}
+{"row_id": "A02-016", "seq": 245, "query": "Marenko corrosion index"}
+{"row_id": "A02-016", "seq": 246, "query": "Marenko index exposure"}
+{"row_id": "A02-016", "seq": 247, "query": "Marenko cable corrosion"}
+{"row_id": "A02-016", "seq": 248, "query": "Marenko index corrosion exposure cable"}
+{"row_id": "A02-016", "seq": 249, "query": "Marenko corrosion index"}
+{"row_id": "A02-016", "seq": 250, "query": "Marenko index cable exposure"}
+{"row_id": "A02-016", "seq": 251, "query": "Marenko index corrosion exposure"}
+{"row_id": "A02-016", "seq": 252, "query": "Marenko cable"}
+{"row_id": "A02-016", "seq": 253, "query": "\"Marenko\" corrosion"}
+{"row_id": "A02-016", "seq": 254, "query": "cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 255, "query": "\"Marenko\" index"}
+{"row_id": "A02-016", "seq": 256, "query": "Marenko corrosion researcher"}
+{"row_id": "A02-016", "seq": 257, "query": "Marenko index corrosion exposure"}
+{"row_id": "A02-016", "seq": 258, "query": "Marenko index corrosion"}
+{"row_id": "A02-016", "seq": 259, "query": "Marenko cable corrosion index"}
+{"row_id": "A02-016", "seq": 260, "query": "Marenko cable"}
+{"row_id": "A02-016", "seq": 261, "query": "индекс Маренко коррозия кабеля"}
+{"row_id": "A02-016", "seq": 262, "query": "S. Marenko cable corrosion"}
+{"row_id": "A02-016", "seq": 263, "query": "Marenko corrosion research"}
+{"row_id": "A02-016", "seq": 265, "query": "bridge cable corrosion exposure index temperature humidity dust"}
+{"row_id": "A02-016", "seq": 266, "query": "cable corrosion exposure index bridge"}
+{"row_id": "A02-016", "seq": 267, "query": "bridge cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 268, "query": "bridge cable corrosion exposure classification temperature humidity dust"}
+{"row_id": "A02-016", "seq": 269, "query": "bridge cable corrosion humidity index"}
+{"row_id": "A02-016", "seq": 270, "query": "bridge cable exposure classification"}
+{"row_id": "A02-016", "seq": 271, "query": "bridge cable exposure class C1 C2"}
+{"row_id": "A02-016", "seq": 272, "query": "bridge cable corrosion index temperature humidity"}
+{"row_id": "A02-016", "seq": 273, "query": "cable corrosion exposure index suspension bridge"}
+{"row_id": "A02-016", "seq": 274, "query": "cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 275, "query": "suspension bridge cable corrosion index temperature humidity"}
+{"row_id": "A02-016", "seq": 276, "query": "bridge cable corrosion exposure index methodology"}
+{"row_id": "A02-016", "seq": 277, "query": "cable corrosion index bridge"}
+{"row_id": "A02-016", "seq": 278, "query": "bridge cable corrosion monitoring temperature humidity"}
+{"row_id": "A02-016", "seq": 279, "query": "AASHTO bridge cable exposure class temperature humidity"}
+{"row_id": "A02-016", "seq": 280, "query": "corrosion exposure index bridge cables"}
+{"row_id": "A02-016", "seq": 281, "query": "\"corrosion exposure index\" bridge cable"}
+{"row_id": "A02-016", "seq": 282, "query": "cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 283, "query": "bridge cable corrosion exposure classification temperature humidity"}
+{"row_id": "A02-016", "seq": 284, "query": "bridge cable environmental exposure index"}
+{"row_id": "A02-016", "seq": 285, "query": "bridge cable corrosion exposure dust"}
+{"row_id": "A02-016", "seq": 286, "query": "\"Bridge cable\" \"exposure index\""}
+{"row_id": "A02-016", "seq": 287, "query": "bridge cable corrosion exposure classification"}
+{"row_id": "A02-016", "seq": 288, "query": "corrosion index temperature humidity bridge cable"}
+{"row_id": "A02-016", "seq": 289, "query": "bridge cable exposure index humidity"}
+{"row_id": "A02-016", "seq": 290, "query": "bridge cable corrosion exposure index"}
+{"row_id": "A02-016", "seq": 291, "query": "corrosion exposure index for bridge cables"}
+{"row_id": "A02-016", "seq": 292, "query": "corrosion index bridge cable temperature humidity dust"}
+{"row_id": "A02-016", "seq": 293, "query": "CEI bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 294, "query": "environmental exposure index bridge cable"}
+{"row_id": "A02-016", "seq": 295, "query": "corrosion exposure index humidity dust bridge"}
+{"row_id": "A02-016", "seq": 296, "query": "CEI bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 297, "query": "bridge cable exposure index"}
+{"row_id": "A02-016", "seq": 298, "query": "bridge cable corrosion exposure classification"}
+{"row_id": "A02-016", "seq": 299, "query": "bridge cable environmental classification temperature humidity dust"}
+{"row_id": "A02-016", "seq": 300, "query": "cable corrosion exposure index temperature humidity dust bridge"}
+{"row_id": "A02-016", "seq": 301, "query": "ISO 9223 bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 303, "query": "Marenko index cable inspection"}
+{"row_id": "A02-016", "seq": 304, "query": "Marenko index corrosion cable"}
+{"row_id": "A02-016", "seq": 305, "query": "Marenko index bridge cable"}
+{"row_id": "A02-016", "seq": 306, "query": "Marenko index cable"}
+{"row_id": "A02-016", "seq": 307, "query": "predictive features cable corrosion tension temperature bridge inspection"}
+{"row_id": "A02-016", "seq": 308, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 309, "query": "Marenko cable inspection index bridge"}
+{"row_id": "A02-016", "seq": 310, "query": "Marenko cable condition index"}
+{"row_id": "A02-016", "seq": 311, "query": "Marenko index"}
+{"row_id": "A02-016", "seq": 312, "query": "Marenko index bridge cable inspection"}
+{"row_id": "A02-016", "seq": 313, "query": "Marenkov index cable"}
+{"row_id": "A02-016", "seq": 314, "query": "Marenko bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 315, "query": "Marenko cable corrosion index"}
+{"row_id": "A02-016", "seq": 316, "query": "\"Marenko\" bridge cable"}
+{"row_id": "A02-016", "seq": 317, "query": "Marenko index corrosion"}
+{"row_id": "A02-016", "seq": 318, "query": "Marenko index bridge cable condition assessment"}
+{"row_id": "A02-016", "seq": 319, "query": "\"Marenko\" cable"}
+{"row_id": "A02-016", "seq": 320, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 321, "query": "cable inspection index Marenko"}
+{"row_id": "A02-016", "seq": 322, "query": "Marenko bridge cable inspection index"}
+{"row_id": "A02-016", "seq": 323, "query": "\"Marenko\" corrosion"}
+{"row_id": "A02-016", "seq": 324, "query": "Marenko et al cable inspection"}
+{"row_id": "A02-016", "seq": 325, "query": "Marenkov index cable"}
+{"row_id": "A02-016", "seq": 326, "query": "Marenko cable inspection"}
+{"row_id": "A02-016", "seq": 327, "query": "Marenko bridge"}
+{"row_id": "A02-016", "seq": 328, "query": "Marenko cable inspection bridge"}
+{"row_id": "A02-016", "seq": 329, "query": "Marenko et al cable inspection"}
+{"row_id": "A02-016", "seq": 330, "query": "Marenko predictive features cable"}
+{"row_id": "A02-016", "seq": 331, "query": "Marenko index cable condition assessment"}
+{"row_id": "A02-016", "seq": 333, "query": "suspension bridge cable corrosion predictive features"}
+{"row_id": "A02-016", "seq": 334, "query": "tension effect on cable corrosion suspension bridge predictive modeling"}
+{"row_id": "A02-016", "seq": 336, "query": "target encoding leakage prevention cross validation"}
+{"row_id": "A02-016", "seq": 337, "query": "prevent leakage target encoding cross validation pipeline"}
+{"row_id": "A02-016", "seq": 338, "query": "target encoding cross validation leakage prevention guide"}
+{"row_id": "A02-016", "seq": 339, "query": "target encoding leakage cross validation sklearn pipeline"}
+{"row_id": "A02-016", "seq": 341, "query": "bridge cable corrosion tension temperature humidity"}
+{"row_id": "A02-016", "seq": 342, "query": "temperature humidity tension cable corrosion bridge"}
+{"row_id": "A02-016", "seq": 343, "query": "effect of tension on cable corrosion bridge"}
+{"row_id": "A02-016", "seq": 344, "query": "bridge cable degradation temperature humidity tension corrosion study"}
+{"row_id": "A02-016", "seq": 345, "query": "suspension bridge cable corrosion temperature humidity tension"}
+{"row_id": "A02-016", "seq": 347, "query": "bridge cable corrosion temperature humidity pressure tension"}
+{"row_id": "A02-016", "seq": 348, "query": "bridge cable stress corrosion cracking factors"}
+{"row_id": "A02-016", "seq": 349, "query": "suspension bridge cable corrosion temperature humidity pressure tension stress corrosion cracking"}
+{"row_id": "A02-016", "seq": 350, "query": "bridge cable corrosion temperature humidity tension stress corrosion cracking factors study"}
+{"row_id": "A02-016", "seq": 351, "query": "suspension bridge cable corrosion monitoring temperature humidity"}
+{"row_id": "A02-016", "seq": 353, "query": "temperature humidity pressure effect on corrosion rate of bridge cables"}
+{"row_id": "A02-016", "seq": 354, "query": "temperature humidity pressure corrosion bridge cable study"}
+{"row_id": "A02-016", "seq": 355, "query": "corrosion monitoring system main cable suspension bridge temperature relative humidity"}
+{"row_id": "A02-016", "seq": 356, "query": "air pressure effect on steel cable corrosion bridge"}
+{"row_id": "A02-016", "seq": 357, "query": "pressure humidity corrosion steel cable"}
+{"row_id": "A02-016", "seq": 358, "query": "2016 corrosion monitoring system main cable suspension bridge temperature relative humidity"}
+{"row_id": "A02-016", "seq": 360, "query": "suspension bridge cable corrosion temperature humidity"}
+{"row_id": "A02-016", "seq": 361, "query": "suspension bridge cable corrosion pressure tension ratio"}
+{"row_id": "A02-016", "seq": 362, "query": "suspension bridge cable corrosion factors temperature humidity pressure tension"}
+{"row_id": "A02-016", "seq": 363, "query": "suspension bridge cable corrosion temperature humidity tension ratio study"}
+{"row_id": "A02-016", "seq": 364, "query": "temperature humidity tension corrosion suspension bridge cable"}
+{"row_id": "A02-016", "seq": 365, "query": "cable corrosion tension ratio suspension bridge study"}
+{"row_id": "A02-016", "seq": 366, "query": "tension ratio cable corrosion bridge"}
+{"row_id": "A02-016", "seq": 367, "query": "bridge wire corrosion rate model temperature humidity tension"}
+{"row_id": "A02-016", "seq": 368, "query": "stress corrosion suspension bridge cable tension"}
+{"row_id": "A02-016", "seq": 369, "query": "tension ratio effect on cable corrosion suspension bridge"}
+{"row_id": "A02-016", "seq": 371, "query": "bridge cable corrosion model temperature humidity pressure"}
+{"row_id": "A02-016", "seq": 372, "query": "bridge cable corrosion temperature humidity model"}
+{"row_id": "A02-016", "seq": 373, "query": "bridge cable corrosion model temperature humidity"}
+{"row_id": "A02-016", "seq": 374, "query": "stay cable corrosion model temperature humidity pressure"}
+{"row_id": "A02-016", "seq": 375, "query": "corrosion model stay cable temperature humidity"}
+{"row_id": "A02-016", "seq": 376, "query": "stay cable corrosion temperature humidity model PDF"}
+{"row_id": "A02-016", "seq": 377, "query": "bridge cable corrosion environmental model"}
+{"row_id": "A02-016", "seq": 378, "query": "bridge cable corrosion rate model temperature humidity"}
+{"row_id": "A02-016", "seq": 379, "query": "bridge cable corrosion model temperature humidity"}
+{"row_id": "A02-016", "seq": 380, "query": "stay cable corrosion temperature humidity engineering"}
+{"row_id": "A02-016", "seq": 381, "query": "computational method main cable temperature relative humidity suspension bridge"}
+{"row_id": "A02-016", "seq": 383, "query": "bridge cable corrosion temperature humidity tension model"}
+{"row_id": "A02-016", "seq": 384, "query": "bridge cable corrosion rate model temperature humidity tension"}
+{"row_id": "A02-016", "seq": 385, "query": "suspension bridge cable corrosion model temperature humidity tension"}
+{"row_id": "A02-016", "seq": 386, "query": "suspension bridge cable corrosion temperature humidity stress model"}
+{"row_id": "A02-016", "seq": 387, "query": "steel cable corrosion model temperature humidity tension"}
+{"row_id": "A02-016", "seq": 388, "query": "bridge cable corrosion rate model"}
+{"row_id": "A02-016", "seq": 389, "query": "main cable corrosion model temperature humidity"}
+{"row_id": "A02-016", "seq": 391, "query": "Marenko index cable inspection suspension bridge"}
+{"row_id": "A02-016", "seq": 392, "query": "Marenko index cable"}
+{"row_id": "A02-016", "seq": 393, "query": "Marenko index bridge cable inspection"}
+{"row_id": "A02-016", "seq": 395, "query": "Marenko index cable inspection suspension"}
+{"row_id": "A02-016", "seq": 396, "query": "Marenko cable inspection"}
+{"row_id": "A02-016", "seq": 397, "query": "Marenko index suspension bridge cable inspection"}
+{"row_id": "A02-016", "seq": 398, "query": "Marenko index cable inspection"}
+{"row_id": "A02-016", "seq": 399, "query": "cable inspection index suspension bridge"}
+{"row_id": "A02-016", "seq": 400, "query": "Marenko index"}
+{"row_id": "A02-016", "seq": 401, "query": "Marenko bridge cable inspection"}
+{"row_id": "A02-016", "seq": 402, "query": "Marenko index cable inspection"}
+{"row_id": "A02-016", "seq": 403, "query": "Marenko cable inspection"}
+{"row_id": "A02-016", "seq": 404, "query": "Marenko index bridge"}
+{"row_id": "A02-016", "seq": 405, "query": "Marenko index cable inspection suspension bridge features"}
+{"row_id": "A02-016", "seq": 406, "query": "Marenko index inspection"}
+{"row_id": "A02-016", "seq": 407, "query": "cable inspection index suspension bridge"}
+{"row_id": "A02-016", "seq": 408, "query": "\"Marenko\" cable inspection"}
+{"row_id": "A02-016", "seq": 410, "query": "temperature humidity interaction feature engineering predictive modeling"}
+{"row_id": "A02-016", "seq": 411, "query": "temperature humidity interaction term predictive model"}
+{"row_id": "A02-016", "seq": 412, "query": "feature interaction temperature humidity machine learning"}
+{"row_id": "A02-016", "seq": 413, "query": "temperature humidity interaction term regression"}
+{"row_id": "A02-016", "seq": 414, "query": "temperature humidity interaction feature engineering example"}
+{"row_id": "A02-016", "seq": 415, "query": "temperature humidity interaction feature engineering"}
+{"row_id": "A02-016", "seq": 416, "query": "temperature humidity interaction feature python pandas"}
+{"row_id": "A02-016", "seq": 417, "query": "temperature humidity interaction feature engineering machine learning"}
+{"row_id": "A02-016", "seq": 418, "query": "interaction term temperature humidity regression example"}
+{"row_id": "A02-016", "seq": 419, "query": "temperature humidity cross feature machine learning"}
+{"row_id": "A02-016", "seq": 420, "query": "temperature humidity interaction feature engineering tutorial"}
+{"row_id": "A02-016", "seq": 421, "query": "temperature humidity feature crossing"}
+{"row_id": "A02-016", "seq": 422, "query": "temperature humidity interaction feature engineering energy consumption"}
+{"row_id": "A02-016", "seq": 423, "query": "temperature humidity interaction feature"}
+{"row_id": "A02-016", "seq": 424, "query": "temperature humidity interaction feature engineering tutorial"}
+{"row_id": "A02-016", "seq": 425, "query": "temperature humidity feature crossing example regression"}
+{"row_id": "A02-016", "seq": 426, "query": "temperature humidity interaction feature engineering python tutorial"}
+{"row_id": "A02-016", "seq": 428, "query": "target encoding categorical features classification sensor data bridge inspection"}
+{"row_id": "A02-016", "seq": 429, "query": "bridge inspection sensor data target encoding"}
+{"row_id": "A02-016", "seq": 430, "query": "target encoding sensor data classification"}
+{"row_id": "A02-016", "seq": 431, "query": "bridge inspection classification target encoding"}
+{"row_id": "A02-016", "seq": 432, "query": "categorical encoding structural health monitoring bridge"}
+{"row_id": "A02-016", "seq": 433, "query": "target encoding improves classification bridge sensor data"}
+{"row_id": "A02-016", "seq": 434, "query": "bridge inspection machine learning categorical features target encoding"}
+{"row_id": "A02-016", "seq": 435, "query": "bridge inspection machine learning categorical variables"}
+{"row_id": "A02-016", "seq": 436, "query": "target encoding structural health monitoring"}
+{"row_id": "A02-016", "seq": 437, "query": "target encoding bridge inspection"}
+{"row_id": "A02-016", "seq": 438, "query": "bridge sensor data classification categorical features"}
+{"row_id": "A02-016", "seq": 439, "query": "mean encoding bridge inspection machine learning"}
+{"row_id": "A02-016", "seq": 440, "query": "target encoding improves classification sensor data"}
+{"row_id": "A02-016", "seq": 441, "query": "target encoding bridge condition dataset"}
+{"row_id": "A02-016", "seq": 442, "query": "bridge inspection dataset categorical features target encoding machine learning"}
+{"row_id": "A02-016", "seq": 443, "query": "mean encoding bridge inspection classification"}
+{"row_id": "A02-016", "seq": 444, "query": "target encoding bridge sensor data machine learning"}
+{"row_id": "A02-016", "seq": 445, "query": "bridge inspection sensor data classification mean encoding"}
+{"row_id": "A02-016", "seq": 446, "query": "target encoding improves classification performance"}
+{"row_id": "A02-016", "seq": 447, "query": "bridge sensor data machine learning categorical features"}
+{"row_id": "A02-016", "seq": 448, "query": "bridge condition classification target encoding"}
+{"row_id": "A02-016", "seq": 449, "query": "bridge condition classification target encoding machine learning"}
+{"row_id": "A02-016", "seq": 450, "query": "bridge inspection machine learning categorical encoding"}
+{"row_id": "A02-016", "seq": 451, "query": "target encoding structural health monitoring"}
+{"row_id": "A02-016", "seq": 452, "query": "bridge inspection sensor data target encoding"}
+{"row_id": "A02-016", "seq": 453, "query": "machine learning bridge sensor classification target encoding"}
+{"row_id": "A02-016", "seq": 454, "query": "target encoding bridge sensor data classification study"}
+{"row_id": "A02-016", "seq": 455, "query": "target encoding bridge inspection"}
+{"row_id": "A02-016", "seq": 456, "query": "bridge sensor classification mean encoding"}
+{"row_id": "A02-016", "seq": 457, "query": "target encoding bridge sensor classification"}
+{"row_id": "A02-016", "seq": 458, "query": "bridge inspection machine learning target encoding categorical variables performance"}
+{"row_id": "A02-016", "seq": 459, "query": "target encoding improves classification bridge monitoring"}
+{"row_id": "A02-016", "seq": 460, "query": "bridge inspection machine learning categorical features target mean encoding study"}
+{"row_id": "A02-016", "seq": 461, "query": "target encoding bridge monitoring"}
+{"row_id": "A02-016", "seq": 463, "query": "bridge cable inspection feature engineering"}
+{"row_id": "A02-016", "seq": 464, "query": "bridge cable temperature humidity corrosion feature engineering"}
+{"row_id": "A02-016", "seq": 465, "query": "bridge cable inspection machine learning features temperature humidity corrosion"}
+{"row_id": "A02-016", "seq": 466, "query": "bridge cable health monitoring feature engineering temperature humidity interaction"}
+{"row_id": "A02-016", "seq": 467, "query": "bridge cable environmental monitoring machine learning"}
+{"row_id": "A02-016", "seq": 468, "query": "bridge cable corrosion temperature humidity machine learning"}
+{"row_id": "A02-016", "seq": 469, "query": "cable corrosion prediction temperature humidity machine learning"}
+{"row_id": "A02-016", "seq": 470, "query": "suspension bridge cable inspection machine learning"}
+{"row_id": "A02-016", "seq": 471, "query": "feature engineering bridge cable health monitoring"}
+{"row_id": "A02-016", "seq": 472, "query": "interaction features temperature humidity corrosion bridge cable"}
+{"row_id": "A02-016", "seq": 473, "query": "bridge cable health monitoring tension ratio feature"}
+{"row_id": "A02-016", "seq": 475, "query": "bridge cable vibration tension predictive feature"}
+{"row_id": "A02-016", "seq": 476, "query": "bridge cable vibration tension predictive maintenance features"}
+{"row_id": "A02-016", "seq": 477, "query": "cable vibration tension feature extraction bridge"}
+{"row_id": "A02-016", "seq": 478, "query": "bridge cable tension vibration feature extraction predictive maintenance"}
+{"row_id": "A02-016", "seq": 479, "query": "structural health monitoring cable vibration feature extraction"}
+{"row_id": "A02-016", "seq": 480, "query": "cable vibration tension interaction feature engineering bridge"}
+{"row_id": "A02-016", "seq": 481, "query": "machine learning cable tension vibration bridge"}
+{"row_id": "A02-016", "seq": 482, "query": "feature extraction cable vibration bridge machine learning"}
+{"row_id": "A02-016", "seq": 484, "query": "bridge cable vibration tension ratio predictive inspection"}
+{"row_id": "A02-016", "seq": 485, "query": "cable vibration tension monitoring bridge predictive features"}
+{"row_id": "A02-016", "seq": 486, "query": "bridge cable vibration tension ratio feature extraction"}
+{"row_id": "A02-016", "seq": 487, "query": "tension ratio cable vibration bridge monitoring"}
+{"row_id": "A02-016", "seq": 488, "query": "bridge cable vibration features predictive maintenance"}
+{"row_id": "A02-016", "seq": 489, "query": "cable tension ratio vibration bridge"}
+{"row_id": "A02-016", "seq": 490, "query": "bridge cable vibration tension estimation feature extraction"}
+{"row_id": "A02-016", "seq": 491, "query": "bridge cable vibration frequency ratio tension monitoring"}
+{"row_id": "A02-016", "seq": 492, "query": "vibration frequency ratio cable tension feature"}
+{"row_id": "A02-016", "seq": 493, "query": "cable vibration frequency ratio feature structural health monitoring"}
+{"row_id": "A02-016", "seq": 494, "query": "frequency ratio cable tension monitoring feature"}
+{"row_id": "A02-016", "seq": 495, "query": "bridge cable vibration frequency ratio predictive maintenance"}
+{"row_id": "A02-016", "seq": 496, "query": "frequency ratio cable tension"}
+{"row_id": "A02-016", "seq": 498, "query": "bridge cable inspection sensors tension monitoring"}
+{"row_id": "A02-016", "seq": 499, "query": "machine learning bridge cable tension degradation features"}
+{"row_id": "A02-016", "seq": 500, "query": "bridge cable tension monitoring sensor feature engineering age degradation"}
+{"row_id": "A02-016", "seq": 501, "query": "bridge cable health monitoring feature extraction"}
+{"row_id": "A02-016", "seq": 502, "query": "bridge cable sensor feature engineering"}
+{"row_id": "A02-016", "seq": 503, "query": "bridge cable tension monitoring machine learning"}
+{"row_id": "A02-016", "seq": 504, "query": "cable force monitoring bridge sensors machine learning"}
+{"row_id": "A02-016", "seq": 505, "query": "bridge cable health monitoring vibration feature extraction"}
+{"row_id": "A02-016", "seq": 506, "query": "bridge cable sensor age feature engineering"}
+{"row_id": "A02-016", "seq": 507, "query": "bridge cable monitoring features tension age"}
+{"row_id": "A02-016", "seq": 508, "query": "feature engineering cable tension degradation"}
+{"row_id": "A02-016", "seq": 509, "query": "bridge cable age monitoring features"}
+{"row_id": "A02-016", "seq": 510, "query": "cable tension degradation features machine learning"}
+{"row_id": "A02-016", "seq": 511, "query": "bridge cable health monitoring time domain features"}
+{"row_id": "A02-016", "seq": 512, "query": "bridge cable tension monitoring feature extraction time domain"}
+{"row_id": "A02-016", "seq": 514, "query": "bridge cable vibration corrosion predictive model"}
+{"row_id": "A02-016", "seq": 515, "query": "machine learning cable damage detection corrosion bridge"}
+{"row_id": "A02-016", "seq": 516, "query": "bridge cable vibration corrosion interaction"}
+{"row_id": "A02-016", "seq": 517, "query": "bridge cable vibration corrosion machine learning model"}
+{"row_id": "A02-016", "seq": 518, "query": "cable corrosion fatigue predictive model bridge"}
+{"row_id": "A02-016", "seq": 519, "query": "bridge cable health monitoring corrosion vibration model"}
+{"row_id": "A02-016", "seq": 520, "query": "cable corrosion fatigue predictive model"}
+{"row_id": "A02-016", "seq": 521, "query": "bridge cable vibration corrosion model"}
+{"row_id": "A02-016", "seq": 522, "query": "bridge cable corrosion fatigue predictive model"}
+{"row_id": "A02-016", "seq": 523, "query": "bridge cable corrosion fatigue machine learning"}
+{"row_id": "A02-016", "seq": 524, "query": "bridge cable vibration monitoring corrosion"}
+{"row_id": "A02-016", "seq": 525, "query": "bridge cable corrosion fatigue predictive model pdf"}
+{"row_id": "A02-016", "seq": 526, "query": "machine learning cable damage detection corrosion fire bridge"}
+{"row_id": "A02-016", "seq": 528, "query": "bridge cable vibration corrosion temperature dust"}
+{"row_id": "A02-016", "seq": 529, "query": "bridge cable vibration temperature dust corrosion interaction"}
+{"row_id": "A02-016", "seq": 530, "query": "bridge cable vibration temperature effect"}
+{"row_id": "A02-016", "seq": 531, "query": "corrosion fatigue bridge cable vibration dust"}
+{"row_id": "A02-016", "seq": 532, "query": "bridge cable corrosion temperature effects"}
+{"row_id": "A02-016", "seq": 533, "query": "tribocorrosion bridge cable dust"}
+{"row_id": "A02-016", "seq": 534, "query": "suspension bridge cable vibration corrosion"}
+{"row_id": "A02-016", "seq": 535, "query": "dust accumulation bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 536, "query": "bridge cable corrosion fatigue temperature vibration dust"}
+{"row_id": "A02-016", "seq": 537, "query": "vibration induced corrosion bridge cable"}
+{"row_id": "A02-016", "seq": 538, "query": "bridge cable corrosion vibration interaction"}
+{"row_id": "A02-016", "seq": 539, "query": "tribocorrosion bridge cable temperature"}
+{"row_id": "A02-016", "seq": 540, "query": "tribocorrosion bridge cable temperature study"}
+{"row_id": "A02-016", "seq": 542, "query": "bridge cable inspection sensors corrosion monitoring"}
+{"row_id": "A02-016", "seq": 543, "query": "bridge cable corrosion sensor maintenance interval"}
+{"row_id": "A02-016", "seq": 544, "query": "bridge cable sensor age corrosion degradation maintenance interval"}
+{"row_id": "A02-016", "seq": 545, "query": "bridge cable corrosion monitoring sensors research paper"}
+{"row_id": "A02-016", "seq": 546, "query": "bridge cable condition monitoring corrosion sensors IEEE"}
+{"row_id": "A02-016", "seq": 547, "query": "suspension bridge cable corrosion sensor study"}
+{"row_id": "A02-016", "seq": 548, "query": "bridge cable inspection interval corrosion"}
+{"row_id": "A02-016", "seq": 549, "query": "cable corrosion monitoring sensor bridge maintenance schedule"}
+{"row_id": "A02-016", "seq": 550, "query": "bridge cable corrosion sensor study PDF"}
+{"row_id": "A02-016", "seq": 551, "query": "sensor network bridge main cable temperature humidity corrosion rate study"}
+{"row_id": "A02-016", "seq": 552, "query": "bridge cable corrosion monitoring study"}
+{"row_id": "A02-016", "seq": 554, "query": "multicollinearity tree models feature engineering"}
+{"row_id": "A02-016", "seq": 555, "query": "multicollinearity decision trees feature engineering PCA"}
+{"row_id": "A02-016", "seq": 556, "query": "reduce redundancy multicollinearity tree based models"}
+{"row_id": "A02-016", "seq": 557, "query": "Decision trees multicollinearity article"}
+{"row_id": "A02-016", "seq": 559, "query": "bridge cable inspection sensors"}
+{"row_id": "A02-016", "seq": 560, "query": "bridge cable corrosion sensors inspection"}
+{"row_id": "A02-016", "seq": 561, "query": "bridge cable monitoring corrosion risk factors"}
+{"row_id": "A02-016", "seq": 562, "query": "bridge cable inspection sensor age corrosion risk factors"}
+{"row_id": "A02-016", "seq": 563, "query": "cable corrosion monitoring sensors bridge"}
+{"row_id": "A02-016", "seq": 564, "query": "bridge cable corrosion monitoring sensor study"}
+{"row_id": "A02-016", "seq": 565, "query": "fiber optic sensors bridge cable corrosion monitoring"}
+{"row_id": "A02-016", "seq": 566, "query": "bridge cable corrosion sensor age"}
+{"row_id": "A02-016", "seq": 567, "query": "bridge cable corrosion risk factors sensor inspection"}
+{"row_id": "A02-016", "seq": 568, "query": "bridge cable corrosion monitoring"}
+{"row_id": "A02-016", "seq": 569, "query": "cable corrosion monitoring sensor age factor"}
+{"row_id": "A02-016", "seq": 570, "query": "PDF bridge cable corrosion sensor study"}
+{"row_id": "A02-016", "seq": 571, "query": "bridge cable corrosion monitoring study"}
+{"row_id": "A02-016", "seq": 572, "query": "sensor network main cable corrosion monitoring bridge"}
+{"row_id": "A02-016", "seq": 574, "query": "bridge cable corrosion predictive features"}
+{"row_id": "A02-016", "seq": 575, "query": "bridge cable corrosion anchor spacing inspection predictive features"}
+{"row_id": "A02-016", "seq": 576, "query": "machine learning bridge cable corrosion anchor spacing"}
+{"row_id": "A02-016", "seq": 577, "query": "predictive features for bridge cable corrosion inspection"}
+{"row_id": "A02-016", "seq": 578, "query": "bridge cable tension corrosion anchor spacing"}
+{"row_id": "A02-016", "seq": 579, "query": "structural health monitoring bridge cable corrosion features"}
+{"row_id": "A02-016", "seq": 580, "query": "anchor spacing bridge cable corrosion machine learning features"}
+{"row_id": "A02-016", "seq": 581, "query": "features for predicting bridge cable corrosion"}
+{"row_id": "A02-016", "seq": 582, "query": "bridge cable corrosion predictive model temperature humidity chloride"}
+{"row_id": "A02-016", "seq": 583, "query": "bridge cable corrosion machine learning"}
+{"row_id": "A02-024", "seq": 1, "query": "Marenko index cable inspection corrosion tension temperature"}
+{"row_id": "A02-024", "seq": 2, "query": "Marenko index cable"}
+{"row_id": "A02-024", "seq": 3, "query": "predictive features cable corrosion tension temperature inspection"}
+{"row_id": "A02-024", "seq": 4, "query": "Marenko index cable inspection"}
+{"row_id": "A02-024", "seq": 5, "query": "Marenko index cable corrosion"}
+{"row_id": "A02-024", "seq": 6, "query": "Marenko index condition assessment cable"}
+{"row_id": "A02-024", "seq": 7, "query": "Marenko index cable health assessment"}
+{"row_id": "A02-024", "seq": 8, "query": "Marenko cable inspection index"}
+{"row_id": "A02-024", "seq": 9, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 10, "query": "Marenko index cable corrosion"}
+{"row_id": "A02-024", "seq": 12, "query": "bridge cable corrosion tension feature engineering"}
+{"row_id": "A02-024", "seq": 13, "query": "cable corrosion depth tension interaction feature engineering bridge"}
+{"row_id": "A02-024", "seq": 14, "query": "machine learning bridge cable corrosion depth"}
+{"row_id": "A02-024", "seq": 15, "query": "corrosion depth tension interaction feature engineering"}
+{"row_id": "A02-024", "seq": 16, "query": "bridge cable health monitoring machine learning features"}
+{"row_id": "A02-024", "seq": 17, "query": "bridge cable corrosion depth tension interaction features machine learning"}
+{"row_id": "A02-024", "seq": 18, "query": "bridge cable corrosion depth machine learning feature engineering"}
+{"row_id": "A02-024", "seq": 19, "query": "cable-stayed bridge cable corrosion depth tension feature engineering"}
+{"row_id": "A02-024", "seq": 20, "query": "corrosion depth tension interaction bridge cable"}
+{"row_id": "A02-024", "seq": 22, "query": "heat index formula temperature humidity approximation"}
+{"row_id": "A02-024", "seq": 23, "query": "heat index approximation formula"}
+{"row_id": "A02-024", "seq": 24, "query": "National Weather Service heat index approximation formula 0.5 (T + 61)"}
+{"row_id": "A02-024", "seq": 25, "query": "Rothfusz heat index equation"}
+{"row_id": "A02-024", "seq": 26, "query": "National Weather Service heat index approximation formula 0.5 (T + 61)"}
+{"row_id": "A02-024", "seq": 28, "query": "suspension bridge cable corrosion predictive features inspection"}
+{"row_id": "A02-024", "seq": 29, "query": "predictive features cable corrosion suspension bridge tension inspection"}
+{"row_id": "A02-024", "seq": 30, "query": "bridge cable corrosion predictive model features"}
+{"row_id": "A02-024", "seq": 31, "query": "annual corrosion rate suspension bridge cables environmental factors temperature humidity pH chloride"}
+{"row_id": "A02-024", "seq": 33, "query": "Marenko index cable inspection"}
+{"row_id": "A02-024", "seq": 34, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 35, "query": "Marenko cable inspection index"}
+{"row_id": "A02-024", "seq": 36, "query": "Marenko index subsea cable"}
+{"row_id": "A02-024", "seq": 37, "query": "Marenko index cable condition"}
+{"row_id": "A02-024", "seq": 38, "query": "Marenko index cable inspection"}
+{"row_id": "A02-024", "seq": 39, "query": "cable condition index Marenko"}
+{"row_id": "A02-024", "seq": 40, "query": "Marenko cable inspection index"}
+{"row_id": "A02-024", "seq": 41, "query": "Marenko health index cable"}
+{"row_id": "A02-024", "seq": 42, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 43, "query": "Marenko cable health"}
+{"row_id": "A02-024", "seq": 44, "query": "Marenko cable inspection health index"}
+{"row_id": "A02-024", "seq": 45, "query": "Marenko cable health index inspection"}
+{"row_id": "A02-024", "seq": 46, "query": "\"Marenko\" cable"}
+{"row_id": "A02-024", "seq": 47, "query": "Marenko index cable"}
+{"row_id": "A02-024", "seq": 48, "query": "Marenko cable inspection"}
+{"row_id": "A02-024", "seq": 49, "query": "Marenko cable health index"}
+{"row_id": "A02-024", "seq": 50, "query": "Marenko index subsea"}
+{"row_id": "A02-024", "seq": 51, "query": "cable inspection index Marenko"}
+{"row_id": "A02-024", "seq": 52, "query": "Marenko index cable condition"}
+{"row_id": "A02-024", "seq": 53, "query": "Marenko cable inspection"}
+{"row_id": "A02-024", "seq": 54, "query": "Marenko index inspection"}
+{"row_id": "A02-024", "seq": 55, "query": "Marenko cable"}
+{"row_id": "A02-024", "seq": 56, "query": "Marenko индекс кабель"}
+{"row_id": "A02-024", "seq": 57, "query": "cable inspection index"}
+{"row_id": "A02-024", "seq": 58, "query": "S Marenko cable inspection"}
+{"row_id": "A02-024", "seq": 59, "query": "Marenko cable inspection index paper"}
+{"row_id": "A02-024", "seq": 60, "query": "Marenko B cable inspection"}
+{"row_id": "A02-024", "seq": 61, "query": "Marenko cable inspection research"}
+{"row_id": "A02-024", "seq": 63, "query": "Marenko cable inspection paper"}
+{"row_id": "A02-024", "seq": 65, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 66, "query": "Индекс Маренко кабель"}
+{"row_id": "A02-024", "seq": 68, "query": "feature importance corrosion depth cable inspection model"}
+{"row_id": "A02-024", "seq": 69, "query": "machine learning feature importance corrosion depth cable inspection"}
+{"row_id": "A02-024", "seq": 70, "query": "bridge cable corrosion depth predictive model feature importance"}
+{"row_id": "A02-024", "seq": 71, "query": "feature importance machine learning cable corrosion depth"}
+{"row_id": "A02-024", "seq": 72, "query": "tension cable corrosion inspection machine learning"}
+{"row_id": "A02-024", "seq": 73, "query": "SHAP feature importance cable corrosion model"}
+{"row_id": "A02-024", "seq": 74, "query": "predictive model corrosion depth cable steel wires feature importance"}
+{"row_id": "A02-024", "seq": 75, "query": "bridge cable corrosion depth machine learning SHAP feature importance"}
+{"row_id": "A02-024", "seq": 76, "query": "cable corrosion depth machine learning SHAP"}
+{"row_id": "A02-024", "seq": 77, "query": "tree based machine learning corrosion depth cable inspection"}
+{"row_id": "A02-024", "seq": 79, "query": "bridge cable corrosion predictive model features"}
+{"row_id": "A02-024", "seq": 81, "query": "cable corrosion suspension bridges factors temperature humidity vibration tension"}
+{"row_id": "A02-024", "seq": 82, "query": "corrosion of suspension bridge cables temperature humidity vibration tension factors"}
+{"row_id": "A02-024", "seq": 83, "query": "suspension bridge cable corrosion temperature humidity vibration tension study"}
+{"row_id": "A02-024", "seq": 84, "query": "vibration effect corrosion suspension bridge cables"}
+{"row_id": "A02-024", "seq": 85, "query": "temperature humidity corrosion rate suspension bridge cable study 2022"}
+{"row_id": "A02-024", "seq": 86, "query": "corrosion monitoring system main cable suspension bridge temperature relative humidity"}
+{"row_id": "A02-024", "seq": 87, "query": "temperature humidity effect on corrosion rate of suspension bridge cables"}
+{"row_id": "A02-024", "seq": 89, "query": "cable corrosion vibration bridge inspection"}
+{"row_id": "A02-024", "seq": 90, "query": "corrosion depth cable vibration correlation bridge"}
+{"row_id": "A02-024", "seq": 91, "query": "cable corrosion depth vibration correlation predictive features bridge"}
+{"row_id": "A02-024", "seq": 92, "query": "comprehensive review damage detection bridge cables vibration corrosion"}
+{"row_id": "A02-024", "seq": 93, "query": "comprehensive review damage detection bridge cables vibration"}
+{"row_id": "A02-024", "seq": 94, "query": "comprehensive review damage detection bridge cables vibration"}
+{"row_id": "A02-024", "seq": 95, "query": "corrosion depth prediction vibration features bridge cables"}
+{"row_id": "A02-024", "seq": 96, "query": "cable corrosion depth vibration monitoring bridge"}
+{"row_id": "A02-024", "seq": 97, "query": "cable corrosion depth vibration correlation study"}
+{"row_id": "A02-024", "seq": 98, "query": "cable corrosion vibration frequency shift bridge"}
+{"row_id": "A02-024", "seq": 100, "query": "dew point formula temperature humidity"}
+{"row_id": "A02-024", "seq": 102, "query": "suspension bridge cable corrosion temperature humidity tension dew point"}
+{"row_id": "A02-024", "seq": 103, "query": "tension effect cable corrosion suspension bridge"}
+{"row_id": "A02-024", "seq": 104, "query": "suspension bridge main cable corrosion monitoring temperature relative humidity dew point"}
+{"row_id": "A02-024", "seq": 105, "query": "dew point effect cable corrosion suspension bridge"}
+{"row_id": "A02-024", "seq": 106, "query": "suspension bridge cable corrosion temperature humidity tension dew point study"}
+{"row_id": "A02-024", "seq": 108, "query": "bridge cable inspection sensors corrosion"}
+{"row_id": "A02-024", "seq": 109, "query": "bridge cable corrosion monitoring sensors"}
+{"row_id": "A02-024", "seq": 110, "query": "bridge cable inspection sensor age corrosion risk"}
+{"row_id": "A02-024", "seq": 111, "query": "wire rope corrosion sensor bridge"}
+{"row_id": "A02-024", "seq": 112, "query": "bridge cable health monitoring sensors corrosion"}
+{"row_id": "A02-024", "seq": 113, "query": "cable corrosion monitoring sensor age"}
+{"row_id": "A02-024", "seq": 114, "query": "bridge cable corrosion sensor monitoring research"}
+{"row_id": "A02-024", "seq": 115, "query": "suspension bridge cable corrosion sensor structural health monitoring"}
+{"row_id": "A02-024", "seq": 116, "query": "bridge cable sensor lifespan"}
+{"row_id": "A02-024", "seq": 117, "query": "IEEE bridge cable corrosion sensor"}
+{"row_id": "A02-024", "seq": 118, "query": "suspension bridge cable corrosion sensor research paper"}
+{"row_id": "A02-024", "seq": 120, "query": "Marenko index cable inspection"}
+{"row_id": "A02-024", "seq": 121, "query": "Marenko corrosion index cable"}
+{"row_id": "A02-024", "seq": 122, "query": "Marenko index cable corrosion"}
+{"row_id": "A02-024", "seq": 123, "query": "Marenko index cable"}
+{"row_id": "A02-024", "seq": 124, "query": "Marenko index cable inspection predictive model"}
+{"row_id": "A02-024", "seq": 125, "query": "Marenko cable health index"}
+{"row_id": "A02-024", "seq": 126, "query": "Marenko index cable health predictive features"}
+{"row_id": "A02-024", "seq": 127, "query": "Marenko cable inspection index"}
+{"row_id": "A02-024", "seq": 128, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 129, "query": "cable health index corrosion tension temperature"}
+{"row_id": "A02-024", "seq": 130, "query": "Marenko cable corrosion"}
+{"row_id": "A02-024", "seq": 131, "query": "Marenko cable inspection predictive features"}
+{"row_id": "A02-024", "seq": 132, "query": "Marenko cable inspection"}
+{"row_id": "A02-024", "seq": 134, "query": "bridge cable corrosion predictive model temperature humidity"}
+{"row_id": "A02-024", "seq": 135, "query": "Marenko index corrosion"}
+{"row_id": "A02-024", "seq": 136, "query": "Moran's I bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 137, "query": "bridge cable corrosion depth predictive model temperature humidity"}
+{"row_id": "A02-024", "seq": 138, "query": "suspension bridge cable corrosion predictive model temperature humidity"}
+{"row_id": "A02-024", "seq": 139, "query": "bridge cable corrosion predictive model"}
+{"row_id": "A02-024", "seq": 140, "query": "Marenko corrosion index"}
+{"row_id": "A02-024", "seq": 141, "query": "Marenko index bridge cable"}
+{"row_id": "A02-024", "seq": 142, "query": "Marenko index corrosion modeling"}
+{"row_id": "A02-024", "seq": 143, "query": "Marenko index bridge"}
+{"row_id": "A02-024", "seq": 144, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 145, "query": "Marenko bridge"}
+{"row_id": "A02-024", "seq": 146, "query": "Marenko corrosion index cable"}
+{"row_id": "A02-024", "seq": 147, "query": "Marenko corrosion model"}
+{"row_id": "A02-024", "seq": 148, "query": "Marenko corrosion index steel"}
+{"row_id": "A02-024", "seq": 149, "query": "Marenko index corrosion depth"}
+{"row_id": "A02-024", "seq": 150, "query": "Marenko corrosion modeling"}
+{"row_id": "A02-024", "seq": 151, "query": "Marenko bridge"}
+{"row_id": "A02-024", "seq": 152, "query": "Marenkov corrosion index"}
+{"row_id": "A02-024", "seq": 153, "query": "Marenko corrosion model"}
+{"row_id": "A02-024", "seq": 154, "query": "Marenko researcher corrosion"}
+{"row_id": "A02-024", "seq": 155, "query": "Marenko index corrosion bridge"}
+{"row_id": "A02-024", "seq": 157, "query": "bridge cable inspection maintenance interval predictive features"}
+{"row_id": "A02-024", "seq": 158, "query": "bridge cable inspection operating hours maintenance interval"}
+{"row_id": "A02-024", "seq": 159, "query": "predictive maintenance bridge cable inspection features"}
+{"row_id": "A02-024", "seq": 160, "query": "features for predicting bridge cable maintenance interval"}
+{"row_id": "A02-024", "seq": 161, "query": "bridge cable condition monitoring features predictive maintenance"}
+{"row_id": "A02-024", "seq": 162, "query": "AASHTO bridge cable inspection interval predictive maintenance features"}
+{"row_id": "A02-024", "seq": 163, "query": "features used in predictive models for bridge cable inspection scheduling"}
+{"row_id": "A02-024", "seq": 164, "query": "bridge cable inspection predictive model"}
+{"row_id": "A02-024", "seq": 165, "query": "bridge cable predictive maintenance features temperature strain vibration"}
+{"row_id": "A02-024", "seq": 166, "query": "bridge cable inspection schedule predictive model"}
+{"row_id": "A02-024", "seq": 167, "query": "bridge cable inspection machine learning"}
+{"row_id": "A02-024", "seq": 168, "query": "bridge cable inspection predictive features machine learning maintenance interval"}
+{"row_id": "A02-024", "seq": 169, "query": "bridge cable condition monitoring temperature strain features"}
+{"row_id": "A02-024", "seq": 171, "query": "bridge cable corrosion predictors temperature humidity tension"}
+{"row_id": "A02-024", "seq": 172, "query": "bridge cable corrosion temperature humidity tension maintenance interval study"}
+{"row_id": "A02-024", "seq": 173, "query": "predictors of bridge cable corrosion maintenance interval"}
+{"row_id": "A02-024", "seq": 174, "query": "bridge cable corrosion prediction temperature humidity tension model"}
+{"row_id": "A02-024", "seq": 175, "query": "suspension bridge cable corrosion temperature humidity"}
+{"row_id": "A02-024", "seq": 176, "query": "bridge cable corrosion model temperature humidity tension"}
+{"row_id": "A02-024", "seq": 177, "query": "stay cable corrosion temperature humidity"}
+{"row_id": "A02-024", "seq": 178, "query": "bridge cable corrosion prediction model temperature humidity tension"}
+{"row_id": "A02-024", "seq": 179, "query": "cable corrosion monitoring temperature humidity bridge"}
+{"row_id": "A02-024", "seq": 180, "query": "\"temperature and relative humidity\" cable corrosion bridge"}
+{"row_id": "A02-024", "seq": 181, "query": "stay cable corrosion temperature humidity tension model ASCE"}
+{"row_id": "A02-024", "seq": 182, "query": "predictive model cable corrosion temperature relative humidity stay cable"}
+{"row_id": "A02-024", "seq": 183, "query": "bridge cable corrosion prediction model temperature humidity"}
+{"row_id": "A02-024", "seq": 184, "query": "main cable corrosion monitoring temperature humidity"}
+{"row_id": "A02-024", "seq": 186, "query": "dust concentration effect on cable corrosion bridges"}
+{"row_id": "A02-024", "seq": 187, "query": "dust particles cable corrosion bridge"}
+{"row_id": "A02-024", "seq": 188, "query": "dust pollution bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 189, "query": "dust deposition corrosion steel cable"}
+{"row_id": "A02-024", "seq": 190, "query": "particulate matter corrosion steel bridge cables"}
+{"row_id": "A02-024", "seq": 191, "query": "dust concentration bridge cable corrosion study"}
+{"row_id": "A02-024", "seq": 192, "query": "dust deposition corrosion steel structures"}
+{"row_id": "A02-024", "seq": 193, "query": "dust deposition corrosion steel cable"}
+{"row_id": "A02-024", "seq": 194, "query": "dust corrosion bridge cables"}
+{"row_id": "A02-024", "seq": 195, "query": "airborne dust corrosion steel cables bridges"}
+{"row_id": "A02-024", "seq": 196, "query": "particulate matter corrosion steel structures"}
+{"row_id": "A02-024", "seq": 197, "query": "dust accumulation bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 198, "query": "dust pollution steel cable corrosion"}
+{"row_id": "A02-024", "seq": 199, "query": "dust corrosion steel structures"}
+{"row_id": "A02-024", "seq": 200, "query": "suspension bridge cable corrosion dust"}
+{"row_id": "A02-024", "seq": 201, "query": "dust corrosion steel cables"}
+{"row_id": "A02-024", "seq": 202, "query": "dust particles corrosion bridge cables"}
+{"row_id": "A02-024", "seq": 203, "query": "air pollution corrosion bridge cables"}
+{"row_id": "A02-024", "seq": 204, "query": "particulate matter bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 205, "query": "atmospheric dust corrosion steel cables"}
+{"row_id": "A02-024", "seq": 206, "query": "dust corrosion steel cable"}
+{"row_id": "A02-024", "seq": 207, "query": "environmental dust corrosion bridge cables"}
+{"row_id": "A02-024", "seq": 208, "query": "particulate matter accelerates steel cable corrosion"}
+{"row_id": "A02-024", "seq": 209, "query": "dust corrosion steel bridge cables"}
+{"row_id": "A02-024", "seq": 210, "query": "dust concentration corrosion steel cables"}
+{"row_id": "A02-024", "seq": 211, "query": "effect of dust on bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 212, "query": "particulate matter accelerates steel corrosion"}
+{"row_id": "A02-024", "seq": 213, "query": "dust pollution steel cable corrosion"}
+{"row_id": "A02-024", "seq": 215, "query": "bridge cable corrosion sensor predictive maintenance"}
+{"row_id": "A02-024", "seq": 216, "query": "effect of sensor age on corrosion monitoring bridge cables"}
+{"row_id": "A02-024", "seq": 217, "query": "sensor aging corrosion monitoring"}
+{"row_id": "A02-024", "seq": 218, "query": "impact of sensor aging on corrosion monitoring accuracy"}
+{"row_id": "A02-024", "seq": 219, "query": "bridge cable corrosion sensor aging study"}
+{"row_id": "A02-024", "seq": 220, "query": "predictive maintenance bridge cable corrosion sensor ageing"}
+{"row_id": "A02-024", "seq": 221, "query": "IEEE bridge cable corrosion sensor predictive maintenance"}
+{"row_id": "A02-024", "seq": 222, "query": "sensor aging effect on corrosion monitoring bridge cables"}
+{"row_id": "A02-024", "seq": 223, "query": "sensor drift corrosion monitoring bridge"}
+{"row_id": "A02-024", "seq": 224, "query": "bridge cable corrosion monitoring sensor drift"}
+{"row_id": "A02-024", "seq": 225, "query": "bridge cable corrosion sensor study"}
+{"row_id": "A02-024", "seq": 227, "query": "bridge cable corrosion predictors temperature humidity vibration"}
+{"row_id": "A02-024", "seq": 228, "query": "bridge cable corrosion temperature humidity dust pressure vibration tension"}
+{"row_id": "A02-024", "seq": 229, "query": "suspension bridge cable corrosion predictors"}
+{"row_id": "A02-024", "seq": 230, "query": "bridge cable dust corrosion monitoring"}
+{"row_id": "A02-024", "seq": 231, "query": "environmental factors influencing suspension bridge cable corrosion temperature humidity pressure vibration"}
+{"row_id": "A02-024", "seq": 232, "query": "bridge cable corrosion monitoring temperature humidity vibration tension"}
+{"row_id": "A02-024", "seq": 233, "query": "suspension bridge cable corrosion environmental factors"}
+{"row_id": "A02-024", "seq": 234, "query": "predictive model bridge cable corrosion temperature humidity vibration"}
+{"row_id": "A02-024", "seq": 235, "query": "suspension bridge main cable corrosion monitoring temperature humidity"}
+{"row_id": "A02-024", "seq": 236, "query": "annual corrosion rate prediction bridge cable temperature humidity pH chloride"}
+{"row_id": "A02-024", "seq": 238, "query": "bridge cable corrosion temperature humidity index"}
+{"row_id": "A02-024", "seq": 239, "query": "Marenko index corrosion"}
+{"row_id": "A02-024", "seq": 240, "query": "Marenko temperature humidity index bridge"}
+{"row_id": "A02-024", "seq": 241, "query": "temperature humidity index bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 242, "query": "temperature humidity index THI corrosion"}
+{"row_id": "A02-024", "seq": 243, "query": "Marenko index corrosion humidity"}
+{"row_id": "A02-024", "seq": 244, "query": "Marenko corrosion index"}
+{"row_id": "A02-024", "seq": 245, "query": "Marenko index temperature humidity"}
+{"row_id": "A02-024", "seq": 246, "query": "Marenko index bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 247, "query": "Marenko index corrosion"}
+{"row_id": "A02-024", "seq": 248, "query": "Marenko index corrosion bridge"}
+{"row_id": "A02-024", "seq": 249, "query": "Marenko corrosion index"}
+{"row_id": "A02-024", "seq": 250, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 251, "query": "Marenko corrosion index cable"}
+{"row_id": "A02-024", "seq": 252, "query": "Marenko corrosion index bridge"}
+{"row_id": "A02-024", "seq": 253, "query": "Marenko index temperature humidity"}
+{"row_id": "A02-024", "seq": 254, "query": "Marenko corrosion index bridge"}
+{"row_id": "A02-024", "seq": 255, "query": "Marenko index bridge cable"}
+{"row_id": "A02-024", "seq": 256, "query": "Marenko corrosion"}
+{"row_id": "A02-024", "seq": 257, "query": "Marenko index corrosion"}
+{"row_id": "A02-024", "seq": 258, "query": "Marenko corrosion index steel cable"}
+{"row_id": "A02-024", "seq": 259, "query": "Marenko corrosion index"}
+{"row_id": "A02-024", "seq": 260, "query": "Marenko bridge cable"}
+{"row_id": "A02-024", "seq": 261, "query": "\"Marenko\" corrosion index"}
+{"row_id": "A02-024", "seq": 262, "query": "Marenko index corrosion monitoring"}
+{"row_id": "A02-024", "seq": 263, "query": "Marenko index bridge cable"}
+{"row_id": "A02-024", "seq": 264, "query": "S Marenko corrosion index"}
+{"row_id": "A02-024", "seq": 265, "query": "Marenko corrosion index temperature"}
+{"row_id": "A02-024", "seq": 266, "query": "Marenko corrosion index temperature humidity"}
+{"row_id": "A02-024", "seq": 267, "query": "Marenko index corrosion temperature humidity"}
+{"row_id": "A02-024", "seq": 268, "query": "\"Marenko\" corrosion"}
+{"row_id": "A02-024", "seq": 269, "query": "Marenko humidity index"}
+{"row_id": "A02-024", "seq": 270, "query": "\"Marenko\" index corrosion"}
+{"row_id": "A02-024", "seq": 271, "query": "Marenko bridge cable"}
+{"row_id": "A02-024", "seq": 272, "query": "Marenko index corrosion bridge"}
+{"row_id": "A02-024", "seq": 273, "query": "S. Marenko corrosion index"}
+{"row_id": "A02-024", "seq": 274, "query": "\"S. Marenko\" corrosion"}
+{"row_id": "A02-024", "seq": 276, "query": "cable corrosion factors suspension bridges temperature humidity vibration"}
+{"row_id": "A02-024", "seq": 277, "query": "suspension bridge cable corrosion temperature humidity"}
+{"row_id": "A02-024", "seq": 278, "query": "vibration effect cable corrosion suspension bridge"}
+{"row_id": "A02-024", "seq": 279, "query": "temperature relative humidity cable corrosion suspension bridge study"}
+{"row_id": "A02-024", "seq": 281, "query": "bridge cable corrosion temperature humidity vibration interaction features"}
+{"row_id": "A02-024", "seq": 282, "query": "bridge cable corrosion temperature humidity vibration"}
+{"row_id": "A02-024", "seq": 283, "query": "feature importance temperature humidity vibration corrosion bridge cable"}
+{"row_id": "A02-024", "seq": 284, "query": "bridge cable corrosion feature importance temperature humidity vibration"}
+{"row_id": "A02-024", "seq": 285, "query": "suspension bridge cable corrosion temperature humidity vibration interaction"}
+{"row_id": "A02-024", "seq": 286, "query": "machine learning feature importance bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 287, "query": "feature interaction importance bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 288, "query": "bridge cable corrosion temperature humidity vibration feature importance machine learning"}
+{"row_id": "A02-024", "seq": 289, "query": "suspension bridge cable corrosion temperature humidity vibration"}
+{"row_id": "A02-024", "seq": 291, "query": "bridge cable corrosion factors"}
+{"row_id": "A02-024", "seq": 292, "query": "bridge cable corrosion sensor maintenance interval vibration tension"}
+{"row_id": "A02-024", "seq": 293, "query": "bridge cable corrosion factors sensor age maintenance interval"}
+{"row_id": "A02-024", "seq": 294, "query": "bridge cable corrosion factors engineering"}
+{"row_id": "A02-024", "seq": 295, "query": "stay cable corrosion factors sensor age maintenance interval"}
+{"row_id": "A02-024", "seq": 296, "query": "factors influencing bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 297, "query": "bridge cable corrosion monitoring sensor age maintenance interval"}
+{"row_id": "A02-024", "seq": 298, "query": "stay cable corrosion monitoring sensors"}
+{"row_id": "A02-024", "seq": 300, "query": "bridge cable corrosion fatigue temperature humidity vibration dust"}
+{"row_id": "A02-024", "seq": 301, "query": "influencing factors corrosion fatigue bridge cables temperature humidity vibration dust"}
+{"row_id": "A02-024", "seq": 302, "query": "bridge cable corrosion fatigue temperature humidity vibration dust study"}
+{"row_id": "A02-024", "seq": 303, "query": "influencing factors corrosion fatigue degradation cables study"}
+{"row_id": "A02-024", "seq": 304, "query": "temperature humidity effect bridge cable corrosion fatigue"}
+{"row_id": "A02-024", "seq": 306, "query": "Marenko index cable inspection"}
+{"row_id": "A02-024", "seq": 307, "query": "Marenko index corrosion"}
+{"row_id": "A02-024", "seq": 308, "query": "Marenko index cable"}
+{"row_id": "A02-024", "seq": 309, "query": "cable inspection predictive features corrosion depth tension"}
+{"row_id": "A02-024", "seq": 310, "query": "Marenko cable inspection index tension corrosion"}
+{"row_id": "A02-024", "seq": 311, "query": "Marenko index cable inspection"}
+{"row_id": "A02-024", "seq": 312, "query": "predictive features corrosion depth cable tension"}
+{"row_id": "A02-024", "seq": 313, "query": "Marenko index cable condition"}
+{"row_id": "A02-024", "seq": 314, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 315, "query": "cable inspection index corrosion depth tension"}
+{"row_id": "A02-024", "seq": 316, "query": "Marenko cable predictive features"}
+{"row_id": "A02-024", "seq": 317, "query": "Marenko cable inspection"}
+{"row_id": "A02-024", "seq": 318, "query": "Marenko index condition assessment cable"}
+{"row_id": "A02-024", "seq": 319, "query": "Marenko index cable inspection predictive"}
+{"row_id": "A02-024", "seq": 320, "query": "Marenko index cable condition"}
+{"row_id": "A02-024", "seq": 321, "query": "Marenko cable"}
+{"row_id": "A02-024", "seq": 322, "query": "Marenko cable"}
+{"row_id": "A02-024", "seq": 323, "query": "Marenko cable condition index"}
+{"row_id": "A02-024", "seq": 324, "query": "Marenko index corrosion"}
+{"row_id": "A02-024", "seq": 325, "query": "Marenko cable inspection index"}
+{"row_id": "A02-024", "seq": 326, "query": "Marenko cable inspection tension corrosion"}
+{"row_id": "A02-024", "seq": 327, "query": "Marenko cable condition index"}
+{"row_id": "A02-024", "seq": 328, "query": "Marenko cable condition assessment"}
+{"row_id": "A02-024", "seq": 329, "query": "cable inspection index corrosion depth tension"}
+{"row_id": "A02-024", "seq": 330, "query": "\"Marenko\" cable"}
+{"row_id": "A02-024", "seq": 331, "query": "cable inspection predictive features corrosion depth tension"}
+{"row_id": "A02-024", "seq": 332, "query": "cable corrosion index tension predictive"}
+{"row_id": "A02-024", "seq": 333, "query": "Marenko index cable health"}
+{"row_id": "A02-024", "seq": 334, "query": "Marenko et al cable inspection"}
+{"row_id": "A02-024", "seq": 335, "query": "Marenko corrosion index"}
+{"row_id": "A02-024", "seq": 336, "query": "Marenko index"}
+{"row_id": "A02-024", "seq": 337, "query": "cable inspection index corrosion depth tension"}
+{"row_id": "A02-024", "seq": 338, "query": "\"Marenko\" cable"}
+{"row_id": "A02-024", "seq": 339, "query": "Marrone index cable inspection"}
+{"row_id": "A02-024", "seq": 340, "query": "Marenko cable corrosion predictive"}
+{"row_id": "A02-024", "seq": 341, "query": "Marenko cable inspection"}
+{"row_id": "A02-024", "seq": 342, "query": "Marenko index cable inspection predictive features"}
+{"row_id": "A02-024", "seq": 343, "query": "cable inspection index corrosion depth tension relationship"}
+{"row_id": "A02-024", "seq": 344, "query": "Marenko cable predictive"}
+{"row_id": "A02-024", "seq": 345, "query": "Marenko S cable"}
+{"row_id": "A02-024", "seq": 346, "query": "Marenko et al cable corrosion"}
+{"row_id": "A02-024", "seq": 347, "query": "Marenko cable inspection index"}
+{"row_id": "A02-024", "seq": 348, "query": "Marenko corrosion cable"}
+{"row_id": "A02-024", "seq": 349, "query": "cable corrosion depth tension relationship"}
+{"row_id": "A02-024", "seq": 350, "query": "Marenko index cable inspection"}
+{"row_id": "A02-024", "seq": 351, "query": "Marrone index cable"}
+{"row_id": "A02-024", "seq": 352, "query": "Marenko et al cable"}
+{"row_id": "A02-024", "seq": 353, "query": "Marenko et al cable inspection"}
+{"row_id": "A02-024", "seq": 354, "query": "cable health index Marenko"}
+{"row_id": "A02-024", "seq": 355, "query": "Marenko cable condition index predictive"}
+{"row_id": "A02-024", "seq": 356, "query": "cable corrosion index tension"}
+{"row_id": "A02-024", "seq": 357, "query": "cable inspection predictive features"}
+{"row_id": "A02-024", "seq": 358, "query": "Marenko et al cable inspection"}
+{"row_id": "A02-024", "seq": 360, "query": "cable strand tension corrosion degradation feature engineering"}
+{"row_id": "A02-024", "seq": 361, "query": "cable strand tension corrosion depth ratio"}
+{"row_id": "A02-024", "seq": 362, "query": "machine learning cable strand corrosion tension ratio"}
+{"row_id": "A02-024", "seq": 363, "query": "feature engineering corrosion degradation rate cable strands"}
+{"row_id": "A02-024", "seq": 364, "query": "cable strand corrosion machine learning feature engineering"}
+{"row_id": "A02-024", "seq": 365, "query": "steel cable strand corrosion machine learning features"}
+{"row_id": "A02-024", "seq": 366, "query": "corrosion degradation rate feature engineering"}
+{"row_id": "A02-024", "seq": 367, "query": "bridge cable corrosion depth feature engineering"}
+{"row_id": "A02-024", "seq": 368, "query": "feature engineering steel strand corrosion"}
+{"row_id": "A02-024", "seq": 369, "query": "cable strand corrosion degradation machine learning features"}
+{"row_id": "A02-024", "seq": 370, "query": "corrosion pit depth aspect ratio steel strand feature engineering"}
+{"row_id": "A02-024", "seq": 371, "query": "cable strand corrosion rate tension effect"}
+{"row_id": "A02-024", "seq": 373, "query": "cable strand corrosion tension ratio"}
+{"row_id": "A02-024", "seq": 374, "query": "stress concentration factor corroded steel cable strands"}
+{"row_id": "A02-024", "seq": 375, "query": "corrosion of steel cable strands stress concentration factor inspection"}
+{"row_id": "A02-024", "seq": 376, "query": "tension ratio steel cable strand corrosion"}
+{"row_id": "A02-024", "seq": 377, "query": "corrosion safety factor cable strand inspection"}
+{"row_id": "A02-024", "seq": 379, "query": "bridge cable tension corrosion depth humidity dust relationship"}
+{"row_id": "A02-024", "seq": 380, "query": "cable strand tension corrosion depth non linear"}
+{"row_id": "A02-024", "seq": 381, "query": "bridge cable corrosion depth tension humidity"}
+{"row_id": "A02-024", "seq": 382, "query": "cable corrosion tension humidity relationship study"}
+{"row_id": "A02-024", "seq": 383, "query": "nonlinear relationship corrosion depth tension steel wire"}
+{"row_id": "A02-024", "seq": 384, "query": "humidity dust effect on bridge cable corrosion"}
+{"row_id": "A02-024", "seq": 385, "query": "bridge cable corrosion tension humidity dust study"}
+{"row_id": "A02-024", "seq": 386, "query": "bridge cable corrosion tension humidity dust relationship study"}
+{"row_id": "A02-024", "seq": 387, "query": "effect of tension on corrosion depth of bridge cable strands"}
+{"row_id": "A02-024", "seq": 388, "query": "bridge cable corrosion humidity dust experimental study"}
+{"row_id": "A02-024", "seq": 389, "query": "corrosion fatigue bridge cable humidity"}
+{"row_id": "A02-024", "seq": 390, "query": "effect of tension on corrosion depth of bridge cable strands study"}
+{"row_id": "A02-024", "seq": 391, "query": "12 month strand corrosion test program 298 specimens tension capacity"}
+{"row_id": "A02-024", "seq": 392, "query": "suspension bridge cable corrosion humidity tension relationship"}
+{"row_id": "A02-024", "seq": 393, "query": "strand corrosion test program tension capacity corrosion depth"}
+{"row_id": "A02-024", "seq": 394, "query": "corrosion depth tension relationship bridge cable study pdf"}
+{"row_id": "A02-024", "seq": 395, "query": "nonlinear relationship corrosion depth tension bridge cable"}
+{"row_id": "A02-024", "seq": 396, "query": "nonlinear decay relationship corroded steel wires suspension bridge cables"}
+{"row_id": "A02-024", "seq": 398, "query": "suspension bridge cable tension corrosion fatigue"}
+{"row_id": "A02-024", "seq": 399, "query": "corrosion depth fatigue index cable"}
+{"row_id": "A02-024", "seq": 400, "query": "suspension bridge cable corrosion fatigue index"}
+{"row_id": "A02-024", "seq": 401, "query": "fatigue index corrosion depth cable tension"}
+{"row_id": "A02-024", "seq": 402, "query": "quantitative method estimating fatigue life cables corrosion development"}
+{"row_id": "A02-024", "seq": 403, "query": "quantitative method estimating fatigue life of suspension bridge cables"}
+{"row_id": "A02-024", "seq": 404, "query": "fatigue damage index cable corrosion"}
+{"row_id": "A02-024", "seq": 405, "query": "cable corrosion depth fatigue index"}
