@@ -1,0 +1,38 @@
+# A04 · CAP-0 Stage-0 smoke tests (docs/ablations/A04_CAP0_stage0_smoke_tests.md §4).
+#   python scripts/agent2027/make_manifest.py --ablation A04 --image-tag agent2027-pre.<N>
+#   -> manifests/agent2027/A04_CAP-0.csv (rows 001-006 on pre.3, the image sessions A/B ran;
+#      regenerate with --image-tag agent2027-pre.3 so they stay byte-identical)
+# Session-C rows 007-008 (A04-T8), SR4 fallback (2026-10-19; pre-registration Part II "A04
+# CAP-0 verdicts" and Part V.4): session C = Q122 TP2 (8040) + Q4 TP1 (8032) + Q0.8 TP1
+# (8030), image agent2027-v2.3 (E7). Each row's global LLM_MODEL/LLM_PORT is the session's
+# THIRD model, the one no role of the row uses (A04 §4 check (d)), so a W call that wrongly
+# follows the global lands on a server no role should reach:
+#   mixcheck_esmall: S, T Q122; E Q4;   global Q0.8 / 8030
+#   mixcheck_1b:     S, T Q0.8; E Q122; global Q4 / 8032
+# make_manifest admits LLM_MODEL/LLM_PORT in env_overrides on mixed rows only.
+ablation_id: A04
+defaults:
+  image_tag: agent2027-pre.N
+  fold_seeds: [42]
+  replicates: [0]
+  cap_hours: 6
+  expected_u: 0.2
+  notes: smoke
+  datasets: [balance-scale]
+  env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1"}
+blocks:
+  - {arm_id: stage0_Q0.8, start: 1, rung: Q0.8, port: 8030}
+  - {arm_id: stage0_Q2, start: 2, rung: Q2, port: 8031}
+  - {arm_id: stage0_Q4, start: 3, rung: Q4, port: 8032}
+  - {arm_id: stage0_Q9, start: 4, rung: Q9, port: 8033}
+  - {arm_id: stage0_Q122, start: 5, rung: Q122, port: 8040}
+  - {arm_id: stage0_O20, start: 6, rung: O20, port: 8020}
+  # Session C (SR6 routing check), SR4 layout; never analysed (notes=smoke).
+  - {arm_id: mixcheck_esmall, start: 7, image_tag: agent2027-v2.3,
+     rung_S: Q122, rung_E: Q4, rung_T: Q122, port_S: 8040, port_E: 8032, port_T: 8040,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_WEBSEARCH_ROUTING: caller,
+                     LLM_MODEL: "Qwen/Qwen3.5-0.8B", LLM_PORT: "8030"}}
+  - {arm_id: mixcheck_1b, start: 8, image_tag: agent2027-v2.3,
+     rung_S: Q0.8, rung_E: Q122, rung_T: Q0.8, port_S: 8030, port_E: 8040, port_T: 8030,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_WEBSEARCH_ROUTING: caller,
+                     LLM_MODEL: "Qwen/Qwen3.5-4B", LLM_PORT: "8032"}}

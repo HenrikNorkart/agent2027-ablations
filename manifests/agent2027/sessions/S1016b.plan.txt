@@ -1,0 +1,29 @@
+session_id=S1016b
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=2298508021182893967
+sentinel_first=0 sentinels=none
+rows=24
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A03-031	replace	balance-scale	0
+2	A05-020	full	wine	0
+3	A07-006	errors_hidden	housing	0
+4	A05-001	full	balance-scale	0
+5	A05-026	full	myocardial	0
+6	A05-004	full	heart	0
+7	A07-001	errors_hidden	myocardial	0
+8	A05-014	full	heart	0
+9	A05-041	full	synp_p3	0
+10	A05-006	full	myocardial	0
+11	A05-050	full	synp_p4	0
+12	A05-023	full	vehicle	0
+13	A05-032	full	synp_p2	0
+14	A03-036	replace	myocardial	0
+15	A05-047	full	synp_p1	0
+16	A03-034	replace	heart	0
+17	A03-040	replace	wine	0
+18	A05-038	full	synp_p7	0
+19	A05-017	full	housing	0
+20	A05-010	full	wine	0
+21	A05-053	full	synp_p6b	0
+22	A05-044	full	synp_p6a	0
+23	A05-035	full	synp_p5	0
+24	A05-029	full	crab	0

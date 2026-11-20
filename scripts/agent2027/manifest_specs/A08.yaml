@@ -1,0 +1,34 @@
+# A08 · M5 brute-force CPU screen + LLM-FE comparator (docs/ablations/A08_M5_bruteforce_screen_and_comparators.md
+# §4, A08-T9; pre-registration Part III.2 and V.8).
+#   python scripts/agent2027/make_manifest.py --ablation A08 -> manifests/agent2027/A08_M5.csv (95 rows)
+#
+# A08-001…081  CPU screen (already run 2026-10-12/14 by classicfe_launch.sh; these rows are its
+#              R7 record and the keys a08_log_wandb.py logs under). 3 arms x SYN-P 8 + p0 x fold
+#              seeds {42, 4, 5}; image classicfe:4; no rung, no port, no LLM seed, 0u.
+# A08-082…095  llmfe: SYN-P 7 x fold seed 42 x replicate {0, 1}; O120 through the X5 token proxy
+#              (port 8090 planned; --plan-session --proxy-port stamps the session's proxy port).
+#              Run by scripts/agent2027/a08_comparators_clients.sh, never by ro27_clients_manifest.sh.
+# caafe        NOT generated: CL4 applied at G1 (Part III.3, V.8): CAAFE is not run.
+#
+# Comparator rows pass no seed to the LLM, so llm_seed is empty (allowed for comparator images only).
+ablation_id: A08
+defaults:
+  fold_seeds: [42]
+  replicates: [0]
+  cap_hours: 6
+  llm_seed: ""
+  env_overrides: {}
+blocks:
+  # --- CPU screen (gate M5S; labels in Part III.2) ------------------------------------------
+  - {arm_id: base_no_fe, start: 1, datasets: "@SYNP_ALL", fold_seeds: [42, 4, 5], image_tag: "classicfe:4",
+     expected_u: 0, notes: "cpu_screen; classicfe raw arm; XGBoost random_state 42"}
+  - {arm_id: openfe, start: 28, datasets: "@SYNP_ALL", fold_seeds: [42, 4, 5], image_tag: "classicfe:4",
+     expected_u: 0, notes: "cpu_screen; OpenFE 0.0.12 OPENFE_NJ=1; every returned feature kept"}
+  - {arm_id: autofeat, start: 55, datasets: "@SYNP_ALL", fold_seeds: [42, 4, 5], image_tag: "classicfe:4",
+     expected_u: 0, notes: "cpu_screen; AutoFeat 2.1.3 feateng_steps=2 n_jobs=4; unseeded draw"}
+  # --- LLM-FE (C1b primary comparator) --------------------------------------------------------
+  # Native budget (main.py: max_sample_nums = 20 x 5, sampler stops at //5 = 20 samples per split,
+  # samples_per_prompt 3), LLMFE_MAX_TOKENS=2048, server-default temperature; X4 specs.
+  - {arm_id: llmfe, start: 82, datasets: "@SYNP7", fold_seeds: [42], replicates: [0, 1],
+     image_tag: "llmfe:oss120", rung: O120, port: 8090, expected_u: 0.6,
+     notes: "llmfe native budget 20 samples/split; LLMFE_MAX_TOKENS=2048; X4 spec; X5 proxy"}

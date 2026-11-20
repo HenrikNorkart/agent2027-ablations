@@ -1,0 +1,107 @@
+"""
+[PREFIX]
+
+###
+<Task>
+Load tests of steel members in a structures laboratory. The table has 2000 records, one per test specimen, described by 23 columns.
+Columns:
+- dust_concentration_mg_m3: airborne dust concentration, mg per cubic metre
+- member_length_m: length of the member, metres
+- maintenance_interval_days: days between scheduled maintenance
+- cross_section_cm2: cross-section area of the member, cm2
+- operating_hours_total: accumulated operating hours
+- line_pressure_kpa: line pressure, kPa
+- supply_voltage_v: supply voltage, volts
+- coolant_flow_l_min: coolant flow, litres per minute
+- vibration_rms_mm_s: RMS vibration velocity, mm/s
+- ambient_temperature_c: ambient temperature at the site, degrees Celsius
+- power_factor: electrical power factor
+- axial_load_kn: axial load applied to the member, kN
+- relative_humidity_pct: relative humidity, percent
+- sensor_age_months: age of the installed sensor, months
+- noise_level_db: background noise level, dB
+- operator_shift: shift during which the record was taken
+- site_region: region of the site
+- sensor_vendor: vendor of the installed sensor
+- shift_length_h: length of the working shift, hours
+- site_altitude_ft: site altitude, feet
+- site_altitude_m: site altitude, metres
+- inspection_count: number of previous inspections
+- coolant_flow_gal_min: coolant flow, US gallons per minute
+Goal: predict the measured deformation index (a numeric target; it has been standardised, so only its relative scale is meaningful).
+
+###
+<Features>
+[FEATURES]
+
+###
+<Examples>
+[EXAMPLES]
+[SUFFIX]
+"""
+
+@evaluate.run
+def evaluate(data: dict):
+    """ Evaluate the feature transformations on data observations."""
+    
+    from sklearn import preprocessing
+    from sklearn.model_selection import StratifiedKFold, KFold
+    from sklearn.metrics import mean_squared_error
+    from preprocessing import preprocess_datasets
+    import xgboost as xgb
+    import torch
+    import numpy as np
+
+    # Load data observations
+    label_encoder = preprocessing.LabelEncoder()
+    inputs, outputs, is_cat, is_regression = data['inputs'], data['outputs'], data['is_cat'], data['is_regression']
+    X = modify_features(inputs)
+    y = outputs
+
+    # Encode categorical string columns
+    for col in X.columns:
+        if X[col].dtype == 'string':
+            X[col] = label_encoder.fit_transform(X[col])
+
+    # Choose cross-validation strategy
+    kf = KFold(n_splits=4, shuffle=True, random_state=42)
+
+    scores = []
+
+    # 4-Fold Cross-Validation
+    for train_idx, test_idx in kf.split(X, y):
+        X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
+        y_train, y_test = y[train_idx], y[test_idx]
+
+        X_train_new, X_test_new = preprocess_datasets(X_train, X_test, None)
+        
+        # Convert to tensors
+        X_train = torch.tensor(X_train_new.to_numpy())
+        X_test = torch.tensor(X_test_new.to_numpy())
+        y_train = torch.tensor(y_train)
+        y_test = torch.tensor(y_test)
+        
+        # Load model
+        model = xgb.XGBRegressor(random_state=42)
+
+        model.fit(X_train, y_train)
+        
+        y_pred = model.predict(X_test)
+        score = -1*mean_squared_error(y_test, y_pred, squared=False)
+        scores.append(score)
+
+    # Calculate average score
+    avg_score = np.mean(scores)
+
+    return avg_score, inputs, outputs
+    
+
+@equation.evolve
+def modify_features(df_input) -> pd.DataFrame:
+    """
+    Thought 1: No transformation yet; this baseline returns the input columns unchanged.
+    New Feature 1: none
+    """
+    df_output = df_input.copy()
+
+    return df_output

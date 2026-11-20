@@ -1,0 +1,15 @@
+session_id=S1022d
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=3720671741962810381
+sentinel_first=1 sentinels=A06-103
+sentinel_image_tag=agent2027-v2.3
+port=8032
+rows=8
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A06-103	sentinel_Q4	synp_p2	1
+2	A20-005	fx_pajM_Q4	synp_p6b	0
+3	A20-007	fx_pajM_Q4	synp_p1	0
+4	A20-001	fx_pajM_Q4	synp_p3	0
+5	A20-004	fx_pajM_Q4	synp_p6a	0
+6	A20-002	fx_pajM_Q4	synp_p5	0
+7	A20-006	fx_pajM_Q4	synp_p4	0
+8	A20-003	fx_pajM_Q4	synp_p2	0

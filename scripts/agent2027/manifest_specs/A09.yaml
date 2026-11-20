@@ -1,0 +1,43 @@
+# A09 · RT3 oracle and misdirected planner (docs/ablations/A09_RT3_planner_oracle_misdirected.md §4.1, §4.4).
+#   python scripts/agent2027/make_manifest.py --ablation A09 -> manifests/agent2027/A09_RT3.csv
+#
+# Image v2.1 = v2.0 + E9c planner hook (Full byte-identical). Seeds f42 r0 on every row, so each
+# arm shares A05's seed-42 partition (pair: A05__full__<dataset>__f42__r0).
+#
+# Focus file mount (A09-T6): no manifest column. ro27_clients_manifest.sh mounts
+# $RT3_FOCUS_DIR/<row_id>.json (default ~/rogueone-rt3-focus/<row_id>.json) read-only at
+# /workspace/focus/focus.json only on rows whose env_overrides set ROGUE_ONE_PLANNER_MODE to
+# oracle or misdirected, and refuses such a row when the file is missing. The files are built
+# off-repo by scripts/agent2027/rt3_focus.py build (A09-T10); they are never in the repo or image.
+#
+# D4: SYN-P classification rows (p3, p4, p5, p7) carry ROGUE_ONE_STRATIFIED_FOLDS=True, as in A05.
+ablation_id: A09
+defaults:
+  image_tag: agent2027-v2.1
+  rung: O120
+  port: 8010
+  cap_hours: 6
+  expected_u: 0.85
+  notes: pair A05 f42
+  fold_seeds: [42]
+  replicates: [0]
+  env_overrides_by_task_type:
+    classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}
+blocks:
+  # Smoke (guard 1 on v2.1: Full-v2 prompt diff vs prompt-baseline-v2.0), 1 fold, never analysed.
+  # Same task and overrides as the freeze smoke A05-901.
+  - {arm_id: full, start: 0, datasets: [synp_p3], expected_u: 0.17, notes: smoke,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  # Oracle: SYN-P 8 in the order p1, p2, p3, p4, p5, p6a, p6b, p7.
+  - {arm_id: oracle, start: 1, datasets: "@SYNP8",
+     env_overrides: {ROGUE_ONE_PLANNER_MODE: oracle, ROGUE_ONE_PLANNER_FOCUS_FILE: /workspace/focus/focus.json}}
+  # Misdirected: SYN-P 7 in the order p1 ... p6b.
+  - {arm_id: misdirected, start: 9, datasets: "@SYNP7",
+     env_overrides: {ROGUE_ONE_PLANNER_MODE: misdirected, ROGUE_ONE_PLANNER_FOCUS_FILE: /workspace/focus/focus.json}}
+  # Options (run only if funded / asked; A09-T14): AB3 on junglechess (source: A05 housing f42 r0),
+  # and misdirected on synp_p7.
+  - {arm_id: misdirected, start: 16, datasets: [junglechess], expected_u: 1.0,
+     env_overrides: {ROGUE_ONE_PLANNER_MODE: misdirected, ROGUE_ONE_PLANNER_FOCUS_FILE: /workspace/focus/focus.json},
+     env_overrides_by_task_type: {}}
+  - {arm_id: misdirected, start: 17, datasets: [synp_p7],
+     env_overrides: {ROGUE_ONE_PLANNER_MODE: misdirected, ROGUE_ONE_PLANNER_FOCUS_FILE: /workspace/focus/focus.json}}

@@ -1,0 +1,94 @@
+# RO27 SearXNG: private, localhost-only search backend for Rogue One agents (HQ #266).
+use_default_settings: true
+general:
+  instance_name: "ro27-searxng"
+  enable_metrics: true
+server:
+  secret_key: "<redacted; generated per host>"
+  # The limiter throttles *incoming* clients (bot detection); our only client is the
+  # agents on localhost, so it stays off. It does not rate-limit outgoing engine calls.
+  limiter: false
+  public_instance: false
+  image_proxy: false
+  method: "GET"
+search:
+  safe_search: 0
+  autocomplete: ""
+  formats: [html, json]
+  # Ban-risk tuning (2026-10-14, after A02 got google cse suspended): back off much
+  # longer than the defaults (5 s / 120 s / 180 s) so a blocked engine is not
+  # re-tried every few minutes, which is what escalates a soft 429 into a block.
+  ban_time_on_fail: 30
+  max_ban_time_on_fail: 600
+  suspended_times:
+    SearxEngineAccessDenied: 3600
+    SearxEngineCaptcha: 21600
+    SearxEngineTooManyRequests: 1800
+    cf_SearxEngineCaptcha: 1296000
+    cf_SearxEngineAccessDenied: 86400
+    recaptcha_SearxEngineCaptcha: 604800
+outgoing:
+  request_timeout: 5.0
+  max_request_timeout: 10.0
+  retries: 0
+  pool_connections: 100
+  pool_maxsize: 20
+# Engine set (2026-10-14). Probed from this IP with 5 tabular-ML queries each:
+#   answer 5/5 with relevant snippets: duckduckgo web, mojeek, yahoo, privacywall, yep,
+#   yandex, seznam; scholarly: arxiv, openalex, crossref, semantic scholar.
+#   mojeek answers but returns 403 after ~15 queries in a burst (kept; it is suspended 1 h
+#   per 403). semantic scholar (keyless) starts failing under load; arxiv's API terms ask
+#   for <= 1 request / 3 s, which the agents' peak rate exceeds: both stay out of the
+#   default set (they remain selectable as engines=... / category science).
+#   blocked: google cse + google (429 / access denied), google scholar (access denied),
+#   startpage + duckduckgo + qwant (CAPTCHA), brave (429). bing: empty 4/5, junk 1/5.
+# openalex and crossref are added to the default (general) category, which is what the
+# agent client queries, at weight 0.5: web pages rank first, and paper abstracts fill the
+# client's top 10 only when the web engines return too little (fallback, not a mix).
+engines:
+  - name: brave
+    disabled: true
+  - name: duckduckgo
+    disabled: true
+  - name: qwant
+    disabled: true
+  - name: startpage
+    disabled: true
+  - name: google cse
+    disabled: true
+  - name: google
+    disabled: true
+  - name: google scholar
+    disabled: true
+  - name: bing
+    disabled: true
+  - name: duckduckgo web
+    disabled: false
+  - name: mojeek
+    disabled: false
+    inactive: false
+  - name: yahoo
+    disabled: false
+  - name: privacywall
+    disabled: false
+  - name: yep
+    disabled: false
+  - name: yandex
+    disabled: false
+  - name: seznam
+    disabled: false
+    timeout: 6.0
+  - name: wikipedia
+    disabled: false
+  - name: wikidata
+    timeout: 5.0
+  - name: openalex
+    disabled: false
+    categories: [general, science, scientific publications]
+    weight: 0.5
+    timeout: 8.0
+  - name: crossref
+    disabled: false
+    categories: [general, science, scientific publications]
+    weight: 0.5
+    timeout: 8.0

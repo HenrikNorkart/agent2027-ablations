@@ -1,0 +1,11 @@
+contrast,test,p_raw,p_holm,reject
+C1a,GLMM y ~ arm + (1|task) + (1|task_seed) (Wald),0.073929391163293,0.221788173489879,False
+C1b,GLMM y ~ arm + (1|task) + (1|task_fold) (Wald),0.748924295691026,1.0,False
+C2a,"RV3 12-cell beta-binomial (analysis of record, G4 addendum), TOST +-0.167",8.226850414321207e-05,0.0007404165372889087,True
+C2b,"RV3 12-cell beta-binomial (analysis of record, G4 addendum), TOST +-0.167",0.005693393226545037,0.028466966132725185,True
+C2c,"RV3 12-cell beta-binomial (analysis of record, G4 addendum), two-sided Wald",0.0009733413790171139,0.007786731032136911,True
+C3,GLMM y ~ arm + task + (1|task_seed) (LR test),0.63877629775684,1.0,False
+C4a,exact conditional test stratified by fold seed (Part V.14),4.7629934461210166e-06,4.762993446121017e-05,True
+C4b,"exact McNemar, 15 pairs (Part V.15)",0.00390625,0.0234375,True
+C5a,exact Cochran-Armitage trend stratified by task x seed (Part V.17),0.0013163840877914953,0.009214688614540468,True
+C5b,GLMM y ~ arm + (1|task) + (1|task_seed) (Wald),0.00875955603648829,0.03503822414595316,True

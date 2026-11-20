@@ -1,0 +1,8 @@
+session_id=S1019q
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=13294086715517437378
+sentinel_first=1 sentinels=A06-101
+sentinel_image_tag=agent2027-v2.0
+port=8022
+rows=1
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A06-101	sentinel_Q4	synp_p2	1

@@ -1,0 +1,48 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Build/dist artifacts
+dist/
+build/
+*.egg-info/
+
+# Repo and editor metadata
+.git/
+.vscode/
+.idea/
+
+# Container metadata
+Dockerfile*
+.dockerignore
+
+# Runtime/log artifacts
+*.log
+*.log.*
+coverage/
+wandb/
+
+# Environment files
+# .env
+# .env.*
+# .secret.env
+
+# OS/temp artifacts
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+# AGENT 2027: config.py loads .dev.env with override=True, which would silently beat
+# every docker -e flag of the launcher. Never bake it into an image.
+.dev.env
+
+# AGENT 2027 A14-T2 / E8b: keep P7's secrets out of every image. The KT3 corpora are
+# mounted read-only at /workspace/corpora/<name>/ for A14's kb_local_* rows only, and
+# the pre-registration and result notes describe P7; neither is baked into an image.
+scripts/agent2027/corpora/
+docs/agent2027/

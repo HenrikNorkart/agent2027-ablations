@@ -1,0 +1,49 @@
+token_basis,param_proxy,baseline,scenario,share_tokens_off_big_model,cost_ratio_vs_baseline,reduction
+"prompt+compl (traces, Full syn, n=30)",active,all O120,"A floors primary (S=Q4, E=O120, T=Q0.8)",0.2764084990956183,0.8210223333728177,0.17897766662718229
+"prompt+compl (traces, Full syn, n=30)",active,all Q122,"B floors primary (S=Q4, E=Q122, T=Q0.8)",0.2764084990956183,0.773281225463284,0.22671877453671596
+"prompt+compl (traces, Full syn, n=30)",active,all Q122,"C floors hq315 decoded (S=Q4, E=Q4, T=Q0.8)",1.0,0.33912632492065503,0.6608736750793449
+"prompt+compl (traces, Full syn, n=30)",active,all O120,"D only Tester small (S=O120, E=O120, T=Q0.8)",0.19023023462295302,0.8396098021806474,0.1603901978193526
+"prompt+compl (traces, Full syn, n=30)",active,all O120,"E Tester as code (S=O120, E=O120, T=code)",0.19023023462295302,0.8097697653770469,0.19023023462295308
+"prompt+compl (traces, Full syn, n=30)",active,all O120,F Tester as code + S=Q4 (E=O120),0.2764084990956183,0.7911822965692172,0.20881770343078276
+"prompt+compl (traces, Full syn, n=30)",active,all Q122,"G live mix_esmall (S=Q122, E=Q4, T=Q122)",0.7235915009043817,0.5658450994573709,0.43415490054262906
+"prompt+compl (traces, Full syn, n=30)",active,all Q122,"H live mix_1b (S=Q0.8, E=Q122, T=Q0.8)",0.2764084990956183,0.7457041808320312,0.25429581916796884
+"prompt+compl (traces, Full syn, n=30)",total,all O120,"A floors primary (S=Q4, E=O120, T=Q0.8)",0.2764084990956183,0.727838485909416,0.272161514090584
+"prompt+compl (traces, Full syn, n=30)",total,all Q122,"B floors primary (S=Q4, E=Q122, T=Q0.8)",0.2764084990956183,0.7276644291469146,0.27233557085308535
+"prompt+compl (traces, Full syn, n=30)",total,all Q122,"C floors hq315 decoded (S=Q4, E=Q4, T=Q0.8)",1.0,0.027797239747594675,0.9722027602524054
+"prompt+compl (traces, Full syn, n=30)",total,all O120,"D only Tester small (S=O120, E=O120, T=Q0.8)",0.19023023462295302,0.8110704849300244,0.18892951506997557
+"prompt+compl (traces, Full syn, n=30)",total,all O120,"E Tester as code (S=O120, E=O120, T=code)",0.19023023462295302,0.8097697653770469,0.19023023462295308
+"prompt+compl (traces, Full syn, n=30)",total,all O120,F Tester as code + S=Q4 (E=O120),0.2764084990956183,0.7265377663564386,0.27346223364356137
+"prompt+compl (traces, Full syn, n=30)",total,all Q122,"G live mix_esmall (S=Q122, E=Q4, T=Q122)",0.7235915009043817,0.30013281060068003,0.69986718939932
+"prompt+compl (traces, Full syn, n=30)",total,all Q122,"H live mix_1b (S=Q0.8, E=Q122, T=Q0.8)",0.2764084990956183,0.7254040156525497,0.27459598434745025
+"compl only (traces, Full syn, n=30)",active,all O120,"A floors primary (S=Q4, E=O120, T=Q0.8)",0.5405034061195345,0.5961952599864253,0.4038047400135747
+"compl only (traces, Full syn, n=30)",active,all Q122,"B floors primary (S=Q4, E=Q122, T=Q0.8)",0.5405034061195345,0.529212913594505,0.47078708640549505
+"compl only (traces, Full syn, n=30)",active,all Q122,"C floors hq315 decoded (S=Q4, E=Q4, T=Q0.8)",1.0,0.2535149572662257,0.7464850427337744
+"compl only (traces, Full syn, n=30)",active,all O120,"D only Tester small (S=O120, E=O120, T=Q0.8)",0.45776575854304474,0.6140406349539035,0.3859593650460965
+"compl only (traces, Full syn, n=30)",active,all O120,"E Tester as code (S=O120, E=O120, T=code)",0.45776575854304474,0.5422342414569553,0.4577657585430447
+"compl only (traces, Full syn, n=30)",active,all O120,F Tester as code + S=Q4 (E=O120),0.5405034061195345,0.5243888664894771,0.47561113351052287
+"compl only (traces, Full syn, n=30)",active,all Q122,"G live mix_esmall (S=Q122, E=Q4, T=Q122)",0.4594965938804655,0.7243020436717207,0.2756979563282793
+"compl only (traces, Full syn, n=30)",active,all Q122,"H live mix_1b (S=Q0.8, E=Q122, T=Q0.8)",0.5405034061195345,0.5027368663700282,0.49726313362997177
+"compl only (traces, Full syn, n=30)",total,all O120,"A floors primary (S=Q4, E=O120, T=Q0.8)",0.5405034061195345,0.4654552536850842,0.5345447463149158
+"compl only (traces, Full syn, n=30)",total,all Q122,"B floors primary (S=Q4, E=Q122, T=Q0.8)",0.5405034061195345,0.4652110463160425,0.5347889536839575
+"compl only (traces, Full syn, n=30)",total,all Q122,"C floors hq315 decoded (S=Q4, E=Q4, T=Q0.8)",1.0,0.020779914530018498,0.9792200854699815
+"compl only (traces, Full syn, n=30)",total,all O120,"D only Tester small (S=O120, E=O120, T=Q0.8)",0.45776575854304474,0.5453642637375914,0.4546357362624086
+"compl only (traces, Full syn, n=30)",total,all O120,"E Tester as code (S=O120, E=O120, T=code)",0.45776575854304474,0.5422342414569552,0.4577657585430448
+"compl only (traces, Full syn, n=30)",total,all O120,F Tester as code + S=Q4 (E=O120),0.5405034061195345,0.462325231404448,0.5376747685955521
+"compl only (traces, Full syn, n=30)",total,all Q122,"G live mix_esmall (S=Q122, E=Q4, T=Q122)",0.4594965938804655,0.555568868213976,0.444431131786024
+"compl only (traces, Full syn, n=30)",total,all Q122,"H live mix_1b (S=Q0.8, E=Q122, T=Q0.8)",0.5405034061195345,0.46304087851075754,0.5369591214892424
+"compl only (rows_final, Full OK syn+real)",active,all O120,"A floors primary (S=Q4, E=O120, T=Q0.8)",0.5521641129969728,0.5878604485697354,0.4121395514302646
+"compl only (rows_final, Full OK syn+real)",active,all Q122,"B floors primary (S=Q4, E=Q122, T=Q0.8)",0.5521641129969728,0.5192484134020484,0.4807515865979516
+"compl only (rows_final, Full OK syn+real)",active,all Q122,"C floors hq315 decoded (S=Q4, E=Q4, T=Q0.8)",1.0,0.25054688120023205,0.749453118799768
+"compl only (rows_final, Full OK syn+real)",active,all O120,"D only Tester small (S=O120, E=O120, T=Q0.8)",0.4670409962492749,0.6062203364957094,0.3937796635042906
+"compl only (rows_final, Full OK syn+real)",active,all O120,"E Tester as code (S=O120, E=O120, T=code)",0.4670409962492749,0.532959003750725,0.467040996249275
+"compl only (rows_final, Full OK syn+real)",active,all O120,F Tester as code + S=Q4 (E=O120),0.5521641129969728,0.514599115824751,0.48540088417524896
+"compl only (rows_final, Full OK syn+real)",active,all Q122,"G live mix_esmall (S=Q122, E=Q4, T=Q122)",0.44783588700302723,0.7312984677981837,0.26870153220181625
+"compl only (rows_final, Full OK syn+real)",active,all Q122,"H live mix_1b (S=Q0.8, E=Q122, T=Q0.8)",0.5521641129969728,0.4920090160427851,0.507990983957215
+"compl only (rows_final, Full OK syn+real)",total,all O120,"A floors primary (S=Q4, E=O120, T=Q0.8)",0.5521641129969728,0.4539395217379863,0.5460604782620138
+"compl only (rows_final, Full OK syn+real)",total,all Q122,"B floors primary (S=Q4, E=Q122, T=Q0.8)",0.5521641129969728,0.4536893727734388,0.5463106272265612
+"compl only (rows_final, Full OK syn+real)",total,all Q122,"C floors hq315 decoded (S=Q4, E=Q4, T=Q0.8)",1.0,0.020536629606576397,0.9794633703934236
+"compl only (rows_final, Full OK syn+real)",total,all O120,"D only Tester small (S=O120, E=O120, T=Q0.8)",0.4670409962492749,0.5361524464601218,0.46384755353987817
+"compl only (rows_final, Full OK syn+real)",total,all O120,"E Tester as code (S=O120, E=O120, T=code)",0.4670409962492749,0.5329590037507251,0.46704099624927486
+"compl only (rows_final, Full OK syn+real)",total,all O120,F Tester as code + S=Q4 (E=O120),0.5521641129969728,0.45074607902858954,0.5492539209714105
+"compl only (rows_final, Full OK syn+real)",total,all Q122,"G live mix_esmall (S=Q122, E=Q4, T=Q122)",0.44783588700302723,0.5668472568331376,0.43315274316686236
+"compl only (rows_final, Full OK syn+real)",total,all Q122,"H live mix_1b (S=Q0.8, E=Q122, T=Q0.8)",0.5521641129969728,0.4514566352849746,0.5485433647150254

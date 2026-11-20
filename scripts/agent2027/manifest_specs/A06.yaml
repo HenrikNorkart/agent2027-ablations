@@ -1,0 +1,59 @@
+# A06 · M0-S session sentinel (docs/ablations/A06_M0S_session_sentinel.md §4.2-4.6, A06-T9;
+# pre-registration Part V.6).
+#
+#   Before G2 (only the Q4 block; the O120 block is skipped while SENTINEL_TASK is unset):
+#     python scripts/agent2027/make_manifest.py --ablation A06
+#   After the G2 memo (ANALYSIS__g2_stats__20261019) names the sentinel task:
+#     python scripts/agent2027/make_manifest.py --ablation A06 --param SENTINEL_TASK=synp_pX
+#   -> manifests/agent2027/A06_M0-S.csv
+#
+# SENTINEL_TASK has NO default on purpose. A06 §4.3 / Part V.6 fix it at G2 from A05's
+# seed-42 rec_sel (closest to 5/10; ties: 15-episode rate, then the lower task index in
+# the order synp_p1, p2, p3, p4, p5, p6a, p6b). If no candidate is informative the rule is
+# still applied (Q3 default "keep the rule", Part VIII.1 items 10-16), which then falls to
+# the lowest tied index. Until G2 lands the O120 sentinels wait (A06 §6, "Mon 19 Oct (G2)").
+#
+# image_tag is empty here: it is the HOST session's tag, stamped when the row is planned
+# into a session (make_manifest.py --plan-session ... --sentinel-image-tag agent2027-v2.N).
+# Ports are planning fields: the launcher uses the session server's port; --port stamps it.
+# SR4: O20 failed, so Q4 is the small rung; sentinel_Q4 never runs on an O20 session.
+ablation_id: A06
+params:
+  SENTINEL_TASK: null
+param_choices:
+  SENTINEL_TASK: "@SYNP7"   # candidates: SYN-P 7 (P7 and P0 excluded, A06 §4.3 rule 1)
+defaults:
+  image_tag: ""
+  is_sentinel: 1
+  fold_seeds: [42]
+  cap_hours: 6
+  # D4: SYN-P classification tasks run with stratified folds (copied from the A05 rows, §4.2).
+  env_overrides_by_task_type:
+    classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}
+# Template for the O120 blocks (a YAML anchor; expand_spec reads only params/defaults/blocks).
+templates:
+  o120: &o120
+    arm_id: sentinel
+    datasets: ["${SENTINEL_TASK}"]
+    requires: [SENTINEL_TASK]
+    rung: O120
+    expected_u: 0.85
+    notes: "sentinel; task fixed at G2 (A06 4.3)"
+blocks:
+  # sentinel_Q4: Qwen/Qwen3.5-4B @ 851bf6e (rungs.csv), synp_p2, k = 1..5, llm_seed 6000+k.
+  # k = 1 plus A17's f2_Q4 x synp_p2 x f42 x r0 anchor form the Q4 reference (A06 §4.5).
+  - {arm_id: sentinel_Q4, start: 101, datasets: [synp_p2], replicates: [1, 2, 3, 4, 5],
+     rung: Q4, port: 8032, expected_u: 0.75, notes: "sentinel_Q4"}
+  # sentinel (O120), k = 1..12, llm_seed 5000+k; under TP2 odd k plan port 8010, even k 8011.
+  - {<<: *o120, start: 1, replicates: [1], port: 8010}
+  - {<<: *o120, start: 2, replicates: [2], port: 8011}
+  - {<<: *o120, start: 3, replicates: [3], port: 8010}
+  - {<<: *o120, start: 4, replicates: [4], port: 8011}
+  - {<<: *o120, start: 5, replicates: [5], port: 8010}
+  - {<<: *o120, start: 6, replicates: [6], port: 8011}
+  - {<<: *o120, start: 7, replicates: [7], port: 8010}
+  - {<<: *o120, start: 8, replicates: [8], port: 8011}
+  - {<<: *o120, start: 9, replicates: [9], port: 8010}
+  - {<<: *o120, start: 10, replicates: [10], port: 8011}
+  - {<<: *o120, start: 11, replicates: [11], port: 8010}
+  - {<<: *o120, start: 12, replicates: [12], port: 8011}

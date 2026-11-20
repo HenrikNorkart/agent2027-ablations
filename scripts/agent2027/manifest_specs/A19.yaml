@@ -1,0 +1,43 @@
+# A19 · CAP-2 role mixing under the SR4 fallback and CL1 (docs/ablations/A19_CAP2_role_mixing.md
+# §4, §6 "SR4 fallback", A19-T10; pre-registration Part V.19, Part VII.1 item 14, Part VIII.1
+# items 10-16, Amendment 2: tau = 0.60).
+#   python scripts/agent2027/make_manifest.py --ablation A19 -> manifests/agent2027/A19_CAP-2.csv
+#
+# SR4 (O20 failed Stage 0): big = Q122 (TP2, 8040), small = Q4 (TP1, 8032), Q0.8 (TP1, 8030).
+#   mix_esmall: S, T on Q122; E on Q4.     mix_1b: S, T on Q0.8; E on Q122.
+#   Global LLM_MODEL / LLM_PORT = Q122 / 8040 in both arms (Part V.19). They sit in
+#   env_overrides (declared R7 deviation, A19 §4); make_manifest admits the pair on mixed rows
+#   only and ro27_clients_manifest.sh writes them instead of its rung_E default.
+#   W follows its caller: ROGUE_ONE_WEBSEARCH_ROUTING=caller (E7, read from v2.3 on; also the
+#   v2_defaults value, restated as a guard). ROGUE_ONE_WEBSEARCH_MODEL/_PORT stay unset.
+# CL1 (CAP-2 on SYN-P only): the real-4 rows A19-015…018 and A19-033…036 are not generated;
+# row numbers follow A19 §4 (gaps kept). 28 rows.
+# Reference = A17 f2_Q122 (SYN-P 7 x {42, 4}), no new rows here.
+# Ports are the LIVE ports of the session's three servers (mixed rows are routed by them;
+# --plan-session never re-stamps a mixed row). D4: synp_p3/p4/p5 rows stratified.
+ablation_id: A19
+templates:
+  esmall: &esmall {ROGUE_ONE_WEBSEARCH_ROUTING: caller, LLM_MODEL: "Qwen/Qwen3.5-122B-A10B-FP8", LLM_PORT: "8040"}
+  synp: &synp {classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}}
+defaults:
+  image_tag: agent2027-v2.3
+  cap_hours: 6
+  replicates: [0]
+  expected_u: 0.85
+  env_overrides: *esmall
+  env_overrides_by_task_type: *synp
+blocks:
+  - {arm_id: mix_esmall, start: 1, datasets: "@SYNP7", fold_seeds: [42],
+     rung_S: Q122, rung_E: Q4, rung_T: Q122, port_S: 8040, port_E: 8032, port_T: 8040,
+     notes: "ref A17 f2_Q122 f42 r0 (SR4)"}
+  - {arm_id: mix_esmall, start: 8, datasets: "@SYNP7", fold_seeds: [4],
+     rung_S: Q122, rung_E: Q4, rung_T: Q122, port_S: 8040, port_E: 8032, port_T: 8040,
+     notes: "ref A17 f2_Q122 f4 r0 (SR4)"}
+  # A19-015…018 (mix_esmall real-4): CL1, not generated.
+  - {arm_id: mix_1b, start: 19, datasets: "@SYNP7", fold_seeds: [42],
+     rung_S: Q0.8, rung_E: Q122, rung_T: Q0.8, port_S: 8030, port_E: 8040, port_T: 8030,
+     notes: "ref A17 f2_Q122 f42 r0 (SR4)"}
+  - {arm_id: mix_1b, start: 26, datasets: "@SYNP7", fold_seeds: [4],
+     rung_S: Q0.8, rung_E: Q122, rung_T: Q0.8, port_S: 8030, port_E: 8040, port_T: 8030,
+     notes: "ref A17 f2_Q122 f4 r0 (SR4)"}
+  # A19-033…036 (mix_1b real-4): CL1, not generated.

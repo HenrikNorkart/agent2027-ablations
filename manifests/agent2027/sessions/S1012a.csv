@@ -1,0 +1,3 @@
+row_id,ablation_id,arm_id,dataset_id,task_type,fold_seed,llm_seed,replicate,is_sentinel,session_id,order_key,image_tag,rung_S,rung_E,rung_T,port_S,port_E,port_T,env_overrides,cap_hours,expected_u,notes
+A02-902,A02,R3,synp_p1,regression,42,42,0,0,S1012a,1,agent2027-pre.1,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_EXTRACTOR_ROUNDS"":""3"",""ROGUE_ONE_FEATURE_POOL_MODE"":""replace"",""ROGUE_ONE_SMOKE_FOLDS"":""1""}",6,0.15,smoke
+A02-901,A02,R1,synp_p1,regression,42,42,0,0,S1012a,2,agent2027-pre.1,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_EXTRACTOR_ROUNDS"":""1"",""ROGUE_ONE_FEATURE_POOL_MODE"":""replace"",""ROGUE_ONE_SMOKE_FOLDS"":""1""}",6,0.15,smoke

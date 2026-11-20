@@ -1,0 +1,26 @@
+row_id,ablation_id,arm_id,dataset_id,task_type,fold_seed,llm_seed,replicate,is_sentinel,session_id,order_key,image_tag,rung_S,rung_E,rung_T,port_S,port_E,port_T,env_overrides,cap_hours,expected_u,notes
+A07-007,A07,errors_hidden,crab,regression,42,42,0,0,S1016a,1,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_TOOL_ERROR_FEEDBACK"":""none""}",6,1.0,pair A05__full__crab__f42__r0
+A05-049,A05,full,synp_p3,classification,42,1042,1,0,S1016a,2,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A05-003,A05,full,vehicle,classification,42,42,0,0,S1016a,3,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A03-033,A03,replace,vehicle,classification,42,42,0,0,S1016a,4,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_FEATURE_POOL_MODE"":""replace""}",6,1.0,fallback
+A07-002,A07,errors_hidden,myocardial,classification,4,4,0,0,S1016a,5,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_TOOL_ERROR_FEEDBACK"":""none""}",6,1.0,pair A05__full__myocardial__f4__r0
+A05-012,A05,full,junglechess,classification,4,4,0,0,S1016a,6,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A05-034,A05,full,synp_p4,classification,42,42,0,0,S1016a,7,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A05-031,A05,full,synp_p1,regression,42,42,0,0,S1016a,8,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,0.85,
+A05-016,A05,full,myocardial,classification,4,4,0,0,S1016a,9,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A05-037,A05,full,synp_p6b,regression,42,42,0,0,S1016a,10,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,0.85,
+A03-039,A03,replace,crab,regression,42,42,0,0,S1016a,11,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_FEATURE_POOL_MODE"":""replace""}",6,1.0,fallback
+A05-011,A05,full,balance-scale,classification,4,4,0,0,S1016a,12,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A07-003,A07,errors_hidden,vehicle,classification,42,42,0,0,S1016a,13,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_TOOL_ERROR_FEEDBACK"":""none""}",6,1.0,pair A05__full__vehicle__f42__r0
+A05-022,A05,full,junglechess,classification,42,1042,1,0,S1016a,14,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A05-043,A05,full,synp_p5,classification,4,4,0,0,S1016a,15,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A05-040,A05,full,synp_p2,regression,4,4,0,0,S1016a,16,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,0.85,
+A05-052,A05,full,synp_p6a,regression,42,1042,1,0,S1016a,17,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,0.85,
+A05-046,A05,full,synp_p7,classification,4,4,0,0,S1016a,18,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A05-025,A05,full,credit-g,classification,42,1042,1,0,S1016a,19,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A05-009,A05,full,crab,regression,42,42,0,0,S1016a,20,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A05-008,A05,full,insurance,regression,42,42,0,0,S1016a,21,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A05-018,A05,full,insurance,regression,4,4,0,0,S1016a,22,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,
+A05-055,A05,full,synp_p0,regression,42,42,0,0,S1016a,23,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,0.85,
+A03-038,A03,replace,insurance,regression,42,42,0,0,S1016a,24,agent2027-v2.0,O120,O120,O120,8014,8014,8014,"{""ROGUE_ONE_FEATURE_POOL_MODE"":""replace""}",6,1.0,fallback
+A05-028,A05,full,insurance,regression,42,1042,1,0,S1016a,25,agent2027-v2.0,O120,O120,O120,8014,8014,8014,{},6,1.0,

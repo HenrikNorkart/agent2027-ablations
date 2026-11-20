@@ -1,0 +1,25 @@
+# A02 · M4 extractor rounds (docs/ablations/A02_M4_extractor_rounds.md §4).
+#   python scripts/agent2027/make_manifest.py --ablation A02 --image-tag agent2027-pre.<N>
+#   -> manifests/agent2027/A02_M4.csv (26 rows)
+ablation_id: A02
+defaults:
+  image_tag: agent2027-pre.N
+  rung: O120
+  port: 8010
+  fold_seeds: [42]
+  replicates: [0]
+  cap_hours: 6
+  env_overrides_by_task_type:
+    classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}
+blocks:
+  - {arm_id: R10, start: 1, datasets: "@SYNP8", expected_u: 0.85,
+     env_overrides: {ROGUE_ONE_EXTRACTOR_ROUNDS: "10", ROGUE_ONE_FEATURE_POOL_MODE: replace}}
+  - {arm_id: R3, start: 9, datasets: "@SYNP8", expected_u: 0.575,
+     env_overrides: {ROGUE_ONE_EXTRACTOR_ROUNDS: "3", ROGUE_ONE_FEATURE_POOL_MODE: replace}}
+  - {arm_id: R1, start: 17, datasets: "@SYNP8", expected_u: 0.575,
+     env_overrides: {ROGUE_ONE_EXTRACTOR_ROUNDS: "1", ROGUE_ONE_FEATURE_POOL_MODE: replace}}
+  # G0a smoke (session S1012a): synp_p1, 1 fold, not analysed.
+  - {arm_id: R1, start: 901, datasets: [synp_p1], expected_u: 0.15, notes: smoke,
+     env_overrides: {ROGUE_ONE_EXTRACTOR_ROUNDS: "1", ROGUE_ONE_FEATURE_POOL_MODE: replace, ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: R3, start: 902, datasets: [synp_p1], expected_u: 0.15, notes: smoke,
+     env_overrides: {ROGUE_ONE_EXTRACTOR_ROUNDS: "3", ROGUE_ONE_FEATURE_POOL_MODE: replace, ROGUE_ONE_SMOKE_FOLDS: "1"}}

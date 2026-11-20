@@ -1,0 +1,3 @@
+arm,runs,run_max_prompt_median,run_max_prompt_max,run_median_prompt_median,run_prompt_sum_median
+full,30,28325.5,122420,7313.5,18905799.5
+single,27,47654.0,129179,12532.0,32015672.0

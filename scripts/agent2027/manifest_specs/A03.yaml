@@ -1,0 +1,30 @@
+# A03 · M1 augment vs replace (docs/ablations/A03_M1_augment_vs_replace.md §4).
+#   python scripts/agent2027/make_manifest.py --ablation A03
+#   -> manifests/agent2027/A03_M1.csv
+# The E6 fallback is in force (pre-reg, 2026-10-14): no Core-10 pair before the freeze.
+# Rows here: the E6 / freeze-candidate smoke (A03-901..905, session S1015l on agent2027-pre.5 (S1015k on pre.4 failed: augment pool dtype bug);
+# A03-905, the pre-E6 prompt baseline, is dropped: one session takes one image, and E6's replace
+# byte-identity was shown end to end with a stub LLM, 47019da). The fallback rows A03-031..040 are added at
+# G1 with image agent2027-v2.0.
+ablation_id: A03
+defaults:
+  rung: O120
+  port: 8012
+  fold_seeds: [42]
+  replicates: [0]
+  cap_hours: 6
+  expected_u: 0.2
+  notes: smoke
+blocks:
+  - {arm_id: replace, start: 901, datasets: [myocardial], image_tag: agent2027-pre.5,
+     env_overrides: {ROGUE_ONE_FEATURE_POOL_MODE: replace, ROGUE_ONE_EXTRACTOR_ROUNDS: "10", ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: augment, start: 902, datasets: [myocardial], image_tag: agent2027-pre.5,
+     env_overrides: {ROGUE_ONE_FEATURE_POOL_MODE: augment, ROGUE_ONE_EXTRACTOR_ROUNDS: "10", ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: replace, start: 903, datasets: [credit-g], image_tag: agent2027-pre.5,
+     env_overrides: {ROGUE_ONE_FEATURE_POOL_MODE: replace, ROGUE_ONE_EXTRACTOR_ROUNDS: "10", ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: augment, start: 904, datasets: [credit-g], image_tag: agent2027-pre.5,
+     env_overrides: {ROGUE_ONE_FEATURE_POOL_MODE: augment, ROGUE_ONE_EXTRACTOR_ROUNDS: "10", ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  # Fallback rows (pre-declared E6 fallback in force): frozen replace x Core-10 x f42, inside A05's
+  # sessions on agent2027-v2.0, paired with A05-001..010 (A03-T12).
+  - {arm_id: replace, start: 31, datasets: "@CORE10", image_tag: agent2027-v2.0, port: 8010, expected_u: 1.0,
+     notes: fallback, env_overrides: {ROGUE_ONE_FEATURE_POOL_MODE: replace}}

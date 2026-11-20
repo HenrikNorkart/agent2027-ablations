@@ -1,0 +1,106 @@
+"""
+[PREFIX]
+
+###
+<Task>
+Experiments with a lever-arm balance scale. The table has 2000 records, one per experiment, described by 24 columns.
+Columns:
+- operator_shift: shift during which the record was taken
+- Right-Distance: distance of the right weight from the fulcrum (1 to 5)
+- site_altitude_m: site altitude, metres
+- operating_hours_total: accumulated operating hours
+- dust_concentration_mg_m3: airborne dust concentration, mg per cubic metre
+- line_pressure_kpa: line pressure, kPa
+- coolant_flow_l_min: coolant flow, litres per minute
+- sensor_vendor: vendor of the installed sensor
+- noise_level_db: background noise level, dB
+- maintenance_interval_days: days between scheduled maintenance
+- Left-Distance: distance of the left weight from the fulcrum (1 to 5)
+- supply_voltage_v: supply voltage, volts
+- relative_humidity_pct: relative humidity, percent
+- coolant_flow_gal_min: coolant flow, US gallons per minute
+- ambient_temperature_c: ambient temperature at the site, degrees Celsius
+- Right-Weight: weight placed on the right pan (1 to 5)
+- sensor_age_months: age of the installed sensor, months
+- site_altitude_ft: site altitude, feet
+- Left-Weight: weight placed on the left pan (1 to 5)
+- power_factor: electrical power factor
+- vibration_rms_mm_s: RMS vibration velocity, mm/s
+- shift_length_h: length of the working shift, hours
+- inspection_count: number of previous inspections
+- site_region: region of the site
+Goal: predict which side of the scale tips (0 = left side tips, 1 = balanced, 2 = right side tips).
+
+###
+<Features>
+[FEATURES]
+
+###
+<Examples>
+[EXAMPLES]
+[SUFFIX]
+"""
+
+@evaluate.run
+def evaluate(data: dict):
+    """ Evaluate the feature transformations on data observations."""
+    
+    from sklearn import preprocessing
+    from sklearn.model_selection import StratifiedKFold, KFold
+    from sklearn.metrics import accuracy_score
+    from preprocessing import preprocess_datasets
+    import xgboost as xgb
+    import torch
+    import numpy as np
+
+    # Load data observations
+    label_encoder = preprocessing.LabelEncoder()
+    inputs, outputs, is_cat, is_regression = data['inputs'], data['outputs'], data['is_cat'], data['is_regression']
+    X = modify_features(inputs)
+    y = label_encoder.fit_transform(outputs)
+
+    # Encode categorical string columns
+    for col in X.columns:
+        if X[col].dtype == 'string':
+            X[col] = label_encoder.fit_transform(X[col])
+
+    # Choose cross-validation strategy
+    kf = KFold(n_splits=4, shuffle=True, random_state=42) if is_regression else StratifiedKFold(n_splits=4, shuffle=True, random_state=42)
+
+    scores = []
+
+    # 4-Fold Cross-Validation
+    for train_idx, test_idx in kf.split(X, y):
+        X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
+        y_train, y_test = y[train_idx], y[test_idx]
+
+        X_train_new, X_test_new = preprocess_datasets(X_train, X_test, None)
+        
+        # Convert to tensors
+        X_train = torch.tensor(X_train_new.to_numpy())
+        X_test = torch.tensor(X_test_new.to_numpy())
+
+        # Load model
+        model = xgb.XGBClassifier(random_state=42)
+
+        model.fit(X_train_new, y_train)
+        
+        y_pred = model.predict(X_test_new)
+        score = accuracy_score(y_test, y_pred)
+        scores.append(score)
+
+    # Calculate average score
+    avg_score = np.mean(scores)
+
+    return avg_score, inputs, outputs
+
+
+@equation.evolve
+def modify_features(df_input) -> pd.DataFrame:
+    """
+    Thought 1: No transformation yet; this baseline returns the input columns unchanged.
+    New Feature 1: none
+    """
+    df_output = df_input.copy()
+
+    return df_output

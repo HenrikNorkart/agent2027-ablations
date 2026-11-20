@@ -1,0 +1,36 @@
+# A16 · RT2 SET-phased vs Full (docs/ablations/A16_RT2_set_phased.md §4, A16-T9; E9f).
+#   python scripts/agent2027/make_manifest.py --ablation A16 -> manifests/agent2027/A16_RT2.csv
+# Needs image v2.4 (E9f): ROGUE_ONE_TOPOLOGY is not read by v2.0-v2.3. A16 never combines
+# with another switch (the code refuses set_phased next to any non-Full switch value).
+# Row 000: smoke (set_phased, synp_p3, 1 fold; never analysed; same run name as A16-003).
+# Rows 001-002: crash-only pilot (blood p=4, communities p=102), K-SET Fri 23 Oct (A16 §6).
+# Rows 003-016: SYN-P 7 at fold seeds 42 and 4 (pair A05 f42 r0/r1 and f4 r0).
+# Rows 017-026: Core-10 at fold seed 42 (control = mean of A05 full f42 r0 + r1).
+# Rows 027-028: Full guard on v2.4 (the two prompt-baseline-v2.0 tasks, as A05-901/902).
+# Rows 029-030: K-SET re-pilot (A16 §6), planned ONLY after a failed pilot, a frozen fix and a
+#   dated pre-registration amendment; launch by Fri 23 Oct 18:00 as their own session.
+# D4: SYN-P classification rows carry ROGUE_ONE_STRATIFIED_FOLDS=True (as their A05 pairs);
+# Core-10 and pilot rows carry none (as A05-001..010).
+ablation_id: A16
+defaults:
+  image_tag: agent2027-v2.4
+  rung: O120
+  port: 8010
+  cap_hours: 6
+  replicates: [0]
+  fold_seeds: [42]
+  env_overrides: {ROGUE_ONE_TOPOLOGY: set_phased}
+blocks:
+  - {arm_id: set_phased, start: 0, datasets: [synp_p3], expected_u: 0.2, notes: smoke,
+     env_overrides: {ROGUE_ONE_TOPOLOGY: set_phased, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_STRATIFIED_FOLDS: "True"}}
+  - {arm_id: set_phased, start: 1, datasets: "@PILOT", expected_u: 1.0, notes: pilot}
+  - {arm_id: set_phased, start: 3, datasets: "@SYNP7", expected_u: 0.85, notes: "pair A05 f42 r0/r1",
+     env_overrides_by_task_type: {classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}}}
+  - {arm_id: set_phased, start: 10, datasets: "@SYNP7", fold_seeds: [4], expected_u: 0.85, notes: "pair A05 f4 r0",
+     env_overrides_by_task_type: {classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}}}
+  - {arm_id: set_phased, start: 17, datasets: "@CORE10", expected_u: 1.0, notes: "pair A05 f42 r0/r1"}
+  - {arm_id: full, start: 27, datasets: [synp_p3], expected_u: 0.2, notes: smoke-guard,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_STRATIFIED_FOLDS: "True"}}
+  - {arm_id: full, start: 28, datasets: [heart], expected_u: 0.2, notes: smoke-guard,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1"}}
+  - {arm_id: set_phased, start: 29, datasets: "@PILOT", expected_u: 1.0, notes: repilot}

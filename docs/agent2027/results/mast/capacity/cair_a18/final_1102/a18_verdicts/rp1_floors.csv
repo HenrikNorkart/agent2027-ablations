@@ -1,0 +1,121 @@
+variant,unit,score,floor,position,stability_share,ladder,passes
+primary,S,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,S,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,S,rp1_executes,> Q122,6.0,0.858,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=1;Q9=1;Q122=0
+primary,S,rp1_usable,Q4,3.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=0;Q4=1;Q9=1;Q122=1
+primary,E,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,E,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,E,rp1_executes,> Q122,6.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=0;Q122=0
+primary,E,rp1_usable,> Q122,6.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=0;Q122=0
+primary,T,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,T,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,T,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+primary,T,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,W,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,W,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,W,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+primary,W,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,T/assessment,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,T/assessment,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,T/assessment,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+primary,T/assessment,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,T/pruning,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,T/pruning,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+primary,T/pruning,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+primary,T/pruning,rp1_usable,<= Q0.8,1.0,0.996,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,S,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,S,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,S,rp1_executes,> Q122,6.0,0.858,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=1;Q9=1;Q122=0
+no_common_set,S,rp1_usable,Q4,3.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=0;Q4=1;Q9=1;Q122=1
+no_common_set,E,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,E,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,E,rp1_executes,> Q122,6.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=0;Q122=0
+no_common_set,E,rp1_usable,> Q122,6.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=0;Q122=0
+no_common_set,T,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,T,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,T,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+no_common_set,T,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,W,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,W,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,W,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+no_common_set,W,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,T/assessment,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,T/assessment,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,T/assessment,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+no_common_set,T/assessment,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,T/pruning,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,T/pruning,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+no_common_set,T/pruning,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+no_common_set,T/pruning,rp1_usable,<= Q0.8,1.0,0.996,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,S,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,S,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,S,rp1_executes,> Q122,6.0,0.858,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=1;Q9=1;Q122=0
+drop_clipped,S,rp1_usable,Q4,3.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=0;Q4=1;Q9=1;Q122=1
+drop_clipped,E,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,E,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,E,rp1_executes,> Q122,6.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=0;Q122=0
+drop_clipped,E,rp1_usable,> Q122,6.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=0;Q122=0
+drop_clipped,T,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,T,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,T,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+drop_clipped,T,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,W,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,W,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,W,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+drop_clipped,W,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,T/assessment,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,T/assessment,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,T/assessment,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+drop_clipped,T/assessment,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,T/pruning,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,T/pruning,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_clipped,T/pruning,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+drop_clipped,T/pruning,rp1_usable,<= Q0.8,1.0,0.996,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,S,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,S,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,S,rp1_executes,> Q122,6.0,0.858,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=1;Q9=1;Q122=0
+drop_suspicious_partial,S,rp1_usable,Q4,3.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=0;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,E,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,E,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,E,rp1_executes,> Q122,6.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=0;Q122=0
+drop_suspicious_partial,E,rp1_usable,> Q122,6.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=0;Q122=0
+drop_suspicious_partial,T,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,T,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,T,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+drop_suspicious_partial,T,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,W,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,W,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,W,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+drop_suspicious_partial,W,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,T/assessment,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,T/assessment,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,T/assessment,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+drop_suspicious_partial,T/assessment,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,T/pruning,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,T/pruning,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+drop_suspicious_partial,T/pruning,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+drop_suspicious_partial,T/pruning,rp1_usable,<= Q0.8,1.0,0.996,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,S,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,S,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,S,rp1_executes,> Q122,6.0,0.858,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=1;Q9=1;Q122=0
+hq315,S,rp1_usable,Q4,3.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=0;Q4=1;Q9=1;Q122=1
+hq315,E,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,E,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,E,rp1_executes,Q9,4.0,0.4675,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=0;Q9=1;Q122=1
+hq315,E,rp1_usable,Q4,3.0,0.441,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=0;Q2=0;Q4=1;Q9=1;Q122=1
+hq315,T,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,T,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,T,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+hq315,T,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,W,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,W,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,W,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+hq315,W,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,T/assessment,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,T/assessment,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,T/assessment,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+hq315,T/assessment,rp1_usable,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,T/pruning,rp1_valid_call_raw,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,T/pruning,rp1_valid_call_rescued,<= Q0.8,1.0,1.0,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1
+hq315,T/pruning,rp1_executes,,,,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=;Q2=;Q4=;Q9=;Q122=
+hq315,T/pruning,rp1_usable,<= Q0.8,1.0,0.996,"Q0.8,Q2,Q4,Q9,Q122",Q0.8=1;Q2=1;Q4=1;Q9=1;Q122=1

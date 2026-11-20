@@ -1,0 +1,16 @@
+row_id,ablation_id,arm_id,dataset_id,task_type,fold_seed,llm_seed,replicate,is_sentinel,session_id,order_key,image_tag,rung_S,rung_E,rung_T,port_S,port_E,port_T,env_overrides,cap_hours,expected_u,notes
+A06-004,A06,sentinel,synp_p2,regression,42,5004,4,1,S1022g,1,agent2027-v2.4,O120,O120,O120,8011,8011,8011,{},6,0.85,sentinel; task fixed at G2 (A06 4.3)
+A16-003,A16,set_phased,synp_p1,regression,42,42,0,0,S1022g,2,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f42 r0/r1
+A16-004,A16,set_phased,synp_p2,regression,42,42,0,0,S1022g,3,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f42 r0/r1
+A16-005,A16,set_phased,synp_p3,classification,42,42,0,0,S1022g,4,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True"",""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f42 r0/r1
+A16-006,A16,set_phased,synp_p4,classification,42,42,0,0,S1022g,5,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True"",""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f42 r0/r1
+A16-007,A16,set_phased,synp_p5,classification,42,42,0,0,S1022g,6,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True"",""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f42 r0/r1
+A16-008,A16,set_phased,synp_p6a,regression,42,42,0,0,S1022g,7,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f42 r0/r1
+A16-009,A16,set_phased,synp_p6b,regression,42,42,0,0,S1022g,8,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f42 r0/r1
+A16-010,A16,set_phased,synp_p1,regression,4,4,0,0,S1022g,9,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f4 r0
+A16-011,A16,set_phased,synp_p2,regression,4,4,0,0,S1022g,10,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f4 r0
+A16-012,A16,set_phased,synp_p3,classification,4,4,0,0,S1022g,11,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True"",""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f4 r0
+A16-013,A16,set_phased,synp_p4,classification,4,4,0,0,S1022g,12,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True"",""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f4 r0
+A16-014,A16,set_phased,synp_p5,classification,4,4,0,0,S1022g,13,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True"",""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f4 r0
+A16-015,A16,set_phased,synp_p6a,regression,4,4,0,0,S1022g,14,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f4 r0
+A16-016,A16,set_phased,synp_p6b,regression,4,4,0,0,S1022g,15,agent2027-v2.4,O120,O120,O120,8010,8010,8010,"{""ROGUE_ONE_TOPOLOGY"":""set_phased""}",6,0.85,pair A05 f4 r0

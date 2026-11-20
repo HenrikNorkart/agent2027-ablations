@@ -1,0 +1,21 @@
+# A07 · HC1 tool-error feedback (docs/ablations/A07_HC1_tool_error_feedback.md §4).
+#   python scripts/agent2027/make_manifest.py --ablation A07 -> manifests/agent2027/A07_HC1.csv
+# CL3 applies (re-tier from A02, 2026-10-14): HC1 on myocardial, vehicle, housing, crab only;
+# rows 009-012 (heart, insurance) are cut. Row order: dataset, then seed 42, 4.
+ablation_id: A07
+defaults:
+  image_tag: agent2027-v2.0
+  rung: O120
+  port: 8010
+  cap_hours: 6
+  expected_u: 1.0
+  env_overrides: {ROGUE_ONE_TOOL_ERROR_FEEDBACK: none}
+blocks:
+  - {arm_id: errors_hidden, start: 1, datasets: [myocardial], fold_seeds: [42], replicates: [0], notes: "pair A05__full__myocardial__f42__r0"}
+  - {arm_id: errors_hidden, start: 2, datasets: [myocardial], fold_seeds: [4], replicates: [0], notes: "pair A05__full__myocardial__f4__r0"}
+  - {arm_id: errors_hidden, start: 3, datasets: [vehicle], fold_seeds: [42], replicates: [0], notes: "pair A05__full__vehicle__f42__r0"}
+  - {arm_id: errors_hidden, start: 4, datasets: [vehicle], fold_seeds: [4], replicates: [0], notes: "pair A05__full__vehicle__f4__r0"}
+  - {arm_id: errors_hidden, start: 5, datasets: [housing], fold_seeds: [42], replicates: [0], notes: "pair A05__full__housing__f42__r0"}
+  - {arm_id: errors_hidden, start: 6, datasets: [housing], fold_seeds: [4], replicates: [0], notes: "pair A05__full__housing__f4__r0"}
+  - {arm_id: errors_hidden, start: 7, datasets: [crab], fold_seeds: [42], replicates: [0], notes: "pair A05__full__crab__f42__r0"}
+  - {arm_id: errors_hidden, start: 8, datasets: [crab], fold_seeds: [4], replicates: [0], notes: "pair A05__full__crab__f4__r0"}

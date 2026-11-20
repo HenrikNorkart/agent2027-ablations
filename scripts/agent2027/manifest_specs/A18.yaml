@@ -1,0 +1,35 @@
+# A18 · RP1 role-wise replay targets (docs/ablations/A18_RP1_rolewise_replay.md §4, A18-T8;
+# pre-registration Part V.18; Part VIII.1 item 15: replay_O20 dropped, O20 failed SR4).
+#   python scripts/agent2027/make_manifest.py --ablation A18 -> manifests/agent2027/A18_RP1.csv
+#
+# One row = one replay target (800 single-turn replays of the rp1-prompts:v0 set, seed 7042).
+# These rows are NOT Rogue One runs: dataset_id=rp1set, task_type=mixed (make_manifest admits
+# both only together); ro27_clients_manifest.sh refuses them (no task folder). They are run by
+# A18's own clients script (rp1_clients.sh, A18-T7, not built yet) or, as a client of an
+# already-running server of the same rung, by replay_tool.py in a CPU container (A18 §4
+# "SR4 fallback (2026-10-19)").
+# A18-005 (replay_O20) is dropped: the number stays a gap.
+# Image agent2027-v2.0: its rogueone/llm/clients.py is the frozen wrapper the A05 source
+# prompts were recorded through (v2.3 changed clients.py, so v2.3+ would need A18-T10's
+# diff review). replay_tool.py itself is mounted from the checkout.
+# Ports are planning fields = the rung's rungs.csv port; at launch the row uses the port of
+# the server it is a client of.
+ablation_id: A18
+defaults:
+  image_tag: agent2027-v2.0
+  datasets: [rp1set]
+  task_type: mixed
+  fold_seeds: [42]
+  replicates: [0]
+  llm_seed: 7042
+  cap_hours: 6
+  expected_u: 0.3
+  notes: replay-only
+blocks:
+  - {arm_id: replay_Q0.8, start: 1, rung: Q0.8, port: 8030}
+  - {arm_id: replay_Q2, start: 2, rung: Q2, port: 8031}
+  - {arm_id: replay_Q4, start: 3, rung: Q4, port: 8032}
+  - {arm_id: replay_Q9, start: 4, rung: Q9, port: 8033}
+  # A18-005 replay_O20: dropped (SR4; Part VIII.1 item 15).
+  - {arm_id: replay_Q122, start: 6, rung: Q122, port: 8040, expected_u: 1.7}
+  - {arm_id: replay_O120, start: 7, rung: O120, port: 8010, expected_u: 1.7, notes: "replay-only; control"}

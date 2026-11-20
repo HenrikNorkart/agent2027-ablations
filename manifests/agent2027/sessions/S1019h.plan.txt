@@ -1,0 +1,22 @@
+session_id=S1019h
+rng=random.Random(int.from_bytes(sha256(session_id)[:8], 'big')) seed=8080787051628560446
+sentinel_first=0 sentinels=none
+port=8035
+rows=16
+order_key	row_id	arm_id	dataset_id	is_sentinel
+1	A17-009	f2_Q0.8	synp_p2	0
+2	A17-008	f2_Q0.8	synp_p1	0
+3	A17-004	f2_Q0.8	synp_p4	0
+4	A17-002	f2_Q0.8	synp_p2	0
+5	A17-011	f2_Q0.8	synp_p4	0
+6	A17-012	f2_Q0.8	synp_p5	0
+7	A17-018	f2_Q0.8	myocardial	0
+8	A17-001	f2_Q0.8	synp_p1	0
+9	A17-007	f2_Q0.8	synp_p6b	0
+10	A17-013	f2_Q0.8	synp_p6a	0
+11	A17-006	f2_Q0.8	synp_p6a	0
+12	A17-010	f2_Q0.8	synp_p3	0
+13	A17-015	f2_Q0.8	junglechess	0
+14	A17-014	f2_Q0.8	synp_p6b	0
+15	A17-005	f2_Q0.8	synp_p5	0
+16	A17-003	f2_Q0.8	synp_p3	0

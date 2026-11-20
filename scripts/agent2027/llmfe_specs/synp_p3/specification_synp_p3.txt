@@ -1,0 +1,104 @@
+"""
+[PREFIX]
+
+###
+<Task>
+Loan applications at a retail bank. The table has 2000 records, one per application, described by 22 columns.
+Columns:
+- monthly_payment_usd: scheduled monthly payment, USD
+- loan_purpose: stated purpose of the loan
+- num_inquiries: credit inquiries in the last 12 months
+- account_age_years: age of the oldest account, years
+- num_open_accounts: number of open credit accounts
+- months_since_last_login: months since the last online login
+- num_cards: number of payment cards held
+- monthly_payment_k: scheduled monthly payment, thousand NOK
+- employment_type: employment type of the applicant
+- loan_amount_k: requested loan amount, thousand NOK
+- num_late_payments: late payments in the last 24 months
+- utilisation_pct: revolving credit utilisation, percent
+- account_age_months: age of the oldest account, months
+- credit_score: credit bureau score
+- annual_income_k: gross annual income, thousand NOK
+- age_years: applicant age, years
+- loan_term_months: requested loan term, months
+- months_at_address: months at the current address
+- region: region of residence
+- savings_balance_k: savings balance, thousand NOK
+- branch_distance_km: distance to the nearest branch, km
+- dependents: number of dependents
+Goal: predict whether the loan defaulted (1 = defaulted, 0 = repaid).
+
+###
+<Features>
+[FEATURES]
+
+###
+<Examples>
+[EXAMPLES]
+[SUFFIX]
+"""
+
+@evaluate.run
+def evaluate(data: dict):
+    """ Evaluate the feature transformations on data observations."""
+    
+    from sklearn import preprocessing
+    from sklearn.model_selection import StratifiedKFold, KFold
+    from sklearn.metrics import accuracy_score
+    from preprocessing import preprocess_datasets
+    import xgboost as xgb
+    import torch
+    import numpy as np
+
+    # Load data observations
+    label_encoder = preprocessing.LabelEncoder()
+    inputs, outputs, is_cat, is_regression = data['inputs'], data['outputs'], data['is_cat'], data['is_regression']
+    X = modify_features(inputs)
+    y = label_encoder.fit_transform(outputs)
+
+    # Encode categorical string columns
+    for col in X.columns:
+        if X[col].dtype == 'string':
+            X[col] = label_encoder.fit_transform(X[col])
+
+    # Choose cross-validation strategy
+    kf = KFold(n_splits=4, shuffle=True, random_state=42) if is_regression else StratifiedKFold(n_splits=4, shuffle=True, random_state=42)
+
+    scores = []
+
+    # 4-Fold Cross-Validation
+    for train_idx, test_idx in kf.split(X, y):
+        X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
+        y_train, y_test = y[train_idx], y[test_idx]
+
+        X_train_new, X_test_new = preprocess_datasets(X_train, X_test, None)
+        
+        # Convert to tensors
+        X_train = torch.tensor(X_train_new.to_numpy())
+        X_test = torch.tensor(X_test_new.to_numpy())
+
+        # Load model
+        model = xgb.XGBClassifier(random_state=42)
+
+        model.fit(X_train_new, y_train)
+        
+        y_pred = model.predict(X_test_new)
+        score = accuracy_score(y_test, y_pred)
+        scores.append(score)
+
+    # Calculate average score
+    avg_score = np.mean(scores)
+
+    return avg_score, inputs, outputs
+
+
+@equation.evolve
+def modify_features(df_input) -> pd.DataFrame:
+    """
+    Thought 1: No transformation yet; this baseline returns the input columns unchanged.
+    New Feature 1: none
+    """
+    df_output = df_input.copy()
+
+    return df_output

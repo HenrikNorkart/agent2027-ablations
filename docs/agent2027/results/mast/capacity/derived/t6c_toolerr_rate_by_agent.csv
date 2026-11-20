@@ -1,0 +1,7 @@
+arm,agent,llm_calls,tool_calls,tool_errors,runner_errors,tool_err_per_tool_call
+full,ExtractorAgent,49941,34955,957,19,0.027378057502503217
+full,ScientistAgent,5339,3539,14,300,0.003955919751342187
+full,TesterAgent,12306,9315,669,11,0.07181964573268922
+single,ExtractorAgent,42733,29303,853,125,0.029109647476367607
+single,ScientistAgent,6645,4495,25,800,0.0055617352614015575
+single,TesterAgent,6589,3556,6,374,0.001687289088863892

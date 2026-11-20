@@ -1,0 +1,25 @@
+row_id,ablation_id,arm_id,dataset_id,task_type,fold_seed,llm_seed,replicate,is_sentinel,session_id,order_key,image_tag,rung_S,rung_E,rung_T,port_S,port_E,port_T,env_overrides,cap_hours,expected_u,notes
+A03-035,A03,replace,credit-g,classification,42,42,0,0,S1016c,1,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_FEATURE_POOL_MODE"":""replace""}",6,1.0,fallback
+A05-002,A05,full,junglechess,classification,42,42,0,0,S1016c,2,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A05-033,A05,full,synp_p3,classification,42,42,0,0,S1016c,3,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A05-021,A05,full,balance-scale,classification,42,1042,1,0,S1016c,4,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A07-004,A07,errors_hidden,vehicle,classification,4,4,0,0,S1016c,5,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_TOOL_ERROR_FEEDBACK"":""none""}",6,1.0,pair A05__full__vehicle__f4__r0
+A05-013,A05,full,vehicle,classification,4,4,0,0,S1016c,6,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A05-039,A05,full,synp_p1,regression,4,4,0,0,S1016c,7,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,0.85,
+A07-008,A07,errors_hidden,crab,regression,4,4,0,0,S1016c,8,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_TOOL_ERROR_FEEDBACK"":""none""}",6,1.0,pair A05__full__crab__f4__r0
+A05-015,A05,full,credit-g,classification,4,4,0,0,S1016c,9,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A05-024,A05,full,heart,classification,42,1042,1,0,S1016c,10,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A05-027,A05,full,housing,regression,42,1042,1,0,S1016c,11,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A05-048,A05,full,synp_p2,regression,42,1042,1,0,S1016c,12,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,0.85,
+A03-037,A03,replace,housing,regression,42,42,0,0,S1016c,13,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_FEATURE_POOL_MODE"":""replace""}",6,1.0,fallback
+A05-019,A05,full,crab,regression,4,4,0,0,S1016c,14,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A05-051,A05,full,synp_p5,classification,42,1042,1,0,S1016c,15,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A05-030,A05,full,wine,regression,42,1042,1,0,S1016c,16,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A03-032,A03,replace,junglechess,classification,42,42,0,0,S1016c,17,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_FEATURE_POOL_MODE"":""replace""}",6,1.0,fallback
+A05-005,A05,full,credit-g,classification,42,42,0,0,S1016c,18,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A07-005,A07,errors_hidden,housing,regression,42,42,0,0,S1016c,19,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_TOOL_ERROR_FEEDBACK"":""none""}",6,1.0,pair A05__full__housing__f42__r0
+A05-042,A05,full,synp_p4,classification,4,4,0,0,S1016c,20,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A05-036,A05,full,synp_p6a,regression,42,42,0,0,S1016c,21,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,0.85,
+A05-007,A05,full,housing,regression,42,42,0,0,S1016c,22,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,1.0,
+A05-054,A05,full,synp_p7,classification,42,1042,1,0,S1016c,23,agent2027-v2.0,O120,O120,O120,8016,8016,8016,"{""ROGUE_ONE_STRATIFIED_FOLDS"":""True""}",6,0.85,
+A05-045,A05,full,synp_p6b,regression,4,4,0,0,S1016c,24,agent2027-v2.0,O120,O120,O120,8016,8016,8016,{},6,0.85,

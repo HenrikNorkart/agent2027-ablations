@@ -1,0 +1,7 @@
+# Shell scripts and the defaults file run under bash: keep LF.
+scripts/agent2027/*.sh text eol=lf
+scripts/agent2027/*.env text eol=lf
+*.sh text eol=lf
+
+# Knowledge corpora (A3): their hash is over the file bytes, keep the committed LF bytes.
+scripts/agent2027/corpora/** text eol=lf

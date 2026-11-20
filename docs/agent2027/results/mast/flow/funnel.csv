@@ -1,0 +1,217 @@
+subset,task,arm,step,num,den,p,lo,hi
+all cycles,p2,full,P(S_reason_phi),3,350,0.008571428571428572,0.0,0.02
+all cycles,p2,full,P(S_cols_all),3,350,0.008571428571428572,0.0,0.02
+all cycles,p2,full,P(focus_phi | S_reason_phi),3,3,1.0,1.0,1.0
+all cycles,p2,full,P(focus_phi | not S_reason_phi),95,347,0.2737752161383285,0.2138728323699422,0.3266710305305799
+all cycles,p2,full,P(focus_phi),98,350,0.28,0.22,0.3314285714285714
+all cycles,p2,full,P(E_phi_code | focus_phi),24,98,0.24489795918367346,0.16853932584269662,0.3258545239503252
+all cycles,p2,full,P(E_phi_code | not focus_phi),38,252,0.15079365079365079,0.12799548872180452,0.1742774775644118
+all cycles,p2,full,P(E_phi_code | focus_phi_cols),25,103,0.24271844660194175,0.16822223141179388,0.31521739130434784
+all cycles,p2,full,P(E_phi_code),62,350,0.17714285714285713,0.15142857142857144,0.2057142857142857
+all cycles,p2,single,P(S_reason_phi),5,350,0.014285714285714285,0.002857142857142857,0.025714285714285714
+all cycles,p2,single,P(S_cols_all),5,350,0.014285714285714285,0.002857142857142857,0.025714285714285714
+all cycles,p2,single,P(focus_phi | S_reason_phi),2,5,0.4,0.0,0.8
+all cycles,p2,single,P(focus_phi | not S_reason_phi),49,345,0.14202898550724638,0.11695906432748537,0.16666666666666666
+all cycles,p2,single,P(focus_phi),51,350,0.1457142857142857,0.12571428571428572,0.1657142857142857
+all cycles,p2,single,P(E_phi_code | focus_phi),20,51,0.39215686274509803,0.25925925925925924,0.5454545454545454
+all cycles,p2,single,P(E_phi_code | not focus_phi),70,299,0.23411371237458195,0.15358361774744028,0.30499375746390145
+all cycles,p2,single,P(E_phi_code | focus_phi_cols),21,54,0.3888888888888889,0.2418572460279249,0.5652173913043478
+all cycles,p2,single,P(E_phi_code),90,350,0.2571428571428571,0.17714285714285713,0.3342857142857143
+all cycles,p3,full,P(S_reason_phi),0,150,0.0,0.0,0.0
+all cycles,p3,full,P(S_cols_all),0,150,0.0,0.0,0.0
+all cycles,p3,full,P(focus_phi | S_reason_phi),0,0,,,
+all cycles,p3,full,P(focus_phi | not S_reason_phi),2,150,0.013333333333333334,0.0,0.04
+all cycles,p3,full,P(focus_phi),2,150,0.013333333333333334,0.0,0.04
+all cycles,p3,full,P(E_phi_code | focus_phi),0,2,0.0,0.0,0.0
+all cycles,p3,full,P(E_phi_code | not focus_phi),0,148,0.0,0.0,0.0
+all cycles,p3,full,P(E_phi_code | focus_phi_cols),0,28,0.0,0.0,0.0
+all cycles,p3,full,P(E_phi_code),0,150,0.0,0.0,0.0
+all cycles,p3,single,P(S_reason_phi),0,100,0.0,0.0,0.0
+all cycles,p3,single,P(S_cols_all),3,100,0.03,0.02,0.04
+all cycles,p3,single,P(focus_phi | S_reason_phi),0,0,,,
+all cycles,p3,single,P(focus_phi | not S_reason_phi),0,100,0.0,0.0,0.0
+all cycles,p3,single,P(focus_phi),0,100,0.0,0.0,0.0
+all cycles,p3,single,P(E_phi_code | focus_phi),0,0,,,
+all cycles,p3,single,P(E_phi_code | not focus_phi),0,100,0.0,0.0,0.0
+all cycles,p3,single,P(E_phi_code | focus_phi_cols),0,14,0.0,0.0,0.0
+all cycles,p3,single,P(E_phi_code),0,100,0.0,0.0,0.0
+all cycles,p4,full,P(S_reason_phi),0,350,0.0,0.0,0.0
+all cycles,p4,full,P(S_cols_all),6,350,0.017142857142857144,0.008571428571428572,0.025714285714285714
+all cycles,p4,full,P(focus_phi | S_reason_phi),0,0,,,
+all cycles,p4,full,P(focus_phi | not S_reason_phi),13,350,0.037142857142857144,0.011428571428571429,0.07428571428571429
+all cycles,p4,full,P(focus_phi),13,350,0.037142857142857144,0.011428571428571429,0.07428571428571429
+all cycles,p4,full,P(E_phi_code | focus_phi),7,13,0.5384615384615384,0.2727272727272727,1.0
+all cycles,p4,full,P(E_phi_code | not focus_phi),2,337,0.005934718100890208,0.0,0.018518518518518517
+all cycles,p4,full,P(E_phi_code | focus_phi_cols),7,175,0.04,0.011363636363636364,0.07344632768361582
+all cycles,p4,full,P(E_phi_code),9,350,0.025714285714285714,0.005714285714285714,0.05142857142857143
+all cycles,p4,single,P(S_reason_phi),1,350,0.002857142857142857,0.0,0.008571428571428572
+all cycles,p4,single,P(S_cols_all),18,350,0.05142857142857143,0.022857142857142857,0.0857857142857139
+all cycles,p4,single,P(focus_phi | S_reason_phi),0,1,0.0,0.0,0.0
+all cycles,p4,single,P(focus_phi | not S_reason_phi),20,349,0.05730659025787966,0.0345821325648415,0.07714285714285714
+all cycles,p4,single,P(focus_phi),20,350,0.05714285714285714,0.03428571428571429,0.07714285714285714
+all cycles,p4,single,P(E_phi_code | focus_phi),12,20,0.6,0.42857142857142855,0.7619047619047619
+all cycles,p4,single,P(E_phi_code | not focus_phi),3,330,0.00909090909090909,0.0,0.021604938271604937
+all cycles,p4,single,P(E_phi_code | focus_phi_cols),12,141,0.0851063829787234,0.04838709677419355,0.1297801422147861
+all cycles,p4,single,P(E_phi_code),15,350,0.04285714285714286,0.022857142857142857,0.06
+all cycles,p5,full,P(S_reason_phi),0,150,0.0,0.0,0.0
+all cycles,p5,full,P(S_cols_all),0,150,0.0,0.0,0.0
+all cycles,p5,full,P(focus_phi | S_reason_phi),0,0,,,
+all cycles,p5,full,P(focus_phi | not S_reason_phi),1,150,0.006666666666666667,0.0,0.02
+all cycles,p5,full,P(focus_phi),1,150,0.006666666666666667,0.0,0.02
+all cycles,p5,full,P(E_phi_code | focus_phi),0,1,0.0,0.0,0.0
+all cycles,p5,full,P(E_phi_code | not focus_phi),0,149,0.0,0.0,0.0
+all cycles,p5,full,P(E_phi_code | focus_phi_cols),0,10,0.0,0.0,0.0
+all cycles,p5,full,P(E_phi_code),0,150,0.0,0.0,0.0
+all cycles,p5,single,P(S_reason_phi),0,100,0.0,0.0,0.0
+all cycles,p5,single,P(S_cols_all),3,100,0.03,0.02,0.04
+all cycles,p5,single,P(focus_phi | S_reason_phi),0,0,,,
+all cycles,p5,single,P(focus_phi | not S_reason_phi),1,100,0.01,0.0,0.02
+all cycles,p5,single,P(focus_phi),1,100,0.01,0.0,0.02
+all cycles,p5,single,P(E_phi_code | focus_phi),1,1,1.0,1.0,1.0
+all cycles,p5,single,P(E_phi_code | not focus_phi),0,99,0.0,0.0,0.0
+all cycles,p5,single,P(E_phi_code | focus_phi_cols),1,9,0.1111111111111111,0.0,0.2
+all cycles,p5,single,P(E_phi_code),1,100,0.01,0.0,0.02
+all cycles,p6a,full,P(S_reason_phi),0,150,0.0,0.0,0.0
+all cycles,p6a,full,P(S_cols_all),0,150,0.0,0.0,0.0
+all cycles,p6a,full,P(focus_phi | S_reason_phi),0,0,,,
+all cycles,p6a,full,P(focus_phi | not S_reason_phi),50,150,0.3333333333333333,0.18,0.54
+all cycles,p6a,full,P(focus_phi),50,150,0.3333333333333333,0.18,0.54
+all cycles,p6a,full,P(E_phi_code | focus_phi),31,50,0.62,0.5555555555555556,0.7142857142857143
+all cycles,p6a,full,P(E_phi_code | not focus_phi),52,100,0.52,0.43478260869565216,0.5833333333333334
+all cycles,p6a,full,P(E_phi_code | focus_phi_cols),31,51,0.6078431372549019,0.5555555555555556,0.7142857142857143
+all cycles,p6a,full,P(E_phi_code),83,150,0.5533333333333333,0.5,0.62
+all cycles,p6a,single,P(S_reason_phi),3,100,0.03,0.02,0.04
+all cycles,p6a,single,P(S_cols_all),3,100,0.03,0.02,0.04
+all cycles,p6a,single,P(focus_phi | S_reason_phi),3,3,1.0,1.0,1.0
+all cycles,p6a,single,P(focus_phi | not S_reason_phi),18,97,0.18556701030927836,0.16326530612244897,0.20833333333333334
+all cycles,p6a,single,P(focus_phi),21,100,0.21,0.18,0.24
+all cycles,p6a,single,P(E_phi_code | focus_phi),17,21,0.8095238095238095,0.75,0.8888888888888888
+all cycles,p6a,single,P(E_phi_code | not focus_phi),40,79,0.5063291139240507,0.4878048780487805,0.5263157894736842
+all cycles,p6a,single,P(E_phi_code | focus_phi_cols),17,21,0.8095238095238095,0.75,0.8888888888888888
+all cycles,p6a,single,P(E_phi_code),57,100,0.57,0.56,0.58
+all cycles,p6b,full,P(S_reason_phi),1,350,0.002857142857142857,0.0,0.008571428571428572
+all cycles,p6b,full,P(S_cols_all),5,350,0.014285714285714285,0.002857142857142857,0.025714285714285714
+all cycles,p6b,full,P(focus_phi | S_reason_phi),1,1,1.0,1.0,1.0
+all cycles,p6b,full,P(focus_phi | not S_reason_phi),230,349,0.6590257879656161,0.5873925501432665,0.7134771933020851
+all cycles,p6b,full,P(focus_phi),231,350,0.66,0.5885714285714285,0.7143571428571425
+all cycles,p6b,full,P(E_phi_code | focus_phi),43,231,0.18614718614718614,0.05404198841698842,0.3191489361702128
+all cycles,p6b,full,P(E_phi_code | not focus_phi),2,119,0.01680672268907563,0.0,0.04066507417651488
+all cycles,p6b,full,P(E_phi_code | focus_phi_cols),44,286,0.15384615384615385,0.0425531914893617,0.26830579596118537
+all cycles,p6b,full,P(E_phi_code),45,350,0.12857142857142856,0.037142857142857144,0.22
+all cycles,p6b,single,P(S_reason_phi),34,350,0.09714285714285714,0.054285714285714284,0.14285714285714285
+all cycles,p6b,single,P(S_cols_all),59,350,0.16857142857142857,0.12285714285714286,0.21714285714285714
+all cycles,p6b,single,P(focus_phi | S_reason_phi),23,34,0.6764705882352942,0.5172413793103449,0.7647058823529411
+all cycles,p6b,single,P(focus_phi | not S_reason_phi),117,316,0.370253164556962,0.2977991518741466,0.434640522875817
+all cycles,p6b,single,P(focus_phi),140,350,0.4,0.3285,0.46578571428571386
+all cycles,p6b,single,P(E_phi_code | focus_phi),20,140,0.14285714285714285,0.06473663926002056,0.23357664233576642
+all cycles,p6b,single,P(E_phi_code | not focus_phi),6,210,0.02857142857142857,0.00497450864489434,0.054551681195516774
+all cycles,p6b,single,P(E_phi_code | focus_phi_cols),25,213,0.11737089201877934,0.053239824759751274,0.19458393113342892
+all cycles,p6b,single,P(E_phi_code),26,350,0.07428571428571429,0.03428571428571429,0.11714285714285715
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(S_reason_phi),2,212,0.009433962264150943,0.0,0.028037383177570093
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(S_cols_all),2,212,0.009433962264150943,0.0,0.028037383177570093
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(focus_phi | S_reason_phi),2,2,1.0,1.0,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(focus_phi | not S_reason_phi),56,210,0.26666666666666666,0.2169811320754717,0.310823559408465
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(focus_phi),58,212,0.27358490566037735,0.22476362104474817,0.3144630623773083
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(E_phi_code | focus_phi),11,58,0.1896551724137931,0.1086705685618729,0.2766252955082741
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(E_phi_code | not focus_phi),11,154,0.07142857142857142,0.03773584905660377,0.11627906976744186
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(E_phi_code | focus_phi_cols),11,61,0.18032786885245902,0.10294117647058823,0.2692307692307692
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,full,P(E_phi_code),22,212,0.10377358490566038,0.07692307692307693,0.139184248381683
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(S_reason_phi),4,170,0.023529411764705882,0.0041666666666666735,0.048484848484848485
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(S_cols_all),4,170,0.023529411764705882,0.0041666666666666735,0.048484848484848485
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(focus_phi | S_reason_phi),1,4,0.25,0.0,0.5
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(focus_phi | not S_reason_phi),36,166,0.21686746987951808,0.18633219104733348,0.2535211267605634
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(focus_phi),37,170,0.21764705882352942,0.18680952380952381,0.25373421354764636
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(E_phi_code | focus_phi),17,37,0.4594594594594595,0.2765957446808511,0.6896551724137931
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(E_phi_code | not focus_phi),8,133,0.06015037593984962,0.020939681500872602,0.13
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(E_phi_code | focus_phi_cols),17,38,0.4473684210526316,0.26,0.6896551724137931
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p2,single,P(E_phi_code),25,170,0.14705882352941177,0.0881057268722467,0.256198347107438
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(S_reason_phi),0,150,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(S_cols_all),0,150,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(focus_phi | S_reason_phi),0,0,,,
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(focus_phi | not S_reason_phi),2,150,0.013333333333333334,0.0,0.04
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(focus_phi),2,150,0.013333333333333334,0.0,0.04
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(E_phi_code | focus_phi),0,2,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(E_phi_code | not focus_phi),0,148,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(E_phi_code | focus_phi_cols),0,28,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,full,P(E_phi_code),0,150,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(S_reason_phi),0,100,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(S_cols_all),3,100,0.03,0.02,0.04
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(focus_phi | S_reason_phi),0,0,,,
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(focus_phi | not S_reason_phi),0,100,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(focus_phi),0,100,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(E_phi_code | focus_phi),0,0,,,
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(E_phi_code | not focus_phi),0,100,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(E_phi_code | focus_phi_cols),0,14,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p3,single,P(E_phi_code),0,100,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(S_reason_phi),0,336,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(S_cols_all),6,336,0.017857142857142856,0.008980699315654405,0.026785714285714284
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(focus_phi | S_reason_phi),0,0,,,
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(focus_phi | not S_reason_phi),8,336,0.023809523809523808,0.008695652173913044,0.04062818377742945
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(focus_phi),8,336,0.023809523809523808,0.008695652173913044,0.04062818377742945
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(E_phi_code | focus_phi),5,8,0.625,0.25,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(E_phi_code | not focus_phi),0,328,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(E_phi_code | focus_phi_cols),5,170,0.029411764705882353,0.010869565217391304,0.05263157894736842
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,full,P(E_phi_code),5,336,0.01488095238095238,0.005714285714285714,0.027692307692307693
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(S_reason_phi),1,329,0.00303951367781155,0.0,0.009036144578313253
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(S_cols_all),18,329,0.0547112462006079,0.023250787480731856,0.09743568533377434
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(focus_phi | S_reason_phi),0,1,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(focus_phi | not S_reason_phi),17,328,0.051829268292682924,0.030395136778115502,0.0694006309148265
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(focus_phi),17,329,0.05167173252279635,0.030120481927710843,0.0694006309148265
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(E_phi_code | focus_phi),10,17,0.5882352941176471,0.41169786096256683,0.7692307692307693
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(E_phi_code | not focus_phi),1,312,0.003205128205128205,0.0,0.01020408163265306
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(E_phi_code | focus_phi_cols),10,136,0.07352941176470588,0.038461538461538464,0.12396694214876033
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p4,single,P(E_phi_code),11,329,0.03343465045592705,0.018575851393188854,0.047781252398127486
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(S_reason_phi),0,150,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(S_cols_all),0,150,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(focus_phi | S_reason_phi),0,0,,,
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(focus_phi | not S_reason_phi),1,150,0.006666666666666667,0.0,0.02
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(focus_phi),1,150,0.006666666666666667,0.0,0.02
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(E_phi_code | focus_phi),0,1,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(E_phi_code | not focus_phi),0,149,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(E_phi_code | focus_phi_cols),0,10,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,full,P(E_phi_code),0,150,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(S_reason_phi),0,100,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(S_cols_all),3,100,0.03,0.02,0.04
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(focus_phi | S_reason_phi),0,0,,,
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(focus_phi | not S_reason_phi),1,100,0.01,0.0,0.02
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(focus_phi),1,100,0.01,0.0,0.02
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(E_phi_code | focus_phi),1,1,1.0,1.0,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(E_phi_code | not focus_phi),0,99,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(E_phi_code | focus_phi_cols),1,9,0.1111111111111111,0.0,0.2
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p5,single,P(E_phi_code),1,100,0.01,0.0,0.02
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(S_reason_phi),0,20,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(S_cols_all),0,20,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(focus_phi | S_reason_phi),0,0,,,
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(focus_phi | not S_reason_phi),15,20,0.75,0.6666666666666666,0.8333333333333334
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(focus_phi),15,20,0.75,0.6666666666666666,0.8333333333333334
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(E_phi_code | focus_phi),13,15,0.8666666666666667,0.8,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(E_phi_code | not focus_phi),2,5,0.4,0.0,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(E_phi_code | focus_phi_cols),13,15,0.8666666666666667,0.8,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,full,P(E_phi_code),15,20,0.75,0.625,0.8333333333333334
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(S_reason_phi),3,15,0.2,0.14285714285714285,0.25
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(S_cols_all),3,15,0.2,0.14285714285714285,0.25
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(focus_phi | S_reason_phi),3,3,1.0,1.0,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(focus_phi | not S_reason_phi),6,12,0.5,0.5,0.5
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(focus_phi),9,15,0.6,0.5714285714285714,0.625
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(E_phi_code | focus_phi),9,9,1.0,1.0,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(E_phi_code | not focus_phi),1,6,0.16666666666666666,0.0,0.3333333333333333
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(E_phi_code | focus_phi_cols),9,9,1.0,1.0,1.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6a,single,P(E_phi_code),10,15,0.6666666666666666,0.625,0.7142857142857143
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(S_reason_phi),0,273,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(S_cols_all),3,273,0.01098901098901099,0.003048548817555045,0.02214022140221402
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(focus_phi | S_reason_phi),0,0,,,
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(focus_phi | not S_reason_phi),171,273,0.6263736263736264,0.5481481481481482,0.6843975002022491
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(focus_phi),171,273,0.6263736263736264,0.5481481481481482,0.6843975002022491
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(E_phi_code | focus_phi),15,171,0.08771929824561403,0.038642697881828315,0.1617804172951231
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(E_phi_code | not focus_phi),0,102,0.0,0.0,0.0
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(E_phi_code | focus_phi_cols),15,218,0.06880733944954129,0.030185841963399063,0.12805611712534234
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,full,P(E_phi_code),15,273,0.054945054945054944,0.024844720496894408,0.10138248847926268
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(S_reason_phi),32,309,0.10355987055016182,0.051194539249146756,0.1574241122565864
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(S_cols_all),55,309,0.1779935275080906,0.12257904293954283,0.23419013174890202
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(focus_phi | S_reason_phi),21,32,0.65625,0.4515294771968854,0.75
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(focus_phi | not S_reason_phi),95,277,0.34296028880866425,0.28466936903147627,0.3879056441778861
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(focus_phi),116,309,0.37540453074433655,0.310580204778157,0.4322624237140366
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(E_phi_code | focus_phi),10,116,0.08620689655172414,0.036231884057971016,0.15463917525773196
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(E_phi_code | not focus_phi),1,193,0.0051813471502590676,0.0,0.015706806282722512
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(E_phi_code | focus_phi_cols),11,180,0.06111111111111111,0.029264740705659487,0.10067114093959731
+"pre-discovery cycles: fold not yet phi-coded, up to and including the first E_phi_code cycle",p6b,single,P(E_phi_code),11,309,0.03559870550161812,0.018070932378161292,0.056140350877192984

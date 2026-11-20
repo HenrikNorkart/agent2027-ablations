@@ -1,0 +1,24 @@
+item,primary,hq315,no_common_set,drop_clipped,drop_suspicious_partial
+D2,"""Hoped""","""uninformative (unstable floors) [Hoped]""","""Hoped""","""Hoped""","""Hoped"""
+D2_point,"""Hoped""","""Hoped""","""Hoped""","""Hoped""","""Hoped"""
+D2_without_affected,"""Hoped""","""uninformative (unstable floors) [Hoped]""","""Hoped""","""Hoped""","""Hoped"""
+D4,"""1B cell predicted to fail""","""1B cell predicted to fail""","""1B cell predicted to fail""","""1B cell predicted to fail""","""1B cell predicted to fail"""
+D3b.Qwen,"""not transport-bottlenecked""","""not transport-bottlenecked""","""not transport-bottlenecked""","""not transport-bottlenecked""","""not transport-bottlenecked"""
+D3b.gpt-oss,"""not evaluable (no gpt-oss target besides the O120 reference; replay_O20 dropped, Part VIII.1 item 15)""","""not evaluable (no gpt-oss target besides the O120 reference; replay_O20 dropped, Part VIII.1 item 15)""","""not evaluable (no gpt-oss target besides the O120 reference; replay_O20 dropped, Part VIII.1 item 15)""","""not evaluable (no gpt-oss target besides the O120 reference; replay_O20 dropped, Part VIII.1 item 15)""","""not evaluable (no gpt-oss target besides the O120 reference; replay_O20 dropped, Part VIII.1 item 15)"""
+D5a.flag,false,false,false,false,false
+D5b.flag,false,false,false,false,false
+D5b.affected_roles,[],[],[],[],[]
+d6_transport_only,false,false,false,false,false
+d6_kappa_substitute_S,false,false,false,false,false
+floor S rp1_usable,Q4 (stab 1.00),Q4 (stab 1.00),Q4 (stab 1.00),Q4 (stab 1.00),Q4 (stab 1.00)
+floor S rp1_valid_call_rescued,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor E rp1_usable,> Q122 (stab 1.00),Q4 (stab 0.44),> Q122 (stab 1.00),> Q122 (stab 1.00),> Q122 (stab 1.00)
+floor E rp1_valid_call_rescued,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor T rp1_usable,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor T rp1_valid_call_rescued,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor W rp1_usable,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor W rp1_valid_call_rescued,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor T/assessment rp1_usable,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor T/assessment rp1_valid_call_rescued,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor T/pruning rp1_usable,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)
+floor T/pruning rp1_valid_call_rescued,<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00),<= Q0.8 (stab 1.00)

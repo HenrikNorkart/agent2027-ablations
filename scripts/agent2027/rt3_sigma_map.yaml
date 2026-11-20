@@ -1,0 +1,27 @@
+# A09 RT3 σ map (docs/ablations/A09_RT3_planner_oracle_misdirected.md §4.2; pre-registration Part V.9).
+#
+# σ never maps a task to itself or to a task of the same operator family: the ratio-like
+# targets (p1, p2, p3, p6a, p6b) draw from {p4, p5}; p4 and p5 draw from the ratio-like
+# group; p7 is never a source. Both P6 twins share one source.
+#
+# Missing source fold (< min_rows_per_fold focus rows for that fold in the run): use, in
+# order, σ(T) r0, σ(T) r1 (A/A), fallback r0, fallback r1 (all fold seed 42, A05 `full`).
+# Read by scripts/agent2027/rt3_focus.py.
+source_ablation: A05
+source_arm: full
+source_fold_seed: 42
+source_replicates: [0, 1]
+source_run_pattern: "{ablation}__{arm}__{dataset}__f{fold_seed}__r{replicate}"
+min_rows_per_fold: 10
+k_folds: 5
+num_iterations: 10
+map:
+  synp_p1: {source: synp_p4, fallback: synp_p5}
+  synp_p2: {source: synp_p4, fallback: synp_p5}
+  synp_p3: {source: synp_p4, fallback: synp_p5}
+  synp_p4: {source: synp_p2, fallback: synp_p1}
+  synp_p5: {source: synp_p1, fallback: synp_p2}
+  synp_p6a: {source: synp_p5, fallback: synp_p4}
+  synp_p6b: {source: synp_p5, fallback: synp_p4}
+  synp_p7: {source: synp_p4, fallback: synp_p5}  # option row A09-017 only
+  junglechess: {source: housing, fallback: null}  # AB3, option row A09-016 only (no planted φ)

@@ -1,0 +1,113 @@
+# A12 · FX: 2^(4-1) half-fraction, planner x assessment x pruning x memory
+# (docs/ablations/A12_FX_component_half_fraction.md §4; flags rogueone/utils/fx_switches.py, E9d).
+#   python scripts/agent2027/make_manifest.py --ablation A12 -> manifests/agent2027/A12_FX.csv
+# Rows 001-056: 8 cells x SYN-P 7, numbered by task (p3, p5, p2, p6a, p6b, p4, p1), cells in
+# table order. 057-064: G0b-1 smoke (all 8 cells, synp_p3, 1 fold x 3 iterations; never analysed).
+# 065: Full guard on v2.3 (same task and overrides as A05-901, whose S1016t dump is
+# prompt-baseline-v2.0; 10 iterations; never analysed). RV3 rows 066-093 are added only if G4
+# triggers them (A12-T23). D4: SYN-P classification rows carry ROGUE_ONE_STRATIFIED_FOLDS=True.
+# J+ cells set ROGUE_ONE_PRUNING_SHADOW=1 (shadow J-a, logged only).
+ablation_id: A12
+cells:  # env_overrides per cell (anchors; make_manifest reads only defaults/blocks)
+  pAJM: &pAJM {ROGUE_ONE_PLANNER_MODE: none, ROGUE_ONE_PRUNING_SHADOW: "1"}
+  PaJM: &PaJM {ROGUE_ONE_ASSESSMENT_MODE: template, ROGUE_ONE_PRUNING_SHADOW: "1"}
+  PAjM: &PAjM {ROGUE_ONE_PRUNING_MODE: rules}
+  PAJm: &PAJm {ROGUE_ONE_MEMORY_MODE: amnesic, ROGUE_ONE_PRUNING_SHADOW: "1"}
+  pajM: &pajM {ROGUE_ONE_PLANNER_MODE: none, ROGUE_ONE_ASSESSMENT_MODE: template, ROGUE_ONE_PRUNING_MODE: rules}
+  paJm: &paJm {ROGUE_ONE_PLANNER_MODE: none, ROGUE_ONE_ASSESSMENT_MODE: template, ROGUE_ONE_MEMORY_MODE: amnesic, ROGUE_ONE_PRUNING_SHADOW: "1"}
+  pAjm: &pAjm {ROGUE_ONE_PLANNER_MODE: none, ROGUE_ONE_PRUNING_MODE: rules, ROGUE_ONE_MEMORY_MODE: amnesic}
+  Pajm: &Pajm {ROGUE_ONE_ASSESSMENT_MODE: template, ROGUE_ONE_PRUNING_MODE: rules, ROGUE_ONE_MEMORY_MODE: amnesic}
+defaults:
+  image_tag: agent2027-v2.3
+  rung: O120
+  port: 8010
+  cap_hours: 6
+  expected_u: 0.85
+  fold_seeds: [42]
+  replicates: [0]
+  env_overrides_by_task_type:
+    classification: {ROGUE_ONE_STRATIFIED_FOLDS: "True"}
+blocks:
+  # synp_p3
+  - {arm_id: fx_pAJM, start: 1, datasets: [synp_p3], env_overrides: *pAJM}
+  - {arm_id: fx_PaJM, start: 2, datasets: [synp_p3], env_overrides: *PaJM}
+  - {arm_id: fx_PAjM, start: 3, datasets: [synp_p3], env_overrides: *PAjM}
+  - {arm_id: fx_PAJm, start: 4, datasets: [synp_p3], env_overrides: *PAJm}
+  - {arm_id: fx_pajM, start: 5, datasets: [synp_p3], env_overrides: *pajM}
+  - {arm_id: fx_paJm, start: 6, datasets: [synp_p3], env_overrides: *paJm}
+  - {arm_id: fx_pAjm, start: 7, datasets: [synp_p3], env_overrides: *pAjm}
+  - {arm_id: fx_Pajm, start: 8, datasets: [synp_p3], env_overrides: *Pajm}
+  # synp_p5
+  - {arm_id: fx_pAJM, start: 9, datasets: [synp_p5], env_overrides: *pAJM}
+  - {arm_id: fx_PaJM, start: 10, datasets: [synp_p5], env_overrides: *PaJM}
+  - {arm_id: fx_PAjM, start: 11, datasets: [synp_p5], env_overrides: *PAjM}
+  - {arm_id: fx_PAJm, start: 12, datasets: [synp_p5], env_overrides: *PAJm}
+  - {arm_id: fx_pajM, start: 13, datasets: [synp_p5], env_overrides: *pajM}
+  - {arm_id: fx_paJm, start: 14, datasets: [synp_p5], env_overrides: *paJm}
+  - {arm_id: fx_pAjm, start: 15, datasets: [synp_p5], env_overrides: *pAjm}
+  - {arm_id: fx_Pajm, start: 16, datasets: [synp_p5], env_overrides: *Pajm}
+  # synp_p2
+  - {arm_id: fx_pAJM, start: 17, datasets: [synp_p2], env_overrides: *pAJM}
+  - {arm_id: fx_PaJM, start: 18, datasets: [synp_p2], env_overrides: *PaJM}
+  - {arm_id: fx_PAjM, start: 19, datasets: [synp_p2], env_overrides: *PAjM}
+  - {arm_id: fx_PAJm, start: 20, datasets: [synp_p2], env_overrides: *PAJm}
+  - {arm_id: fx_pajM, start: 21, datasets: [synp_p2], env_overrides: *pajM}
+  - {arm_id: fx_paJm, start: 22, datasets: [synp_p2], env_overrides: *paJm}
+  - {arm_id: fx_pAjm, start: 23, datasets: [synp_p2], env_overrides: *pAjm}
+  - {arm_id: fx_Pajm, start: 24, datasets: [synp_p2], env_overrides: *Pajm}
+  # synp_p6a
+  - {arm_id: fx_pAJM, start: 25, datasets: [synp_p6a], env_overrides: *pAJM}
+  - {arm_id: fx_PaJM, start: 26, datasets: [synp_p6a], env_overrides: *PaJM}
+  - {arm_id: fx_PAjM, start: 27, datasets: [synp_p6a], env_overrides: *PAjM}
+  - {arm_id: fx_PAJm, start: 28, datasets: [synp_p6a], env_overrides: *PAJm}
+  - {arm_id: fx_pajM, start: 29, datasets: [synp_p6a], env_overrides: *pajM}
+  - {arm_id: fx_paJm, start: 30, datasets: [synp_p6a], env_overrides: *paJm}
+  - {arm_id: fx_pAjm, start: 31, datasets: [synp_p6a], env_overrides: *pAjm}
+  - {arm_id: fx_Pajm, start: 32, datasets: [synp_p6a], env_overrides: *Pajm}
+  # synp_p6b
+  - {arm_id: fx_pAJM, start: 33, datasets: [synp_p6b], env_overrides: *pAJM}
+  - {arm_id: fx_PaJM, start: 34, datasets: [synp_p6b], env_overrides: *PaJM}
+  - {arm_id: fx_PAjM, start: 35, datasets: [synp_p6b], env_overrides: *PAjM}
+  - {arm_id: fx_PAJm, start: 36, datasets: [synp_p6b], env_overrides: *PAJm}
+  - {arm_id: fx_pajM, start: 37, datasets: [synp_p6b], env_overrides: *pajM}
+  - {arm_id: fx_paJm, start: 38, datasets: [synp_p6b], env_overrides: *paJm}
+  - {arm_id: fx_pAjm, start: 39, datasets: [synp_p6b], env_overrides: *pAjm}
+  - {arm_id: fx_Pajm, start: 40, datasets: [synp_p6b], env_overrides: *Pajm}
+  # synp_p4
+  - {arm_id: fx_pAJM, start: 41, datasets: [synp_p4], env_overrides: *pAJM}
+  - {arm_id: fx_PaJM, start: 42, datasets: [synp_p4], env_overrides: *PaJM}
+  - {arm_id: fx_PAjM, start: 43, datasets: [synp_p4], env_overrides: *PAjM}
+  - {arm_id: fx_PAJm, start: 44, datasets: [synp_p4], env_overrides: *PAJm}
+  - {arm_id: fx_pajM, start: 45, datasets: [synp_p4], env_overrides: *pajM}
+  - {arm_id: fx_paJm, start: 46, datasets: [synp_p4], env_overrides: *paJm}
+  - {arm_id: fx_pAjm, start: 47, datasets: [synp_p4], env_overrides: *pAjm}
+  - {arm_id: fx_Pajm, start: 48, datasets: [synp_p4], env_overrides: *Pajm}
+  # synp_p1
+  - {arm_id: fx_pAJM, start: 49, datasets: [synp_p1], env_overrides: *pAJM}
+  - {arm_id: fx_PaJM, start: 50, datasets: [synp_p1], env_overrides: *PaJM}
+  - {arm_id: fx_PAjM, start: 51, datasets: [synp_p1], env_overrides: *PAjM}
+  - {arm_id: fx_PAJm, start: 52, datasets: [synp_p1], env_overrides: *PAJm}
+  - {arm_id: fx_pajM, start: 53, datasets: [synp_p1], env_overrides: *pajM}
+  - {arm_id: fx_paJm, start: 54, datasets: [synp_p1], env_overrides: *paJm}
+  - {arm_id: fx_pAjm, start: 55, datasets: [synp_p1], env_overrides: *pAjm}
+  - {arm_id: fx_Pajm, start: 56, datasets: [synp_p1], env_overrides: *Pajm}
+  # G0b-1 smoke (session S1021b): synp_p3, 1 fold x 3 iterations (R3 override, smoke only)
+  - {arm_id: fx_pAJM, start: 57, datasets: [synp_p3], expected_u: 0.06, notes: smoke,
+     env_overrides: {<<: *pAJM, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}
+  - {arm_id: fx_PaJM, start: 58, datasets: [synp_p3], expected_u: 0.06, notes: smoke,
+     env_overrides: {<<: *PaJM, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}
+  - {arm_id: fx_PAjM, start: 59, datasets: [synp_p3], expected_u: 0.06, notes: smoke,
+     env_overrides: {<<: *PAjM, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}
+  - {arm_id: fx_PAJm, start: 60, datasets: [synp_p3], expected_u: 0.06, notes: smoke,
+     env_overrides: {<<: *PAJm, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}
+  - {arm_id: fx_pajM, start: 61, datasets: [synp_p3], expected_u: 0.06, notes: smoke,
+     env_overrides: {<<: *pajM, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}
+  - {arm_id: fx_paJm, start: 62, datasets: [synp_p3], expected_u: 0.06, notes: smoke,
+     env_overrides: {<<: *paJm, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}
+  - {arm_id: fx_pAjm, start: 63, datasets: [synp_p3], expected_u: 0.06, notes: smoke,
+     env_overrides: {<<: *pAjm, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}
+  - {arm_id: fx_Pajm, start: 64, datasets: [synp_p3], expected_u: 0.06, notes: smoke,
+     env_overrides: {<<: *Pajm, ROGUE_ONE_SMOKE_FOLDS: "1", ROGUE_ONE_NUM_ITERATIONS: "3"}}
+  # Full guard (01 §2 guard 1 on v2.3): Full-v2, synp_p3, 1 fold x 10 iterations, as A05-901
+  - {arm_id: full, start: 65, datasets: [synp_p3], expected_u: 0.2, notes: smoke-guard,
+     env_overrides: {ROGUE_ONE_SMOKE_FOLDS: "1"}}

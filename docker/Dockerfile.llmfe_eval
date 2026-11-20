@@ -1,0 +1,37 @@
+# Image for SCORING LLM-FE's generated features under Rogue One's folds + evaluator
+# (paper/scripts/llmfe_score_rogueone.py). Distinct from docker/Dockerfile.llmfe, which
+# only runs LLM-FE's search loop against a vLLM endpoint.
+#
+# Why this file exists: the July image that produced the "LLM-FE under our harness"
+# numbers in REBUTTAL_FINAL.md's Q2 table was called `llmfe:eval`, was pruned from the
+# daemon, and left no recipe anywhere -- the fourth time in this project that an image
+# behind a reported number has evaporated. Rebuild with:
+#   docker build -t llmfe:eval -f docker/Dockerfile.llmfe_eval .
+FROM llmfe:oss120
+
+# scipy for stats.mode (the top-3 majority-vote ensemble in LLM-FE's own evaluation
+# methodology, which we keep unchanged).
+RUN pip install --no-cache-dir scipy==1.12.0
+
+# `caafe`, for ONE function: specs/specification_diabetes.txt and the scorer both call
+# `caafe.preprocessing.make_datasets_numeric`. It is NOT in LLM-FE's requirements.txt --
+# the July image had it installed ad hoc, which is why the rebuilt llmfe:oss120 failed
+# `diabetes` instantly with `Execution Error: No module named 'caafe'` (misdiagnosed in
+# the 2026-08-17 log as the model failing to produce parseable output).
+#
+# Installed --no-deps on purpose. caafe/preprocessing.py imports only pandas/numpy, but
+# caafe/__init__.py chains to sklearn_wrapper -> data -> openml and tabpfn, none of
+# which any code path here touches, and pulling them in would drag a second torch build
+# into an image with a deliberate torch==2.0.1 CPU pin. Blanking __init__.py leaves the
+# genuine upstream preprocessing module importable and changes nothing about the
+# function itself -- this is not a re-implementation of CAAFE.
+#
+# NOTE for T0.4's CAAFE *baseline*: this is emphatically not that. Running CAAFE as a
+# competing feature-engineering method needs its full environment (tabpfn included) in
+# its own image. A preprocessing helper shared with LLM-FE is not a CAAFE result.
+RUN pip install --no-cache-dir --no-deps caafe==0.1.6 \
+    && printf '%s\n' '# Intentionally blank: see docker/Dockerfile.llmfe_eval.' \
+       > /usr/local/lib/python3.11/site-packages/caafe/__init__.py \
+    && python -c "from caafe.preprocessing import make_datasets_numeric; print('caafe.preprocessing OK')"
+
+WORKDIR /app

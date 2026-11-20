@@ -1,0 +1,39 @@
+dataset_id,task_type,fold_seed,fold_scheme,folds_done,metric,mean,fold_sd,floor_0.1x_sd,source
+balance-scale,classification,42,kfold,5,accw_balanced,0.5925,0.0247,0.00247,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+junglechess,classification,42,kfold,5,accw_balanced,0.8806,0.0048,0.00048,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+vehicle,classification,42,kfold,5,accw_balanced,0.774,0.0315,0.00315,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+heart,classification,42,kfold,5,accw_balanced,0.8641,0.0318,0.00318,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+credit-g,classification,42,kfold,5,accw_balanced,0.6983,0.0421,0.00421,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+myocardial,classification,42,kfold,5,accw_balanced,0.5837,0.063,0.0063,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+housing,regression,42,kfold,5,nrmse,0.225,0.007,0.0007,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+insurance,regression,42,kfold,5,nrmse,0.3779,0.0193,0.00193,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+crab,regression,42,kfold,5,nrmse,0.2236,0.0096,0.00096,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+wine,regression,42,kfold,5,nrmse,0.1063,0.0011,0.00011,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+balance-scale,classification,4,kfold,5,accw_balanced,0.5929,0.0214,0.00214,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+junglechess,classification,4,kfold,5,accw_balanced,0.8806,0.003,0.0003,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+vehicle,classification,4,kfold,5,accw_balanced,0.7908,0.022,0.0022,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+heart,classification,4,kfold,5,accw_balanced,0.8519,0.0116,0.00116,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+credit-g,classification,4,kfold,5,accw_balanced,0.7008,0.023,0.0023,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+myocardial,classification,4,kfold,5,accw_balanced,0.6075,0.0192,0.00192,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+housing,regression,4,kfold,5,nrmse,0.2239,0.0035,0.00035,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+insurance,regression,4,kfold,5,nrmse,0.386,0.0061,0.00061,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+crab,regression,4,kfold,5,nrmse,0.2212,0.0076,0.00076,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+wine,regression,4,kfold,5,nrmse,0.1064,0.0018,0.00018,"A05-T6 classicfe:4 raw arm, computed 2026-10-19"
+synp_p0,regression,42,kfold,5,nrmse,0.0911,0.0036,0.00036,A08 CPU screen raw arm
+synp_p1,regression,42,kfold,5,nrmse,0.0332,0.0085,0.00085,A08 CPU screen raw arm
+synp_p2,regression,42,kfold,5,nrmse,0.0711,0.0064,0.00064,A08 CPU screen raw arm
+synp_p3,classification,42,stratified,5,accw_balanced,0.6969,0.0427,0.00427,A08 CPU screen raw arm
+synp_p4,classification,42,stratified,5,accw_balanced,0.4725,0.0357,0.00357,A08 CPU screen raw arm
+synp_p5,classification,42,stratified,5,accw_balanced,0.6838,0.0174,0.00174,A08 CPU screen raw arm
+synp_p6a,regression,42,kfold,5,nrmse,0.0698,0.0044,0.00044,A08 CPU screen raw arm
+synp_p6b,regression,42,kfold,5,nrmse,0.0698,0.0044,0.00044,A08 CPU screen raw arm
+synp_p7,classification,42,stratified,5,accw_balanced,0.9191,0.0225,0.00225,A08 CPU screen raw arm
+synp_p0,regression,4,kfold,5,nrmse,0.0922,0.0026,0.00026,A08 CPU screen raw arm
+synp_p1,regression,4,kfold,5,nrmse,0.0342,0.0033,0.00033,A08 CPU screen raw arm
+synp_p2,regression,4,kfold,5,nrmse,0.0684,0.0031,0.00031,A08 CPU screen raw arm
+synp_p3,classification,4,stratified,5,accw_balanced,0.696,0.0132,0.00132,A08 CPU screen raw arm
+synp_p4,classification,4,stratified,5,accw_balanced,0.4856,0.0167,0.00167,A08 CPU screen raw arm
+synp_p5,classification,4,stratified,5,accw_balanced,0.6955,0.0133,0.00133,A08 CPU screen raw arm
+synp_p6a,regression,4,kfold,5,nrmse,0.0671,0.0081,0.00081,A08 CPU screen raw arm
+synp_p6b,regression,4,kfold,5,nrmse,0.0671,0.0081,0.00081,A08 CPU screen raw arm
+synp_p7,classification,4,stratified,5,accw_balanced,0.9156,0.036,0.0036,A08 CPU screen raw arm
